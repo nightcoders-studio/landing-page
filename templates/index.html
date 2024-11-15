@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nighcoders - AI and Web Development Agency</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container text-center">
+        <h1>
+          we're your partner in
+          <span class="gradient-text">digital innovation</span>
+        </h1>
+        <p>AI-powered development agency crafting next-gen web experiences. No templates, pure innovation.</p>
+        <div>
+          <a href="#contact" class="btn btn-primary">Start a Project</a>
+          <a href="#services" class="btn btn-outline">See Packages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="text-center mb-12">Our Services</h2>
+        <div class="grid md:grid-cols-3">
+          <div class="card">
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications</p>
+            <p class="price">from $2,000</p>
+            <ul>
+              <li>Modern tech stack</li>
+              <li>Responsive design</li>
+              <li>SEO optimized</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>AI Integration</h3>
+            <p>Smart solutions for your business</p>
+            <p class="price">from $2,500</p>
+            <ul>
+              <li>Custom AI models</li>
+              <li>API integration</li>
+              <li>Automation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>UI/UX Design</h3>
+            <p>Beautiful and functional interfaces</p>
+            <p class="price">from $1,500</p>
+            <ul>
+              <li>User research</li>
+              <li>Wireframing</li>
+              <li>Prototype</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+      <div class="container">
+        <h2 class="text-center mb-12">How We Work</h2>
+        <div class="grid md:grid-cols-4">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <h3>Discovery Call</h3>
+            <p>We discuss your goals and how we can help achieve them.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <h3>Planning</h3>
+            <p>We create a detailed roadmap and proposal for your project.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <h3>Development</h3>
+            <p>Our team brings your vision to life with regular updates.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <h3>Launch & Support</h3>
+            <p>We ensure everything runs smoothly after deployment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="text-center mb-12">Common Questions</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>What is the typical process like?</h3>
+            </div>
+            <div class="accordion-content">
+              <p>We start with a discovery call, then create a detailed proposal. Once approved, we begin development with regular updates and feedback sessions.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>How much will my project cost?</h3>
+            </div>
+            <div class="accordion-content">
+              <p>Project costs vary based on complexity and requirements. Our basic packages start from $2,000, but we'll provide a detailed quote after understanding your needs.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <h3>How long does a project take to complete?</h3>
+            </div>
+            <div class="accordion-content">
+              <p>Timeline depends on project scope. Simple websites typically take 4-6 weeks, while complex applications may take 3+ months.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="text-center mb-12">Start Your Project</h2>
+        <form id="contactForm" class="max-w-2xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Budget Range</label>
+            <div class="radio-group">
+              <label><input type="radio" name="budget" value="1000-5000" required />$1,000 - $5,000</label>
+              <label><input type="radio" name="budget" value="5000-10000" />$5,000 - $10,000</label>
+              <label><input type="radio" name="budget" value="10000+" />$10,000+</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="{{ url_for('static', path='js/main.js') }}"></script>
+  </body>
+</html>

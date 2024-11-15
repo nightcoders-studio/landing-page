@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.text-center {
+  text-align: center;
+}
+.mb-12 {
+  margin-bottom: 48px;
+}
+.grid {
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Hero section */
+.hero {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+}
+.hero p {
+  font-size: 1.25rem;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+.btn-outline {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+.btn-outline:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Services section */
+.services {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.card p {
+  color: #6c757d;
+  margin-bottom: 16px;
+}
+.card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.card ul {
+  list-style-type: none;
+}
+.card li {
+  margin-bottom: 8px;
+}
+.card li::before {
+  content: "→";
+  color: #22c55e;
+  margin-right: 8px;
+}
+
+/* Process section */
+.process {
+  padding: 80px 0;
+}
+.process-step {
+  text-align: center;
+}
+.process-step .step-number {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #3b82f6;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.process-step h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.process-step p {
+  color: #6c757d;
+}
+
+/* FAQ section */
+.faq {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+.accordion-header {
+  padding: 16px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-header::after {
+  content: "+";
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+.accordion-header.active::after {
+  transform: rotate(45deg);
+}
+.accordion-content {
+  padding: 0 0 16px;
+  display: none;
+}
+.accordion-content.active {
+  display: block;
+}
+
+/* Contact form */
+.contact {
+  padding: 80px 0;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+textarea.form-control {
+  min-height: 150px;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+.radio-group label {
+  margin-bottom: 8px;
+  font-weight: normal;
+}
