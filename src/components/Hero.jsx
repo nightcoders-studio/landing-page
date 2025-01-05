@@ -6,7 +6,7 @@ import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
     return (
-        <div id='heroWrapper' className='flex flex-col items-stretch gap-2 px-4 flex-start'>
+        <div id='heroWrapper' className='flex flex-col items-stretch gap-2 px-4 pb-8 flex-start'>
             <div id='heroContainer' className='flex flex-col items-stretch gap-2 mt-10 flex-start'>
                 <div id='textHeroWrapper' className='flex flex-col items-stretch gap-4 p-6 py-6 border-2 shadow-sm rounded-xl border-text-brand bg-bg-default-secondary'>
                     <h4>40+ Client Happy</h4>
