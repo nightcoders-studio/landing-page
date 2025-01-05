@@ -7,6 +7,7 @@ const HomePage = () => {
     return (
         <div>
             <Hero />
+            <Divider />
             {/* <Service />
             <OurClient />
             <HowWeWork />
