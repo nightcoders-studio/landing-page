@@ -64,13 +64,19 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "320px",
+        md: "640px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        /* Background Colors */
         "bg-default": "var(--color-bg-default)",
         "bg-default-secondary": "var(--color-bg-default-secondary)",
         "bg-default-tertiary": "var(--color-bg-default-tertiary)",
@@ -82,8 +88,6 @@ export default {
         "bg-success": "var(--color-bg-success)",
         "bg-warning": "var(--color-bg-warning)",
         "bg-danger": "var(--color-bg-danger)",
-
-        /* Text Colors */
         "text-default": "var(--color-text-default)",
         "text-default-secondary": "var(--color-text-default-secondary)",
         "text-default-tertiary": "var(--color-text-default-tertiary)",
@@ -95,8 +99,6 @@ export default {
         "text-success": "var(--color-text-success)",
         "text-warning": "var(--color-text-warning)",
         "text-danger": "var(--color-text-danger)",
-
-        /* Icon Colors */
         "icon-default": "var(--color-icon-default)",
         "icon-default-secondary": "var(--color-icon-default-secondary)",
         "icon-default-tertiary": "var(--color-icon-default-tertiary)",
@@ -108,8 +110,6 @@ export default {
         "icon-success": "var(--color-icon-success)",
         "icon-warning": "var(--color-icon-warning)",
         "icon-danger": "var(--color-icon-danger)",
-
-        /* Border Colors */
         "border-default": "var(--color-border-default)",
         "border-default-secondary": "var(--color-border-default-secondary)",
         "border-default-tertiary": "var(--color-border-default-tertiary)",
@@ -121,12 +121,10 @@ export default {
         "border-success": "var(--color-border-success)",
         "border-warning": "var(--color-border-warning)",
         "border-danger": "var(--color-border-danger)",
-
         fontFamily: {
           default: "var(--dt-font-family-default)",
           secondary: "var(--dt-font-family-secondary)",
         },
-
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
@@ -165,6 +163,43 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+      },
+      keyframes: {
+        moveLeftRight: {
+          "0%": {
+            transform: "translateX(4%)",
+          },
+          "25%": {
+            transform: "translateX(12%)",
+          },
+          "75%": {
+            transform: "translateX(2%)",
+          },
+          "100%": {
+            transform: "translateX(4%)",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        moveLeftRight: "moveLeftRight 15s ease-in-out infinite",
+        "accordion-down": "accordion-down 2s ease-out",
+        "accordion-up": "accordion-up 2s ease-out",
       },
     },
   },
