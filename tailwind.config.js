@@ -165,6 +165,14 @@ export default {
         },
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0, transform: "translateY(-10px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        fadeOut: {
+          "0%": { opacity: 1, transform: "translateY(0)" },
+          "100%": { opacity: 0, transform: "translateY(-10px)" },
+        },
         moveLeftRight: {
           "0%": {
             transform: "translateX(4%)",
@@ -200,8 +208,10 @@ export default {
         moveLeftRight: "moveLeftRight 15s ease-in-out infinite",
         "accordion-down": "accordion-down 2s ease-out",
         "accordion-up": "accordion-up 2s ease-out",
+        "fade-in": "fadeIn 0.5s ease-in-out",
+        "fade-out": "fadeOut 0.5s ease-in-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), "tailwind-scrollbar-hide"],
 };

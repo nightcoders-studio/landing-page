@@ -99,12 +99,14 @@ button:focus-visible {
 }
 
 /* Untuk hilangin border waktu data state open = true */
-[data-state="open"] {
-  border: none;
+.data-[state="open"] {
+  max-height: 500px; /* Sesuaikan nilai ini */
+  transition: max-height 0.5s ease-in-out;
 }
 
-[data-state="closed"] {
-  border: none;
+.data-[state="closed"] {
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
 }
 
 [data-disabled] {
@@ -157,4 +159,11 @@ button:focus-visible {
 
 .read-the-docs {
   color: #888;
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }

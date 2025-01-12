@@ -27,7 +27,7 @@ const HowWeWork = () => {
         },
         {
             id: 4,
-            title: "Handover & Support",
+            title: 'Handover & Support',
             subTitle: "We ensure everything runs smoothly after deployment.",
             button: false,
         },
@@ -37,12 +37,13 @@ const HowWeWork = () => {
         <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8">
             {/* Header */}
             <div id="howWeWork-Container" className="sm:flex sm:flex-col sm:items-center">
-                <div id="howWeWork-headerContainer" className="sm:flex sm:flex-col sm:items-center sm:mx-8 sm:text-center">
-                    <h1 className="sm:text-4xl sm:font-semibold">
-                        How We <span className="text-orange-500">Work</span>
+                <div className="flex flex-col w-full px-12 howWeWork-headerContainer sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                    <h1 className="sm:text-3xl sm:font-semibold flex-[50%]">
+                        How We <span className="text-text-brand">Work</span>
                     </h1>
-                    <Spacer />
-                    <h4 className="text-gray-600 sm:text-lg sm:leading-snug">
+                    <Spacer className="md:hidden" />
+                    <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
+                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal flex-[50%]">
                         A proven process to transform your ideas into powerful digital solutions
                     </h4>
                 </div>
@@ -50,14 +51,14 @@ const HowWeWork = () => {
             </div>
 
             {/* Card Container */}
-            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-6">
+            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-4 md:grid-cols-">
                 {weWork.map((step) => (
-                    <Card key={step.id} className="p-6 shadow-md bg-gray-50 rounded-xl">
+                    <Card key={step.id} className="shadow-md sm:p-0 bg-gray-50 rounded-xl">
                         <CardHeader>
-                            <CardTitle className="text-lg font-semibold text-gray-800">{step.title}</CardTitle>
+                            <CardTitle id="titleCard" className="font-semibold sm:p-0 sm:text-2xl text-text-default sm:w-2/3">{step.title}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-sm text-gray-700">{step.subTitle}</p>
+                            <p className="text-lg">{step.subTitle}</p>
                             {step.button && (
                                 <Button className="mt-4">
                                     Start Your Project <Rocket className="w-4 h-4 ml-2" />
