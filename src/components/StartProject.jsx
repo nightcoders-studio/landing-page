@@ -26,9 +26,9 @@ const StartProject = () => {
     }
 
     return (
-        <div className="flex flex-col px-10 py-16 h-4/5 sm:items-stretch md:flex-row md:gap-10">
+        <div className="flex flex-col px-12 mb-10 h-scree sm:items-stretch md:flex-row md:gap-2">
             {/* Header Section */}
-            <div className="md:w-[364px] text-[#293239] text-3xl text-center font-semibold leading-[44px]">
+            <div className="md:w-[364px] text-[#293239] text-3xl text-center font-semibold leading-[44px] md:text-left">
                 Start Your Project
             </div>
 
