@@ -19,6 +19,7 @@ const Divider = () => {
                 <i className="fa-solid fa-circle text-icon-brand-tertiary"></i>
                 <span className="text-white">AI Automation</span>
             </div>
+
         </div>
     );
 };

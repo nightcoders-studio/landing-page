@@ -8,6 +8,7 @@ import HowWeWork from '@/components/HowWeWork';
 import Portfolio from '@/components/OurWorkSpeaksforItself'
 import OurClients from '@/components/OurClients';
 import StartProject from '@/components/StartProject';
+import Testimonial from '@/components/Testimonial';
 
 
 const HomePage = () => {
@@ -19,10 +20,9 @@ const HomePage = () => {
             <HowWeWork />
             <Portfolio />
             <OurClients />
+            <Testimonial />
+            {/* <FAQ /> */}
             <StartProject />
-            {/*<Testimonial />
-            <FAQ />
-            <StartYourProject /> */}
             <Footer />
 
         </div>

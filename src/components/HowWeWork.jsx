@@ -38,12 +38,12 @@ const HowWeWork = () => {
             {/* Header */}
             <div id="howWeWork-Container" className="sm:flex sm:flex-col sm:items-center">
                 <div className="flex flex-col w-full px-12 howWeWork-headerContainer sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl sm:font-semibold flex-[50%]">
+                    <h1 className="sm:text-3xl md:text-2xl sm:font-semibold flex-[50%]">
                         How We <span className="text-text-brand">Work</span>
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
-                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal flex-[50%]">
+                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal flex-[50%] md:text-base">
                         A proven process to transform your ideas into powerful digital solutions
                     </h4>
                 </div>
@@ -51,16 +51,17 @@ const HowWeWork = () => {
             </div>
 
             {/* Card Container */}
-            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-4 md:grid-cols-">
+            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-4 md:grid md:items-stretch md:grid-cols-2">
                 {weWork.map((step) => (
-                    <Card key={step.id} className="shadow-md sm:p-0 bg-gray-50 rounded-xl">
+                    <Card key={step.id} className="sm:p-0 bg-gray-50 rounded-xl md:h-64 md:gap-">
                         <CardHeader>
-                            <CardTitle id="titleCard" className="font-semibold sm:p-0 sm:text-2xl text-text-default sm:w-2/3">{step.title}</CardTitle>
+                            <CardTitle id="titleCard" className="font-semibold sm:p-0 sm:text-2xl text-text-default sm:w-2/3 md:text-xl">{step.title}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-lg">{step.subTitle}</p>
+                            <p className="text-lg md:text-lg">{step.subTitle}</p>
+                            <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="mt-4">
+                                <Button className="mt-4 md:text-sm">
                                     Start Your Project <Rocket className="w-4 h-4 ml-2" />
                                 </Button>
                             )}
@@ -68,6 +69,7 @@ const HowWeWork = () => {
                     </Card>
                 ))}
             </div>
+            <Spacer />
         </div>
     );
 };
