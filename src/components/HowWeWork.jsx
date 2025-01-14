@@ -34,16 +34,16 @@ const HowWeWork = () => {
     ];
 
     return (
-        <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8">
+        <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
             {/* Header */}
-            <div id="howWeWork-Container" className="sm:flex sm:flex-col sm:items-center">
-                <div className="flex flex-col w-full px-12 howWeWork-headerContainer sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl md:text-2xl sm:font-semibold flex-[50%]">
+            <div id="howWeWork-Container" className="z-10 sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center lg:gap-8">
+                <div className="flex flex-col w-full px-12 lg:mx-0 xl:px-0 sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left lg:w-full">
+                    <h1 className="sm:text-3xl md:text-2xl font-semibold flex-[50%] lg:text-3xl lg:text-left lg:pr-8">
                         How We <span className="text-text-brand">Work</span>
                     </h1>
                     <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
-                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal flex-[50%] md:text-base">
+                    <Spacer className="hidden md:block md:flex-[5%]" />
+                    <h4 className="text-text-default sm:text-lg md:text-base md:text-right sm:leading-normal flex-[50%] lg:text-base lg:leading-relaxed lg:text-right lg:pl-8">
                         A proven process to transform your ideas into powerful digital solutions
                     </h4>
                 </div>
@@ -51,17 +51,27 @@ const HowWeWork = () => {
             </div>
 
             {/* Card Container */}
-            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-4 md:grid md:items-stretch md:grid-cols-2">
+            <div className="sm:flex sm:flex-col sm:gap-6 sm:w-full sm:px-4 md:grid md:items-stretch md:grid-cols-2 lg:grid-cols-3 lg:px-8 xl:grid-cols-3 lg:gap-8">
                 {weWork.map((step) => (
-                    <Card key={step.id} className="sm:p-0 bg-gray-50 rounded-xl md:h-64 md:gap-">
+                    <Card
+                        key={step.id}
+                        className="sm:p-0 rounded-xl lg:p-6 lg:shadow-md lg:border lg:rounded-lg"
+                    >
                         <CardHeader>
-                            <CardTitle id="titleCard" className="font-semibold sm:p-0 sm:text-2xl text-text-default sm:w-2/3 md:text-xl">{step.title}</CardTitle>
+                            <CardTitle
+                                id="titleCard"
+                                className="font-semibold sm:p-0 sm:text-2xl text-text-default sm:w-2/3 md:text-lg lg:text-xl lg:font-medium lg:leading-relaxed"
+                            >
+                                {step.title}
+                            </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-lg md:text-lg">{step.subTitle}</p>
+                            <p className="text-lg md:text-base lg:text-base lg:leading-relaxed">
+                                {step.subTitle}
+                            </p>
                             <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="mt-4 md:text-sm">
+                                <Button className="mt-4 md:text-sm lg:text-sm lg:py-2 lg:px-4">
                                     Start Your Project <Rocket className="w-4 h-4 ml-2" />
                                 </Button>
                             )}
@@ -71,6 +81,8 @@ const HowWeWork = () => {
             </div>
             <Spacer />
         </div>
+
+
     );
 };
 

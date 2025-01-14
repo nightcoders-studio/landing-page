@@ -38,54 +38,55 @@ const OurWorkSpeaksforItself = () => {
     ];
 
     return (
-        <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-3">
+        <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-12 xl:px-12">
             {/* Header */}
-            <div id="ourWork-Container" className="sm:flex sm:flex-col sm:items-center">
-                <div class="container-header" className="flex flex-col w-full px-12 howWeWork-headerContainer sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl md:text-2xl sm:font-semibold flex-[50%]">
+            <div id="ourWork-Container" className="w-full px-8 sm:flex sm:flex-col sm:items-center lg:px-16">
+                <div className="flex flex-col sm:items-center sm:text-center md:flex-row md:items-center md:gap-8 md:text-left lg:gap-12">
+                    <h1 className="sm:text-3xl md:text-2xl lg:text-4xl font-semibold flex-[60%] lg:text-left">
                         Our <span className="text-text-brand">Work</span> Speaks For Itself
                     </h1>
                     <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
-                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal flex-[50%] md:text-base">
+                    <Spacer className="hidden md:block md:flex-[5%]" />
+                    <h4 className="text-gray-600 sm:text-lg md:text-base lg:text-lg lg:leading-relaxed flex-[40%] lg:text-right">
                         Discover the innovative solutions we’ve crafted for our clients
                     </h4>
                 </div>
             </div>
 
-            <Spacer className="sm: display-hidden" />
+            <Spacer className="hidden sm:block" />
 
             {/* Carousel Container */}
-            <Carousel className="relative w-full">
-                <CarouselContent className="max-w-full gap-6 overflow-x-auto snap-mandatory snap-x scrollbar-hidden">
+            <Carousel className="relative w-full lg:max-w-6xl xl:max-w-7xl">
+                <CarouselContent className="flex gap-6 p-8 overflow-x-auto snap-mandatory snap-x scrollbar-hidden">
                     {cardPortfolio.map((card) => (
                         <CarouselItem
                             key={card.id}
-                            className="flex-shrink-0 flex-grow-0 w-[90%] snap-align-none sm:w-12 sm:h-80 md:w-[45%] bg-gray-100 border shadow-md border-border-brand rounded-xl"
+                            className="flex-shrink-0 flex-grow-0 w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] border border-border-brand rounded-xl snap-align-center"
                         >
-                            <div className="inline-flex flex-col items-stretch gap-6 px-6 py-8 ">
+                            <div className="flex flex-col gap-6 p-6 lg:gap-8">
                                 {/* Text Wrapper */}
-                                <div className="flex flex-col gap-8 text-wrapper">
-                                    <h3 className="w-full text-text-default-secondary sm:text-2xl sm:font-semibold">
+                                <div className="flex flex-col gap-4">
+                                    <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl text-text-default-secondary">
                                         {card.title}
                                     </h3>
-                                    <h4 className="text-text-default-secondary sm:text-lg">
+                                    <h4 className="text-base sm:text-lg lg:text-base text-text-default-secondary">
                                         {card.subtitle}
                                     </h4>
                                 </div>
                                 {/* Button */}
-                                <Button className="flex justify-end gap-2 bg-transparent border-none shadow-none sm:text-base text-text-default">
+                                <Button className="flex justify-end gap-2 bg-transparent border-none shadow-none text-text-default">
                                     See Detail <MoveRight className="w-4 h-4" />
                                 </Button>
                             </div>
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-
             </Carousel>
-            <Spacer />
-            <Spacer />
-        </div >
+
+            <Spacer className="hidden lg:block" />
+        </div>
+
+
     );
 };
 
