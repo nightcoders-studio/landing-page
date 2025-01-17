@@ -41,13 +41,13 @@ const OurWorkSpeaksforItself = () => {
         <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-12 xl:px-12">
             {/* Header */}
             <div id="ourWork-Container" className="w-full px-8 sm:flex sm:flex-col sm:items-center lg:px-16">
-                <div className="flex flex-col sm:items-center sm:text-center md:flex-row md:items-center md:gap-8 md:text-left lg:gap-12">
-                    <h1 className="sm:text-3xl md:text-2xl lg:text-4xl font-semibold flex-[60%] lg:text-left">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-16 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
                         Our <span className="text-text-brand">Work</span> Speaks For Itself
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%]" />
-                    <h4 className="text-gray-600 sm:text-lg md:text-base lg:text-lg lg:leading-relaxed flex-[40%] lg:text-right">
+                    <h4 className="text-gray-600 sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[40%] lg:text-right">
                         Discover the innovative solutions we’ve crafted for our clients
                     </h4>
                 </div>
@@ -57,13 +57,13 @@ const OurWorkSpeaksforItself = () => {
 
             {/* Carousel Container */}
             <Carousel className="relative w-full lg:max-w-6xl xl:max-w-7xl">
-                <CarouselContent className="flex gap-6 p-8 overflow-x-auto snap-mandatory snap-x scrollbar-hidden">
+                <CarouselContent className="grid gap-6 p-8 lg:grid-cols-3 xl:grid-cols-3">
                     {cardPortfolio.map((card) => (
                         <CarouselItem
                             key={card.id}
-                            className="flex-shrink-0 flex-grow-0 w-[90%] sm:w-[70%] md:w-[50%] lg:w-[30%] border border-border-brand rounded-xl snap-align-center"
+                            className="border border-border-brand rounded-xl snap-align-center"
                         >
-                            <div className="flex flex-col gap-6 p-6 lg:gap-8">
+                            <div className="flex flex-col gap-6 p-6">
                                 {/* Text Wrapper */}
                                 <div className="flex flex-col gap-4">
                                     <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl text-text-default-secondary">
@@ -81,13 +81,13 @@ const OurWorkSpeaksforItself = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+
             </Carousel>
 
             <Spacer className="hidden lg:block" />
         </div>
-
-
     );
+
 };
 
 export default OurWorkSpeaksforItself;

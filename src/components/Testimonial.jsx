@@ -45,20 +45,20 @@ const Testimonial = () => {
         <div className="hidden overflow-x-hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-8">
             {/* Header */}
             <div className="sm:flex sm:flex-col sm:items-center">
-                <div className="flex flex-col w-full px-12 sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left lg:gap-12">
-                    <h1 className="sm:text-3xl sm:font-semibold flex-[60%] lg:text-4xl lg:leading-snug">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-16 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
                         What Our Client <span className="text-text-brand">Say</span>
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%]" />
-                    <h4 className="text-gray-600 sm:text-lg md:text-base md:text-right sm:leading-normal lg:text-lg lg:leading-relaxed flex-[40%]">
+                    <h4 className="text-gray-600 sm:text-lg md:text-base md:text-right sm:leading-normal lg:text-xl lg:leading-relaxed flex-[40%]">
                         Hear how we’ve helped businesses achieve their digital dreams
                     </h4>
                 </div>
                 <Spacer />
 
                 {/* Testimonial Carousel */}
-                <Carousel className="relative w-full lg:max-w-6xl xl:max-w-7xl">
+                <Carousel className="relative w-full lg:max-w-6xl xl:max-w-7xl lg:grid-cols-2">
                     <CarouselContent className="flex gap-6 p-8 overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
                         {testimonialContents.map((testimonial) => (
                             <CarouselItem

@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import Spacer from "./ui/spacer"
+import vector4 from "../assets/images/vector4.svg"
 
 const StartProject = () => {
     const form = useForm({
@@ -26,28 +27,33 @@ const StartProject = () => {
     }
 
     return (
-        <div className="flex flex-col px-12 mb-10 h-scree sm:items-stretch md:flex-row md:gap-2">
+        <div className="relative flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-16 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-start md:gap-8 md:text-left md:pb-36 lg:pt-16">
             {/* Header Section */}
-            <div className="md:w-[364px] text-[#293239] text-3xl text-center font-semibold leading-[44px] md:text-left">
-                Start Your Project
+            <div className="relative flex flex-col md:w-[364px] text-4xl font-semibold leading-[44px] md:text-left lg:items-start">
+                <span className="relative z-10 text-text-default lg:mb-6 lg:self-start">Start Your Project</span>
+                <img
+                    src={vector4}
+                    alt="Vector Background"
+                    className="absolute lg:top-24 lg:left-20 w-[150px] sm:w-[200px] lg:w-[400px] opacity-80 z-0"
+                    style={{
+                        transform: 'translateX(-50%)',
+                    }}
+                />
             </div>
 
-            <Spacer className='sm:h-12' />
+            <Spacer className="sm:h-12" />
 
             {/* Form Section */}
             <div className="flex flex-col flex-grow gap-10">
                 <Form {...form}>
-                    <form
-                        onSubmit={form.handleSubmit(onSubmit)}
-                        className="space-y-6"
-                    >
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         {/* Name Field */}
                         <FormField
                             name="name"
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-[#39434b] text-base">Name</FormLabel>
+                                    <FormLabel className="text-base text-text-default">Name</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="Type your or company name here"
@@ -66,7 +72,7 @@ const StartProject = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel className="text-[#39434b] text-base">How Can I Help You?</FormLabel>
+                                    <FormLabel className="text-base text-text-default">How Can I Help You?</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             placeholder="Type here"
@@ -81,17 +87,16 @@ const StartProject = () => {
                         />
 
                         {/* Submit Button */}
-                        <div className="flex items-center justify-center px-4 py-3 bg-[#293239] border border-[#e4882b] rounded-lg">
-                            <Button
-                                type="submit"
-                                className="text-[#e8eaec] text-base bg-transparent border-none hover:shadow-none"
-                            >
-                                Send Message
-                            </Button>
-                        </div>
+                        <Button
+                            type="submit"
+                            className="w-full text-text-default-quaternary px-4 lg:py-6 flex items-center justify-center text-base bg-transparent hover:shadow-none bg-[#293239] border-solid border-2 border-[#e4882b] rounded-lg lg:text-xl"
+                        >
+                            Send Message
+                        </Button>
                     </form>
                 </Form>
             </div>
+            <Spacer className="sm:h-12 lg:h-24" />
         </div>
     )
 }

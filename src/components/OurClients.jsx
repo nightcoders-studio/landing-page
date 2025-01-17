@@ -15,13 +15,13 @@ const OurClients = () => {
         <div className="hidden overflow-x-hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8">
             {/* Header */}
             <div className="sm:flex sm:flex-col sm:items-center">
-                <div className="flex flex-col w-full px-12 sm:items-center sm:mx-8 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl sm:font-semibold flex-[60%]">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-16 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
                         Who Are Our <span className="text-text-brand">Clients</span>?
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
-                    <h4 className="text-gray-600 sm:text-lg md:text-right sm:leading-normal">
+                    <h4 className="text-gray-600 sm:text-lg md:text-right lg:text-xl sm:leading-normal">
                         Trusted by businesses across industries to deliver exceptional digital solutions
                     </h4>
                 </div>
@@ -29,18 +29,18 @@ const OurClients = () => {
                 <Spacer />
 
                 {/* Carousel */}
-                <Carousel className="relative w-full h-48 m-8">
+                <Carousel className="relative w-full h-48 m-8 lg:py-0">
                     <Spacer />
                     <CarouselContent className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
                         {clientsLogo.map((client) => (
                             <CarouselItem
                                 key={client.id}
-                                className="flex items-center justify-center h-full snap-start"
+                                className="flex items-center justify-center h-full p-0 snap-start"
                             >
                                 <img
                                     src={client.logo}
                                     alt={`Client Logo ${client.id}`}
-                                    className="object-contain"
+                                    className="object-contain w-40"
                                 />
                             </CarouselItem>
                         ))}

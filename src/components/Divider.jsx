@@ -4,9 +4,9 @@ const Divider = () => {
     return (
         <div
             id="divider"
-            className="relative flex items-center justify-start w-full h-16 px-4 overflow-hidden md:py-2 sm:px-2 bg-bg-default-tertiary"
+            className="relative flex items-center justify-center w-full h-16 px-4 overflow-hidden md:py-2 sm:px-2 bg-bg-default-tertiary"
         >
-            <div className="flex items-center gap-9 animate-moveLeftRight md:m-0 whitespace-nowrap">
+            <div className="flex items-center gap-9 md:m-0 whitespace-nowrap">
                 <span className="text-white">Web Development</span>
                 <i className="fa-solid fa-circle text-icon-brand-tertiary"></i>
                 <span className="text-white">Product Design</span>
@@ -19,7 +19,6 @@ const Divider = () => {
                 <i className="fa-solid fa-circle text-icon-brand-tertiary"></i>
                 <span className="text-white">AI Automation</span>
             </div>
-
         </div>
     );
 };
