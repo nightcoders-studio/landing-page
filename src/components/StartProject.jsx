@@ -27,26 +27,25 @@ const StartProject = () => {
     }
 
     return (
-        <div className="relative flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-start md:gap-8 md:text-left md:pb-36 lg:pt-16">
+        <div className="relative grid grid-cols-1 lg:grid-cols-[35%,65%] w-screen px-0 lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:text-left md:pb-36 lg:pt-16 lg:gap-8">
             {/* Header Section */}
-            <div className="relative flex flex-col md:w-[364px] text-4xl font-semibold leading-[44px] md:text-left lg:items-start">
-                <span className="relative z-10 text-text-default lg:mb-6 lg:self-start">Start Your Project</span>
+            <div className="relative flex flex-col md:w-[364px] lg:w-full text-4xl font-semibold leading-[44px] md:text-left lg:items-start">
+                <span className="relative z-10 align-text-top text-text-default sm:text-3xl lg:text-5xl lg:mb-6 sm:pl-7 lg:self-start sm:pb-5 lg:leading-normal">
+                    Start Your Project
+                </span>
             </div>
 
-            <Spacer className="sm:h-12" />
-
             {/* Form Section */}
-            <div className="z-10 flex flex-col flex-grow gap-10 sm:w-full sm:px-8">
-                <Form {...form}
-                    className="md:w-full">
+            <div className="z-10 flex flex-col flex-grow gap-10 sm:w-full sm:px-8 sm:align-text-left">
+                <Form {...form} className="md:w-full">
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                         {/* Name Field */}
                         <FormField
                             name="name"
                             control={form.control}
                             render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel className="text-base text-text-default">Name</FormLabel>
+                                <FormItem className="sm:flex sm:flex-col sm:items-start">
+                                    <FormLabel className="text-base text-text-default sm:mb-2">Name</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="Type your or company name here"
@@ -64,8 +63,8 @@ const StartProject = () => {
                             name="help"
                             control={form.control}
                             render={({ field }) => (
-                                <FormItem className="w-full ">
-                                    <FormLabel className="text-base text-text-default">How Can I Help You?</FormLabel>
+                                <FormItem className="w-full sm:flex sm:flex-col sm:items-start">
+                                    <FormLabel className="text-base text-text-default sm:mb-2">How Can I Help You?</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             placeholder="Type here"
@@ -89,15 +88,17 @@ const StartProject = () => {
                     </form>
                 </Form>
             </div>
+
+            {/* Vector Background */}
             <img
                 src={vector4}
                 alt="Vector Background"
-                className="absolute lg:top-24 lg:left-20 w-[150px] sm:w-[220px]  sm:bottom-0 sm:left-14 lg:w-[400px] opacity-80 z-0"
+                className="absolute lg:left-20 w-[150px] sm:w-[220px] sm:bottom-0 lg:bottom-0 sm:left-14 lg:w-[380px] opacity-80 z-0"
                 style={{
                     transform: 'translateX(-50%)',
                 }}
             />
-            <Spacer className="sm:h-12 lg:h-24" />
+            <Spacer className="sm:h-1 lg:h-12" />
         </div>
     )
 }

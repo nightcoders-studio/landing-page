@@ -63,8 +63,8 @@ const OurWorkSpeaksforItself = () => {
             {/* <Spacer className="hidden sm:block" /> */}
 
             {/* Carousel Container */}
-            <Carousel className="relative w-full lg:max-w-6xl xl:max-w-full">
-                <CarouselContent className="grid gap-6 p-8 lg:grid-cols-3 xl:grid-cols-4">
+            <Carousel className="relative w-full lg:max-w-6xl xl:max-w-full sm:justify-center">
+                <CarouselContent className="grid gap-6 p-8 sm:ml-0 px-9 lg:grid-cols-3 xl:grid-cols-4">
                     {cardPortfolio.map((card) => (
                         <CarouselItem
                             key={card.id}
@@ -91,7 +91,7 @@ const OurWorkSpeaksforItself = () => {
                                 {/* Button */}
                                 <Button
                                     variant="secondary"
-                                    className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min"
+                                    className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none focus-visible:border-none"
                                 >
                                     See Detail <MoveRight className="w-4 h-4 " />
                                 </Button>
