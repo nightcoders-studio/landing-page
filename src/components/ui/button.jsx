@@ -10,15 +10,16 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-default-quaternary text-text-default-quaternary  font-light shadow hover:bg-text-default-tertiary hover:text-default-secondary",
+          "bg-default-quaternary text-text-default-quaternary font-light shadow hover:bg-bg-default-tertiary hover:text-default-secondary active:border-transparent focus-visible:border-transparent",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 active:border-transparent focus-visible:border-transparent",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground active:border-transparent focus-visible:border-transparent",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "inline-flex items-center justify-center bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 border-0 p-0 m-0 transform transition-transform hover:translate-y-1 active:border-transparent focus-visible:border-transparent",
+        ghost:
+          "hover:bg-accent hover:text-accent-foreground active:border-transparent focus-visible:border-transparent",
+        link: "text-primary underline-offset-4 hover:underline active:border-none focus-visible:border-none",
       },
       size: {
         default: "h-9 px-4 py-2",

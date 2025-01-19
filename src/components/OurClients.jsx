@@ -15,7 +15,7 @@ const OurClients = () => {
         <div className="hidden overflow-x-hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8">
             {/* Header */}
             <div className="sm:flex sm:flex-col sm:items-center">
-                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-16 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-7 sm:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
                     <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
                         Who Are Our <span className="text-text-brand">Clients</span>?
                     </h1>
@@ -47,7 +47,8 @@ const OurClients = () => {
                     </CarouselContent>
                 </Carousel>
             </div>
-            <Spacer />
+            {/* <Spacer className="lg:hidden" />
+            <Spacer className="lg:hidden" /> */}
         </div>
     )
 }
