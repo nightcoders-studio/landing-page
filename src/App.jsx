@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import './App.css'
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
         <div id="containerBesarHome" className="flex-grow w-full">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/detail-project" element={<ProjectDetail />} />
           </Routes>
         </div>
       </div>
