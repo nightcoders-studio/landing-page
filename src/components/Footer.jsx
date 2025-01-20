@@ -19,26 +19,29 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-sm font-medium text-center text-white">
-                © nightCoders
+            <div className="text-sm font-medium text-center text-white md:text-lg">
+                ©nightCoders
             </div>
 
             {/* Social Media */}
-            <div className="grid grid-cols-4 gap-4 justify-items-center text-text-brand-tertiary">
-                <div className="flex items-center justify-center w-8 h-8">
-                    <Facebook className="w-6 h-6 transition-colors hover:text-blue-600" />
+            <div className="flex gap-4 sm:gap-3 md:gap-6 lg:gap-8 justify-items-center text-text-brand-tertiary">
+                <div className="flex items-center justify-center">
+                    <Facebook className="transition ease-in-out sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 hover:text-blue-600 hover:translate-y-1" />
                 </div>
-                <div className="flex items-center justify-center w-8 h-8">
-                    <Linkedin className="w-6 h-6 transition-colors hover:text-blue-700" />
+                <div className="flex items-center justify-center">
+                    <Linkedin className="transition ease-in-out sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 hover:text-blue-700 hover:translate-y-1" />
                 </div>
-                <div className="flex items-center justify-center w-8 h-8">
-                    <Instagram className="w-6 h-6 transition-colors hover:text-pink-500" />
+                <div className="flex items-center justify-center">
+                    <Instagram className="transition ease-in-out sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 hover:text-pink-500 hover:translate-y-1" />
                 </div>
-                <div className="flex items-center justify-center w-8 h-8">
-                    <img src={WhatsAppIcon} alt="WhatsApp" className="w-6 h-6 transition-colors hover:text-green-500" />
+                <div className="flex items-center justify-center">
+                    <img
+                        src={WhatsAppIcon}
+                        alt="WhatsApp"
+                        className="transition ease-in-out hover:translate-y-1 sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 hover:text-green-500"
+                    />
                 </div>
             </div>
-
         </footer>
     );
 };
