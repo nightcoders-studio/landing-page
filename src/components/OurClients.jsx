@@ -40,7 +40,7 @@ const OurClients = () => {
                                 <img
                                     src={client.logo}
                                     alt={`Client Logo ${client.id}`}
-                                    className="object-contain w-40"
+                                    className="object-contain min-w-28"
                                 />
                             </CarouselItem>
                         ))}

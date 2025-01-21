@@ -29,7 +29,7 @@ const Hero = () => {
                     <Button
                         variant="default"
                         size="lg"
-                        className="mt-auto rounded-lg py-6 px-10 sm:w-full lg:w-[60%] text-xl md:text-base lg:px-20 md:mt-auto md:w-[50%] self-start xl:text-xl ">
+                        className="mt-auto rounded-lg py-6 px-10 sm:w-full lg:w-[60%] text-xl md:text-base lg:px-20 md:mt-auto md:w-[50%] self-start xl:text-xl transition duration-300 ease-in-out hover:translate-y-1">
                         Start your project <FontAwesomeIcon icon={faRocket} />
                     </Button>
                 </div>

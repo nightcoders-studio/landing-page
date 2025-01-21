@@ -16,13 +16,13 @@ const OurWorkSpeaksforItself = () => {
             id: 1,
             title: "Redesign Mugee Application",
             subtitle: "Improvement of the overall flow and user interface",
-            detail: "https://www.example.com/redesign-mugee",
+            detail: "/detail-project"
         },
         {
             id: 2,
             title: "Redesign Mugee Application",
             subtitle: "Improvement of the overall flow and user interface",
-            detail: "https://www.example.com/redesign-mugee",
+            detail: "/detail-project",
         },
         {
             id: 3,
@@ -48,7 +48,7 @@ const OurWorkSpeaksforItself = () => {
         <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-12 xl:px-12">
             {/* Header */}
             <div id="ourWork-Container" className="w-full px-8 sm:flex sm:flex-col sm:items-center lg:px-16">
-                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 sm:w-5/6 md:text-left">
                     <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
                         Our <span className="text-text-brand">Work</span> Speaks For Itself
                     </h1>
@@ -92,8 +92,9 @@ const OurWorkSpeaksforItself = () => {
                                 <Button
                                     variant="secondary"
                                     className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none focus-visible:border-none"
+                                    onClick={() => (window.location.href = card.detail)} //tombol ke halaman project detail
                                 >
-                                    See Detail <MoveRight className="w-4 h-4 " />
+                                    See Detail <MoveRight className="w-4 h-4" />
                                 </Button>
                             </div>
                         </CarouselItem>

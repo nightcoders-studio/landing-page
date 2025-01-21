@@ -16,10 +16,10 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background shadow-sm hover:translate-y-1 hover:text-accent-foreground active:border-none focus:border-none",
         secondary:
-          "inline-flex items-center justify-center bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 border-0 p-0 m-0 transform transition-transform hover:translate-y-1 active:border-none focus:border-none",
+          "inline-flex items-center justify-center bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 border-0 p-0 m-0 transform transition-transform hover:translate-y-1 active:border-none focus:border-none transition ease-in-out hover:translate-y-1",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground active:border-none focus:border-none",
-        link: "text-primary underline-offset-4 hover:underline active:border-none focus:border-none",
+          "hover:bg-accent hover:text-accent-foreground active:border-none focus:border-none transition ease-in-out hover:translate-y-1",
+        link: "text-primary underline-offset-4 hover:underline active:border-none focus:border-none transition ease-in-out hover:translate-y-1",
       },
       size: {
         default: "h-9 px-4 py-2",

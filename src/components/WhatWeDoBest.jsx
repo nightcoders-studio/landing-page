@@ -119,7 +119,7 @@ const WhatWeDoBest = () => {
                                             </div>
 
                                             {/* Title Section */}
-                                            <h4 className="lg:self-start lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-xl md:font-medium sm:font-medium lg:text-left xl:text-2xl xl:max-w-64">
+                                            <h4 id="judulCard" className="lg:self-start lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-xl md:font-medium sm:font-medium lg:text-left xl:text-2xl xl:max-w-64 ">
                                                 {item.title}
                                             </h4>
 

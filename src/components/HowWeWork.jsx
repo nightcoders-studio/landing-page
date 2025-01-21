@@ -37,6 +37,8 @@ const HowWeWork = () => {
 
     return (
         <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
+            <Spacer className="md:block sm:hidden" />
+
             {/* Header */}
             <div id="howWeWork-Container" className="z-10 sm:flex sm:flex-col xl:w-full 2xl:w-full xl:px-4 sm:items-center lg:gap-8">
                 <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
@@ -66,7 +68,7 @@ const HowWeWork = () => {
                             </div>
                             <CardTitle
                                 id="titleCard"
-                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl sm:leading-normal text-text-default-secondary sm:w-2/6 md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0"
+                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0"
                             >
 
                                 {step.title}
@@ -78,7 +80,13 @@ const HowWeWork = () => {
                             </p>
                             <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="mt-4 border-none md:text-sm lg:text-sm sm:text-lg bg-default lg:py-2 lg:px-4">
+                                <Button className="mt-4 transition duration-300 ease-in-out border-none md:text-sm lg:text-lg sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
+                                    onClick={() => {
+                                        window.scrollTo({
+                                            top: document.body.scrollHeight,
+                                            behavior: 'smooth'
+                                        });
+                                    }}>
                                     Start Your Project <Rocket className="w-4 h-4 ml-2" />
                                 </Button>
                             )}
@@ -86,8 +94,10 @@ const HowWeWork = () => {
                     </Card>
                 ))}
             </div>
-            <Spacer className='md:hidden' />
-            <Spacer className='md:hidden' />
+
+            <Spacer className="md:block sm:hidden" />
+            <Spacer className="md:block sm:hidden" />
+            <Spacer className="md:block sm:hidden" />
             <Spacer />
         </div>
 
