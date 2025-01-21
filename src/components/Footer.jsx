@@ -5,12 +5,6 @@ import WhatsAppIcon from "../assets/images/whatsapp.svg";
 
 const socialMediaIcons = [
     {
-        component: Facebook,
-        alt: "Facebook",
-        hoverClass: "hover:text-blue-600",
-        useHref: "https://www.facebook.com/nightcoders/"
-    },
-    {
         component: Linkedin,
         alt: "LinkedIn",
         hoverClass: "hover:text-blue-700",

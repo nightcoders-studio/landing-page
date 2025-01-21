@@ -33,7 +33,8 @@ const FAQ = () => {
         ]
 
     return (
-        <div>
+        <div class='faqWrapper' className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
+
 
         </div>
     )
