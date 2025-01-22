@@ -9,6 +9,7 @@ import Portfolio from '@/components/OurWorkSpeaksforItself'
 import OurClients from '@/components/OurClients';
 import StartProject from '@/components/StartProject';
 import Testimonial from '@/components/Testimonial';
+import FAQ from '@/components/FAQ';
 
 
 const HomePage = () => {
@@ -21,7 +22,7 @@ const HomePage = () => {
             <Portfolio />
             <OurClients />
             <Testimonial />
-            {/* <FAQ /> */}
+            <FAQ />
             <StartProject />
             <Footer />
 

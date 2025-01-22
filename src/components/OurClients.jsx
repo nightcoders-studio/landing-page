@@ -1,6 +1,6 @@
-import React from 'react'
-import Spacer from './ui/spacer'
-import { Carousel, CarouselContent, CarouselItem } from './ui/carousel'
+import React from "react";
+import Spacer from "./ui/spacer";
+import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 
 const OurClients = () => {
     const clientsLogo = [
@@ -9,7 +9,7 @@ const OurClients = () => {
         { id: 3, logo: "src/assets/images/LogoKemenkeu.svg" },
         { id: 4, logo: "src/assets/images/LogoTOU.svg" },
         { id: 5, logo: "src/assets/images/LogoMugee.svg" },
-    ]
+    ];
 
     return (
         <div className="hidden overflow-x-hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8">
@@ -20,7 +20,7 @@ const OurClients = () => {
                         Who Are Our <span className="text-text-brand">Clients</span>?
                     </h1>
                     <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%] " /> {/* Spacer untuk jarak */}
+                    <Spacer className="hidden md:block md:flex-[5%]" /> {/* Spacer for gap */}
                     <h4 className="text-gray-600 sm:text-lg md:text-right lg:text-xl sm:leading-normal">
                         Trusted by businesses across industries to deliver exceptional digital solutions
                     </h4>
@@ -29,28 +29,35 @@ const OurClients = () => {
                 <Spacer />
 
                 {/* Carousel */}
-                <Carousel className="relative w-full h-48 m-8 lg:py-0">
+                <Carousel
+                    className="relative w-full h-48 m-8 lg:py-0"
+                    opts={{
+                        loop: true, // Enable infinite scroll
+                        align: "start",
+                        skipSnaps: false,
+                    }}
+                >
                     <Spacer />
-                    <CarouselContent className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
+                    <Spacer />
+                    <Spacer className="sm:hidden md:block" />
+                    <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
                         {clientsLogo.map((client) => (
                             <CarouselItem
                                 key={client.id}
-                                className="flex items-center justify-center h-full p-0 snap-start"
+                                className="flex items-center justify-center h-full p-0"
                             >
                                 <img
                                     src={client.logo}
                                     alt={`Client Logo ${client.id}`}
-                                    className="object-contain min-w-28"
+                                    className="object-contain lg:min-w-36 sm:min-w-20 sm:px-4"
                                 />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
                 </Carousel>
             </div>
-            {/* <Spacer className="lg:hidden" />
-            <Spacer className="lg:hidden" /> */}
         </div>
-    )
-}
+    );
+};
 
-export default OurClients
+export default OurClients;
