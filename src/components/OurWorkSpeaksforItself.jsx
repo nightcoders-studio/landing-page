@@ -47,14 +47,15 @@ const OurWorkSpeaksforItself = () => {
     return (
         <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-12 xl:px-12">
             {/* Header */}
-            <div id="ourWork-Container" className="w-full px-8 sm:flex sm:flex-col sm:items-center lg:px-16">
-                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 sm:w-5/6 md:text-left">
-                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[50%] lg:text-4xl lg:text-left lg:pr-8">
+
+            <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
+                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
+                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8">
                         Our <span className="text-text-brand">Work</span> Speaks For Itself
                     </h1>
                     <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%]" />
-                    <h4 className="text-gray-600 sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[40%] lg:text-right">
+                    <Spacer className="hidden md:block md:flex-[5%] " />
+                    <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[60%] lg:text-right">
                         Discover the innovative solutions we’ve crafted for our clients
                     </h4>
                 </div>

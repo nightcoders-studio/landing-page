@@ -29,7 +29,7 @@ const StartProject = () => {
     return (
         <div className="relative grid grid-cols-1 lg:grid-cols-[35%,65%] w-screen px-0 lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:text-left md:pb-36 lg:pt-16 lg:gap-8">
             {/* Header Section */}
-            <div className="relative flex flex-col md:w-[364px] lg:w-full text-4xl font-semibold leading-[44px] md:text-left lg:items-start">
+            <div className="relative flex flex-col md:w-56 lg:w-full text-4xl font-semibold leading-[44px] md:text-left lg:items-start">
                 <span className="relative z-10 align-text-top text-text-default sm:text-3xl lg:text-5xl lg:mb-6 sm:pl-7 lg:self-start sm:pb-5 lg:leading-normal">
                     Start Your Project
                 </span>
