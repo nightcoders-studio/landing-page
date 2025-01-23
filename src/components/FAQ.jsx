@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
 import { MoveUpRight, MoveDownRight } from "lucide-react";
 import Spacer from './ui/spacer';
@@ -29,36 +29,38 @@ const FAQ = () => {
             {/* Left Section */}
             <div className="relative flex flex-col md:w-[364px] lg:w-full text-4xl font-semibold leading-[44px] md:text-left lg:items-start ">
                 <h1 className="relative z-10 font-semibold align-text-top md:pl-0 text-text-default sm:text-3xl lg:text-5xl lg:mb-6 lg:self-start sm:pb-5 sm:px-20 lg:leading-normal">
-                    Still wondering if we're right for you?
+                    Still wondering if we&rsquo;re right for you?
                 </h1>
             </div>
 
             {/* Right Section */}
             <div className=" contentWrapper">
-                <div className="bg-blue-400 shadow-md w-fullrounded-lg content-container">
-                    <Accordion.Root type="single" collapsible className="space-y-4 backdrop-blur-sm ">
+                <div className=" w-fullrounded-lg content-container">
+                    <Accordion.Root type="single" collapsible className="space-y-4 ">
                         {questions.map((item) => (
                             <Accordion.Item
                                 key={item.id}
                                 value={`item-${item.id}`}
                                 className="px-6 overflow-hidden"
                             >
-                                <Accordion.Header className='rounded-sm sm:rounded-xl backdrop-blur-sm bg-[rgba(17,0,0,0.08)]'>
+                                <Accordion.Header className='rounded-sm sm:rounded-md backdrop-blur-sm sm:p-4 bg-[rgba(17,0,0,0.08)]'>
                                     <Accordion.Trigger
                                         onClick={() =>
                                             setActiveItem(activeItem === item.id ? null : item.id)
                                         }
-                                        className="flex items-center justify-between w-full p-4 text-left"
+                                        className="flex items-center justify-between w-full text-left bg-transparent"
                                     >
-                                        <span className="text-lg font-medium ">{item.title}</span>
+                                        <span className="text-lg font-medium sm:text-2xl sm:w-3/5 text-text-default ">{item.title}</span>
                                         <div
-                                            className={`transition-transform duration-300 ease-in-out ${activeItem === item.id ? "rotate-180" : "rotate-0"
+                                            className={`transition-transform duration-700 ease-in-out ${activeItem === item.id
+                                                ? "rotate-[1deg] transition-transform duration-700"
+                                                : "rotate-10 transition-transform duration-700"
                                                 }`}
                                         >
                                             {activeItem === item.id ? (
-                                                <MoveDownRight className="w-6 h-6 text-text-default" />
+                                                <MoveDownRight className="sm:w-12 sm:h-12 sm:p-2 text-text-default-secondary bg-bg-default-secondary sm:rounded-full" />
                                             ) : (
-                                                <MoveUpRight className="w-6 h-6 text-text-default" />
+                                                <MoveUpRight className="text-white sm:w-12 sm:h-12 sm:p-2 bg-bg-default-tertiary sm:rounded-full" />
                                             )}
                                         </div>
 

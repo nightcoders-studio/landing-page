@@ -1,30 +1,31 @@
-import React from 'react';
 import logo from "@/assets/images/logoLight.svg";
-import { Instagram, Linkedin, Facebook } from 'lucide-react';
 import WhatsAppIcon from "../assets/images/whatsapp.svg";
+import PropTypes from "prop-types";
 
+// Social Media Icon List
 const socialMediaIcons = [
     {
-        component: Linkedin,
+        component: "Linkedin",
         alt: "LinkedIn",
         hoverClass: "hover:text-blue-700",
-        useHref: "https://www.linkedin.com/company/nightcoders/"
+        useHref: "https://www.linkedin.com/company/nightcoders/",
     },
     {
-        component: Instagram,
+        component: "Instagram",
         alt: "Instagram",
         hoverClass: "hover:text-pink-500",
-        useHref: "https://www.instagram.com/nightcoders.id/"
+        useHref: "https://www.instagram.com/nightcoders.id/",
     },
     {
-        component: null,
+        component: null, // Custom image for WhatsApp
         src: WhatsAppIcon,
         alt: "WhatsApp",
         hoverClass: "hover:text-green-500",
-        useHref: "https://wa.me/+6285372603154"
+        useHref: "https://wa.me/+6285372603154",
     },
 ];
 
+// Reusable Clickable Link Component
 const ClickLink = ({ useHref, children }) => {
     return (
         <a href={useHref} target="_blank" rel="noopener noreferrer">
@@ -33,6 +34,12 @@ const ClickLink = ({ useHref, children }) => {
     );
 };
 
+ClickLink.propTypes = {
+    useHref: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+};
+
+// Footer Component
 const Footer = () => {
     return (
         <footer className="relative grid items-center justify-center grid-cols-[30%_40%_30%] overflow-hidden bg-bg-default-quaternary sm:py-12 sm:px-4">
@@ -41,12 +48,17 @@ const Footer = () => {
                 src={logo}
                 alt="Background Logo"
                 className="absolute left-0 z-0 object-contain h-auto transform -translate-y-1/2 top-1/2 w-72 opacity-5"
-                onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             />
 
             {/* Footer Logo */}
-            <div className="flex justify-center" >
-                <img src={logo} alt="Footer Logo" className="w-auto h-12" onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }} />
+            <div className="flex justify-center">
+                <img
+                    src={logo}
+                    alt="Footer Logo"
+                    className="w-auto h-12"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                />
             </div>
 
             {/* Footer Copyright */}
@@ -59,10 +71,12 @@ const Footer = () => {
                 {socialMediaIcons.map((icon, index) => (
                     <ClickLink key={index} useHref={icon.useHref}>
                         {icon.component ? (
-                            <icon.component
+                            <i
                                 className={`transition ease-in-out sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 ${icon.hoverClass} hover:translate-y-1 text-text-brand-tertiary`}
                                 aria-label={icon.alt}
-                            />
+                            >
+                                {icon.component}
+                            </i>
                         ) : (
                             <img
                                 src={icon.src}

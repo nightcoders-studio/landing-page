@@ -1,4 +1,3 @@
-import React from "react";
 import Spacer from "./ui/spacer";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 

@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 import Spacer from "./ui/spacer"
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel"
 import Vector5 from "../assets/images/vector5.svg"

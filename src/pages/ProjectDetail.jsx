@@ -1,19 +1,12 @@
-import React from "react";
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
-import {
-    Form,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormControl,
-    FormMessage,
-} from "@/components/ui/form";
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import vector4 from "../assets/images/vector4.svg";
+import PropTypes from "prop-types";
 
 const HeroSection = () => (
     <div id="heroWrapper" className="items-center sm:gap-2 sm:px-4 sm:pb-8 sm:pt-8 md:m-0">
@@ -134,6 +127,14 @@ const StartProjectSection = ({ form, onSubmit }) => (
     </div>
 );
 
+StartProjectSection.propTypes = {
+    form: PropTypes.shape({
+        handleSubmit: PropTypes.func.isRequired,
+        control: PropTypes.object.isRequired,
+    }).isRequired,
+    onSubmit: PropTypes.func.isRequired,
+};
+
 const ProjectDetail = () => {
     const form = useForm({
         defaultValues: {
@@ -158,5 +159,6 @@ const ProjectDetail = () => {
         </div>
     );
 };
+
 
 export default ProjectDetail;

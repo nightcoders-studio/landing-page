@@ -1,5 +1,4 @@
 // HomePage.jsx
-import React from 'react';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import Divider from '../components/Divider';
@@ -10,6 +9,7 @@ import OurClients from '@/components/OurClients';
 import StartProject from '@/components/StartProject';
 import Testimonial from '@/components/Testimonial';
 import FAQ from '@/components/FAQ';
+import Spacer from '@/components/ui/spacer';
 
 
 const HomePage = () => {
@@ -17,6 +17,7 @@ const HomePage = () => {
         <div>
             <Hero />
             <Divider />
+            <Spacer />
             <WhatWeDoBest />
             <HowWeWork />
             <Portfolio />

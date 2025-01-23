@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { cn } from "@/lib/utils";
 
 const Divider = ({ className, ...props }) => {
@@ -11,6 +11,10 @@ const Divider = ({ className, ...props }) => {
             {...props}
         />
     );
+};
+
+Divider.propTypes = {
+    className: PropTypes.string, // Menentukan bahwa className harus berupa string
 };
 
 export default Divider;

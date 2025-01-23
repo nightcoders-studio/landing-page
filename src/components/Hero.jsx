@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button } from '../components/ui/button'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +16,7 @@ const Hero = () => {
                     <h4 className="font-normal text-text-default md:text-xl lg:text-2xl">40+ Client Happy</h4>
                     <div id="textHeroContainer" className="flex flex-col items-stretch gap-4">
                         <h1 className="text-4xl font-semibold text-text-default md:text-4xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-4xl xl:text-5xl xl:leading-relaxed ">
-                            We're Here to Help You to <span className=" text-text-brand">Rock</span> Digital
+                            We&lsquo;re Here to Help You to <span className=" text-text-brand">Rock</span> Digital
                             <span className="text-text-brand"> Innovation</span>
                         </h1>
                         <h3 className="text-xl sm:text-xl text-text-default xl:text-xl xl:pr-24 md:text-xl xl:leading-normal">

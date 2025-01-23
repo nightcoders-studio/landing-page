@@ -10,13 +10,16 @@ const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item ref={ref} className={cn("border-none backdrop-blur-2xl", className)} {...props} />
 ))
 AccordionItem.displayName = "AccordionItem"
+AccordionItem.propTypes = {
+  className: PropTypes.string,
+}
 
 const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 text-sm font-medium transition-all border-none hover:underline text-left [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1  items-center justify-between py-4 text-sm font-medium transition-all border-none hover:underline text-left [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}>
@@ -27,6 +30,10 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Header>
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+AccordionTrigger.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
 
 const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
@@ -37,5 +44,9 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
+AccordionContent.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+}
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }

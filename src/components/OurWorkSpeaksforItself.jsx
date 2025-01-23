@@ -1,4 +1,3 @@
-import React from 'react'
 import Spacer from "@/components/ui/spacer";
 import { MoveRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -69,16 +68,18 @@ const OurWorkSpeaksforItself = () => {
                     {cardPortfolio.map((card) => (
                         <CarouselItem
                             key={card.id}
-                            className="relative border bg-[#efefef] backdrop-blur-sm border-border-brand rounded-xl snap-align-center"
+                            className="relative group border-solid bg-[#efefef] border-[1px] backdrop-blur-sm border-border-brand rounded-xl snap-align-center hover:bg-[#e5e6e5]/70 overflow-hidden"
                         >
                             {/* Gambar Absolute */}
-                            <img
-                                src={Vector3}
-                                className="absolute -bottom-0 left-8"
-                            />
+                            <div className="absolute inset-0 overflow-hidden">
+                                <img
+                                    src={Vector3}
+                                    className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-150"
+                                />
+                            </div>
 
-                            <div className="flex flex-col gap-6 p-6 xl:h-72">
-                                {/* Text Wrapper */}
+                            {/* Text Wrapper */}
+                            <div className="relative z-10 flex flex-col gap-6 p-6 xl:h-72">
                                 <div className="flex flex-col gap-4 lg:gap-2">
                                     <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl text-text-default-secondary">
                                         {card.title}
@@ -88,6 +89,7 @@ const OurWorkSpeaksforItself = () => {
                                         {card.subtitle}
                                     </h4>
                                 </div>
+
                                 <Spacer className="md:hidden lg:block " />
                                 {/* Button */}
                                 <Button

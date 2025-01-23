@@ -30,6 +30,7 @@ body {
   flex-direction: column;
   background-color: var(--background-color);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 #root {
@@ -45,7 +46,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 0;
 }
 
 /* Links */
@@ -87,7 +87,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  /* background-color: #1a1a1a; */
+  background-color: #1a1a1a;
   cursor: pointer;
   /* transition: border-color 0.25s; */
 }
@@ -147,6 +147,7 @@ button:focus-visible {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }

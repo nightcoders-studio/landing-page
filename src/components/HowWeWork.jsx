@@ -1,4 +1,3 @@
-import React from 'react';
 import Spacer from "@/components/ui/spacer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -80,7 +79,7 @@ const HowWeWork = () => {
                             </p>
                             <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="mt-4 transition duration-300 ease-in-out border-none md:text-sm lg:text-lg sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
+                                <Button className="bg-[#293239] mt-4 transition duration-300 ease-in-out border-none md:text-sm lg:text-lg sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
                                     onClick={() => {
                                         window.scrollTo({
                                             top: document.body.scrollHeight,
