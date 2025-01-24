@@ -28,33 +28,34 @@ const OurClients = () => {
                 <Spacer />
 
                 {/* Carousel */}
-                <Carousel
-                    className="relative w-full h-48 m-8 lg:py-0"
-                    opts={{
-                        loop: true, // Enable infinite scroll
-                        align: "start",
-                        skipSnaps: false,
-                    }}
-                >
-                    <Spacer />
-                    <Spacer />
-                    <Spacer className="sm:hidden md:block" />
-                    <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
-                        {clientsLogo.map((client) => (
-                            <CarouselItem
-                                key={client.id}
-                                className="flex items-center justify-center h-full p-0"
-                            >
-                                <img
-                                    src={client.logo}
-                                    alt={`Client Logo ${client.id}`}
-                                    className="object-contain lg:min-w-36 sm:min-w-20 sm:px-4"
-                                />
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                </Carousel>
+
             </div>
+            <Carousel
+                className="relative w-full h-48 m-8 lg:py-0"
+                opts={{
+                    loop: true, // Enable infinite scroll
+                    align: "start",
+                    skipSnaps: false,
+                }}
+            >
+                <Spacer />
+                <Spacer />
+                <Spacer className="sm:hidden md:block" />
+                <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
+                    {clientsLogo.map((client) => (
+                        <CarouselItem
+                            key={client.id}
+                            className="flex items-center justify-center h-full p-0"
+                        >
+                            <img
+                                src={client.logo}
+                                alt={`Client Logo ${client.id}`}
+                                className="object-contain lg:min-w-36 sm:min-w-20 sm:px-4"
+                            />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+            </Carousel>
         </div>
     );
 };

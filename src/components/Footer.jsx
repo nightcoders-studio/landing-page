@@ -1,6 +1,7 @@
 import logo from "@/assets/images/logoLight.svg";
 import WhatsAppIcon from "../assets/images/whatsapp.svg";
 import PropTypes from "prop-types";
+import { Linkedin, Instagram } from "lucide-react";
 
 // Social Media Icon List
 const socialMediaIcons = [

@@ -61,7 +61,7 @@ const WhatWeDoBest = () => {
 
     return (
         <div id="whatWeDoBestWrapper" >
-            <Spacer className={"sm:hidden lg:block lg:h-20"} />
+            <Spacer className={"sm:h-14 lg:block lg:h-20"} />
             {/* Header */}
             <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
                 <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
@@ -80,7 +80,7 @@ const WhatWeDoBest = () => {
                 <img
                     src={vector1}
                     alt="Vector Background"
-                    className="absolute lg:top-[1000px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:bottom-10 lg:w-[400px] opacity-80 z-0"
+                    className="absolute lg:top-[1000px] xl:top-[1300px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
                     style={{
                         transform: 'translateX(-50%)',
                     }}
