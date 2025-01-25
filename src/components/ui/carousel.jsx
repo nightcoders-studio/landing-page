@@ -1,7 +1,7 @@
 import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import PropTypes from "prop-types";
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
@@ -111,6 +111,15 @@ const Carousel = React.forwardRef((
   );
 })
 Carousel.displayName = "Carousel"
+Carousel.propTypes = {
+  orientation: PropTypes.string,
+  opts: PropTypes.object,
+  setApi: PropTypes.func,
+  plugins: PropTypes.array,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
 
 const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
@@ -129,6 +138,10 @@ const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
   );
 })
 CarouselContent.displayName = "CarouselContent"
+CarouselContent.propTypes = {
+  className: PropTypes.string,
+};
+
 
 const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
@@ -147,6 +160,9 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
   );
 })
 CarouselItem.displayName = "CarouselItem"
+CarouselItem.propTypes = {
+  className: PropTypes.string,
+};
 
 const CarouselPrevious = React.forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
@@ -168,6 +184,13 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
   );
 })
 CarouselPrevious.displayName = "CarouselPrevious"
+CarouselPrevious.propTypes = {
+  className: PropTypes.string,
+  variant: PropTypes.string,
+  size: PropTypes.string,
+};
+
+
 
 const CarouselNext = React.forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
@@ -189,5 +212,11 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
   );
 })
 CarouselNext.displayName = "CarouselNext"
+CarouselNext.propTypes = {
+  className: PropTypes.string,
+  variant: PropTypes.string,
+  size: PropTypes.string,
+};
+
 
 export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };

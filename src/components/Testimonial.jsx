@@ -1,4 +1,3 @@
-import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Vector5 from "../assets/images/vector5.svg";
 import Spacer from "./ui/spacer";
