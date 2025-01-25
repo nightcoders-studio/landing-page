@@ -3,28 +3,30 @@ import WhatsAppIcon from "../assets/images/whatsapp.svg";
 import PropTypes from "prop-types";
 import { Linkedin, Instagram } from "lucide-react";
 
+
 // Social Media Icon List
 const socialMediaIcons = [
     {
-        component: "Linkedin",
+        component: Linkedin,
         alt: "LinkedIn",
         hoverClass: "hover:text-blue-700",
         useHref: "https://www.linkedin.com/company/nightcoders/",
     },
     {
-        component: "Instagram",
+        component: Instagram,
         alt: "Instagram",
         hoverClass: "hover:text-pink-500",
         useHref: "https://www.instagram.com/nightcoders.id/",
     },
     {
-        component: null, // Custom image for WhatsApp
+        component: null, // Custom image untuk WhatsApp
         src: WhatsAppIcon,
         alt: "WhatsApp",
         hoverClass: "hover:text-green-500",
         useHref: "https://wa.me/+6285372603154",
     },
 ];
+
 
 // Reusable Clickable Link Component
 const ClickLink = ({ useHref, children }) => {
@@ -72,12 +74,10 @@ const Footer = () => {
                 {socialMediaIcons.map((icon, index) => (
                     <ClickLink key={index} useHref={icon.useHref}>
                         {icon.component ? (
-                            <i
+                            <icon.component
                                 className={`transition ease-in-out sm:w-6 sm:h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 ${icon.hoverClass} hover:translate-y-1 text-text-brand-tertiary`}
                                 aria-label={icon.alt}
-                            >
-                                {icon.component}
-                            </i>
+                            />
                         ) : (
                             <img
                                 src={icon.src}

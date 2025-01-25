@@ -70,6 +70,7 @@ const OurWorkSpeaksforItself = () => {
                             key={card.id}
                             className="relative group border-solid bg-[#efefef] border-[1px] backdrop-blur-sm border-border-brand rounded-xl snap-align-center hover:bg-[#e5e6e5]/70 overflow-hidden"
                         >
+                            <Spacer className="lg:block sm:hidden" />
                             {/* Gambar Absolute */}
                             <div className="absolute inset-0 overflow-hidden">
                                 <img
@@ -81,11 +82,11 @@ const OurWorkSpeaksforItself = () => {
                             {/* Text Wrapper */}
                             <div className="relative z-10 flex flex-col gap-6 p-6 xl:h-72">
                                 <div className="flex flex-col gap-4 lg:gap-2">
-                                    <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl text-text-default-secondary">
+                                    <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl xl:text-3xl text-text-default-secondary">
                                         {card.title}
                                     </h3>
                                     <div className="hidden lg:block lg:h-1 xl:h-1" />
-                                    <h4 className="text-base sm:text-lg lg:text-base text-text-default-secondary">
+                                    <h4 className="w-3/4 text-base sm:text-lg lg:text-base xl:text-xl text-text-default-secondary">
                                         {card.subtitle}
                                     </h4>
                                 </div>
@@ -94,7 +95,7 @@ const OurWorkSpeaksforItself = () => {
                                 {/* Button */}
                                 <Button
                                     variant="secondary"
-                                    className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none focus-visible:border-none"
+                                    className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none xl:text-lg focus-visible:border-none"
                                     onClick={() => (window.location.href = card.detail)} //tombol ke halaman project detail
                                 >
                                     See Detail <MoveRight className="w-4 h-4" />

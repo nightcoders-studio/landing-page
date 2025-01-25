@@ -119,12 +119,12 @@ const WhatWeDoBest = () => {
                                             </div>
 
                                             {/* Title Section */}
-                                            <h4 id="judulCard" className="lg:self-start lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-xl md:font-medium sm:font-medium lg:text-left xl:text-2xl xl:max-w-64 ">
+                                            <h4 id="judulCard" className="lg:self-start lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-2xl md:font-medium sm:font-medium lg:text-left xl:text-3xl xl:max-w-64 ">
                                                 {item.title}
                                             </h4>
 
                                             {/* Subtitle Section */}
-                                            <p className="hidden text-sm text-gray-600 lg:block lg:text-left xl:max-w-xl lg:text-base ">
+                                            <p className="hidden text-sm text-gray-600 lg:block lg:text-left xl:max-w-3xl lg:text-xl ">
                                                 {item.subTitle}
                                             </p>
 

@@ -44,11 +44,11 @@ const StartProject = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem className="sm:flex sm:flex-col sm:items-start">
-                                    <FormLabel className="text-base text-text-default sm:mb-2">Name</FormLabel>
+                                    <FormLabel className="text-base text-text-default sm:mb-2 xl:text-2xl">Name</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="Type your or company name here"
-                                            className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400"
+                                            className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400 xl:text-xl  xl:py-6"
                                             {...field}
                                         />
                                     </FormControl>
@@ -63,12 +63,12 @@ const StartProject = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem className="w-full sm:flex sm:flex-col sm:items-start">
-                                    <FormLabel className="text-base text-text-default sm:mb-2">How Can I Help You?</FormLabel>
+                                    <FormLabel className="text-base text-text-default sm:mb-2 xl:text-2xl">How Can I Help You?</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             placeholder="Type here"
                                             rows={4}
-                                            className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400"
+                                            className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400 xl:text-xl"
                                             {...field}
                                         />
                                     </FormControl>
@@ -80,7 +80,7 @@ const StartProject = () => {
                         {/* Submit Button */}
                         <Button
                             type="submit"
-                            className="transition ease-in-out w-full text-text-default-quaternary px-4 lg:py-6 flex items-center justify-center text-base bg-transparent hover:shadow-none bg-[#293239] border-solid border-2 border-[#e4882b] rounded-lg lg:text-xl hover:translate-y-1 sm:text-lg md:text-2xl md:py-6">
+                            className="transition ease-in-out w-full text-text-default-quaternary px-4 lg:py-6 flex items-center justify-center text-base bg-transparent hover:shadow-none bg-[#293239] border-solid border-2 border-text-brand rounded-lg lg:text-xl xl:text-2xl xl:py-8 hover:translate-y-1 sm:text-lg md:text-2xl md:py-6">
                             Send Message
                         </Button>
                     </form>

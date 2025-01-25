@@ -54,7 +54,7 @@ const HowWeWork = () => {
             </div>
 
             {/* Card Container */}
-            <div className="sm:flex sm:px-6 sm:flex-col sm:gap-6 sm:w-full xl:w-full md:grid md:grid-cols-2 md:gap-6 lg:flex lg:flex-row lg:py-0 lg:px-10 lg:gap-0 xl:flex xl:flex-row ">
+            <div className="z-10 sm:flex sm:px-6 sm:flex-col sm:gap-6 sm:w-full xl:w-full md:grid md:grid-cols-2 md:gap-6 lg:flex lg:flex-row lg:py-0 lg:px-10 lg:gap-0 xl:flex xl:flex-row ">
                 {weWork.map((step) => (
                     <Card
                         key={step.id}
@@ -67,19 +67,18 @@ const HowWeWork = () => {
                             </div>
                             <CardTitle
                                 id="titleCard"
-                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0"
-                            >
-
+                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl xl:text-3xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0">
                                 {step.title}
                             </CardTitle>
                         </CardHeader>
+                        <Spacer />
                         <CardContent className="sm:px-6 lg:p-0 xl:p-0">
-                            <p className="text-lg font-normal md:text-base lg:text-base sm:w-3/4 text-text-default-tertiary lg:items-start lg:leading-relaxed lg:p-0 lg:gap-0 xl:gap-0 xl:p-0">
+                            <p className="text-lg font-normal md:text-base lg:text-base xl:text-xl sm:w-3/4 text-text-default-tertiary lg:items-start lg:leading-relaxed lg:p-0 lg:gap-0 xl:gap-0 xl:p-0">
                                 {step.subTitle}
                             </p>
                             <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="bg-[#293239] mt-4 transition duration-300 ease-in-out border-none md:text-sm lg:text-lg sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
+                                <Button className="mt-4 transition duration-300 ease-in-out border-none bg-bg-default-secondary md:text-sm lg:text-lg xl:text-2xl xl:p-4 xl:py-6 sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
                                     onClick={() => {
                                         window.scrollTo({
                                             top: document.body.scrollHeight,

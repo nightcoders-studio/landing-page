@@ -70,27 +70,29 @@ const Testimonial = () => {
                         {testimonialContents.map((testimonial) => (
                             <CarouselItem
                                 key={testimonial.id}
-                                className="z-10 flex-shrink-0 sm:w-1/2 lg:w-1/4 p-6 rounded-3xl border border-[#f1c480] backdrop-blur-sm bg-[rgba(17,0,0,0.04)] snap-align-center"
+                                className="z-10 flex-shrink-0 sm:w-1/2 lg:w-1/4 p-6 lg:py-8 sm:px-4 sm:py-10 xl:px-8 h-[300px] rounded-3xl border border-[#f1c480] backdrop-blur-sm bg-[rgba(17,0,0,0.04)] snap-align-center"
                             >
                                 <div className="flex flex-col items-start justify-between gap-4">
                                     {/* Header */}
-                                    <div className="flex items-center justify-center gap-4">
+                                    <div className="flex items-center justify-center gap-4 sm:px-4 lg:px-4">
                                         <img
-                                            className="w-12 h-12 rounded-full lg:w-16"
+                                            className="w-12 h-12 rounded-full sm:w-10 lg:w-16"
                                             src={testimonial.profile}
                                             alt={`${testimonial.name} Profile`}
                                         />
                                         <div>
-                                            <h3 className="text-lg font-semibold text-text-default lg:text-xl">
+                                            <h3 className="font-semibold sm:text-xl text-text-default lg:text-xl xl:text-3xl">
                                                 {testimonial.name}
                                             </h3>
-                                            <p className="text-sm font-normal text-text-default lg:text-sm">
+
+                                            <p className="text-sm font-normal text-text-default lg:text-lg sm:text-lg xl:text-lg">
                                                 {testimonial.position}
                                             </p>
                                         </div>
                                     </div>
+                                    <div className='bg-[#f1c480] z-100 lg:h-4 sm:h-2' />
                                     {/* Message */}
-                                    <p className="text-sm font-normal text-text-default lg:text-lg">
+                                    <p className="font-normal align-bottom sm:text-lg text-text-default lg:text-lg xl:text-2xl lg:w-full sm:px-4 lg:px-8">
                                         {testimonial.message}
                                     </p>
                                 </div>
@@ -103,7 +105,7 @@ const Testimonial = () => {
             {/* Background Decoration */}
             <img
                 src={Vector5}
-                className="absolute z-0 h-auto w-82 top-[3700px] left-1"
+                className="absolute z-0 h-auto w-96 sm:w-72 lg:w-96 sm:top-[4500px] lg:top-[4000px] left-1"
                 alt="Background Decoration"
             />
             <Spacer />

@@ -56,6 +56,7 @@ const OurClients = () => {
                     ))}
                 </CarouselContent>
             </Carousel>
+            <Spacer />
         </div>
     );
 };

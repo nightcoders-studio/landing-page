@@ -143,7 +143,6 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
         orientation === "horizontal" ? "pl-4 sm:basis-1/2 lg:basis-1/4" : "pt-4",
         className
       )}
-
       {...props} />)
   );
 })
