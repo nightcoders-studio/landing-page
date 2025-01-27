@@ -1,20 +1,30 @@
-import { Button } from '../components/ui/button'
+import { Button } from "../components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
-import Spacer from './ui/spacer';
-
+import Spacer from "./ui/spacer";
+import { Rocket } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <div id="heroWrapper" className="items-center sm:gap-2 sm:px-4 sm:pb-8 sm:pt-8 md:m-0">
+        <div
+            id="heroWrapper"
+            className="items-center sm:gap-2 sm:px-4 sm:pb-8 sm:pt-8 md:m-0"
+        >
             <div
                 id="heroContainer"
                 className="grid items-center p-6 py-6 m-6 border-2 sm:justify-between shadow-sm lg:m-4 lg:gap-7 xl:gap-4 sm:m-2 rounded-xl border-text-brand-tertiary bg-bg-default-secondary lg:[grid-template-columns:55%_45%] md:gap-20 md:m-2 md:py-10 md:px-10"
-            /* Tambahkan items-center di sini */
             >
-                <div id="textHeroWrapper" className="flex flex-col items-stretch gap-6 md:gap-5 ">
-                    <h4 className="font-normal text-text-default md:text-xl lg:text-2xl">40+ Client Happy</h4>
-                    <div id="textHeroContainer" className="flex flex-col items-stretch gap-4">
+                <div
+                    id="textHeroWrapper"
+                    className="flex flex-col items-stretch gap-6 md:gap-5 "
+                >
+                    <h4 className="font-normal text-text-default md:text-xl lg:text-2xl">
+                        40+ Client Happy
+                    </h4>
+                    <div
+                        id="textHeroContainer"
+                        className="flex flex-col items-stretch gap-4"
+                    >
                         <h1 className="text-4xl font-semibold text-text-default md:text-4xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-4xl xl:text-5xl xl:leading-relaxed ">
                             We&lsquo;re Here to Help You to <span className=" text-text-brand">Rock</span> Digital
                             <span className="text-text-brand"> Innovation</span>
@@ -25,23 +35,21 @@ const Hero = () => {
                         </h3>
                     </div>
                     <div className="hidden md:flex lg:flex xl:flex 2xl:flex lg:h-12 lg:w-full" />
-                    <Button
-                        variant="default"
-                        size="lg"
-                        className="mt-auto rounded-lg py-6 px-10 sm:w-full lg:w-[60%] text-xl md:text-base lg:px-20 md:mt-auto md:w-[50%] self-start xl:text-xl transition duration-300 ease-in-out hover:translate-y-1">
-                        Start your project <FontAwesomeIcon icon={faRocket} />
+                    <Button variant="default" className="flex items-center sm:w-full md:w-auto">
+                        Start Your Project <Rocket className="z-10 w-5 h-5 ml-2 text-current" />
                     </Button>
+
                 </div>
+
                 <img
                     src="src/assets/images/heroImage.svg"
                     alt="Illustration"
                     className="hidden w-full h-auto lg:block "
-                /* Tidak perlu tambahan di sini untuk align */
                 />
             </div>
             <Spacer />
         </div>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;

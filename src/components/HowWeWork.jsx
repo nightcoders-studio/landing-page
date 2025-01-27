@@ -58,7 +58,7 @@ const HowWeWork = () => {
                 {weWork.map((step) => (
                     <Card
                         key={step.id}
-                        className="sm:p-0 rounded-xl sm:rounded-3xl lg:p-0 lg:w-[300px] lg:h-[300px] lg:shadow-none lg:border-none lg:rounded-none xl:p-0 xl:w-full xl:h-auto xl:shadow-none xl:border-none xl:rounded-none lg:gap-1 xl:gap-1"
+                        className="sm:p-0 rounded-xl sm:rounded-3xl lg:p-0 lg:w-[300px] lg:h-[300px] shadow-none bg-[rgba(17, 0, 0, 0.04)] backdrop-blur-sm  border-none lg:rounded-none xl:p-0 xl:w-full xl:h-auto  xl:border-none xl:rounded-none lg:gap-1 xl:gap-1"
                     >
                         <CardHeader className='lg:gap-0 lg:p-0 sm:pb-3'>
                             <div className='gap-0 lg:flex xl:flex sm:hidden md:hidden sm:pb-2 '>
@@ -67,18 +67,19 @@ const HowWeWork = () => {
                             </div>
                             <CardTitle
                                 id="titleCard"
-                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl xl:text-3xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0">
+                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl xl:text-2xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0">
                                 {step.title}
                             </CardTitle>
                         </CardHeader>
-                        <Spacer />
-                        <CardContent className="sm:px-6 lg:p-0 xl:p-0">
+                        <Spacer className="block sm:hidden" />
+                        <CardContent className="sm:px-7 lg:p-0 xl:p-0">
                             <p className="text-lg font-normal md:text-base lg:text-base xl:text-xl sm:w-3/4 text-text-default-tertiary lg:items-start lg:leading-relaxed lg:p-0 lg:gap-0 xl:gap-0 xl:p-0">
                                 {step.subTitle}
                             </p>
                             <Spacer className="md:h-8" />
                             {step.button && (
-                                <Button className="mt-4 transition duration-300 ease-in-out border-none bg-bg-default-secondary md:text-sm lg:text-lg xl:text-2xl xl:p-4 xl:py-6 sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
+                                <Button variant="default"
+                                    // className="mt-4 transition duration-300 ease-in-out border-none md:text-sm lg:text-lg xl:text-2xl xl:p-4 xl:py-6 sm:text-lg bg-default lg:py-2 lg:px-4 hover:translate-y-1"
                                     onClick={() => {
                                         window.scrollTo({
                                             top: document.body.scrollHeight,

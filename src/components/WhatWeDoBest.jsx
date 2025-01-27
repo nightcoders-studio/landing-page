@@ -89,7 +89,7 @@ const WhatWeDoBest = () => {
                 {/* Service Card Container */}
                 <div
                     id="serviceCardContainer"
-                    className="z-10 w-full mx-auto max-w-screen xl:px-0 md:w-full sm:w-full xl:w-full sm:p-3"
+                    className="z-10 w-full mx-auto max-w-screen md:px-10 lg:px-7 md:w-full sm:w-full xl:w-full sm:p-3"
                 >
                     <div
                         id="cardContent"
@@ -108,7 +108,7 @@ const WhatWeDoBest = () => {
                                 >
                                     <Accordion.Header>
                                         <Accordion.Trigger
-                                            className="sm:flex sm:items-center sm:justify-between sm:w-full sm:p-4 lg:grid lg:grid-cols-[auto,2.4fr,5fr,auto] lg:items-center lg:gap-4 md:gap-2 xl:gap-4 sm:gap-2 bg-inherit border-none lg:p-10"
+                                            className="sm:flex sm:items-center  sm:w-full sm:p-4 lg:grid lg:grid-cols-[auto,2.4fr,5fr,auto] lg:items-center lg:gap-4 md:gap-2 xl:gap-4 sm:gap-2 bg-inherit border-none lg:p-10"
                                             onClick={() =>
                                                 setActiveItem(activeItem === item.id ? null : item.id)
                                             }
@@ -119,7 +119,7 @@ const WhatWeDoBest = () => {
                                             </div>
 
                                             {/* Title Section */}
-                                            <h4 id="judulCard" className="lg:self-start lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-2xl md:font-medium sm:font-medium lg:text-left xl:text-3xl xl:max-w-64 ">
+                                            <h4 id="judulCard" className="lg:self-start sm:align-text-left lg:pl-8 text-text-default sm:text-xl sm:text-left md:text-xl lg:text-2xl md:font-medium sm:font-medium lg:text-left xl:text-3xl xl:max-w-64 ">
                                                 {item.title}
                                             </h4>
 
@@ -144,6 +144,7 @@ const WhatWeDoBest = () => {
                                         </Accordion.Trigger>
                                     </Accordion.Header>
 
+                                    {/* <div className="flex flex-wrap containerAccordionContent max-w-screen"> */}
                                     <Accordion.Content className="sm:p-4 sm:pb-10 transition-all duration-500 sm:max ease-in-out data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out lg:pt-0">
                                         <p className="sm:pt-4 sm:pb-8 sm:text-xl text-text-default sm:font-normal md:w-full md:text-lg lg:hidden">
                                             {item.subTitle}
@@ -162,6 +163,7 @@ const WhatWeDoBest = () => {
                                             </ul>
                                         </div>
                                     </Accordion.Content>
+                                    {/* </div> */}
                                 </Accordion.Item>
                             ))}
                         </Accordion.Root>
