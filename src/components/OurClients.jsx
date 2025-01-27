@@ -20,7 +20,7 @@ const OurClients = () => {
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%]" /> {/* Spacer for gap */}
-                    <h4 className="text-gray-600 sm:text-lg md:text-right lg:text-xl sm:leading-normal">
+                    <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right">
                         Trusted by businesses across industries to deliver exceptional digital solutions
                     </h4>
                 </div>
@@ -31,7 +31,7 @@ const OurClients = () => {
 
             </div>
             <Carousel
-                className="relative w-full h-48 m-8 lg:py-0"
+                className="relative w-full h-48 lg:py-0"
                 opts={{
                     loop: true, // Enable infinite scroll
                     align: "start",
@@ -41,7 +41,8 @@ const OurClients = () => {
                 <Spacer />
                 <Spacer />
                 <Spacer className="sm:hidden md:block" />
-                <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden">
+                {/* <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden"> */}
+                <CarouselContent>
                     {clientsLogo.map((client) => (
                         <CarouselItem
                             key={client.id}
@@ -51,6 +52,10 @@ const OurClients = () => {
                                 src={client.logo}
                                 alt={`Client Logo ${client.id}`}
                                 className="object-contain lg:min-w-36 sm:min-w-20 sm:px-4"
+                                style={{
+                                    filter: 'grayscale(100%)',
+                                    opacity: 1, // Opsional: Jika ingin membuat abu-abu lebih soft
+                                }}
                             />
                         </CarouselItem>
                     ))}

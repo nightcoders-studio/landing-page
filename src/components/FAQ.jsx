@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
-import { MoveUpRight, MoveDownRight } from "lucide-react";
+import { MoveUpRight, MoveDownRight, Space } from "lucide-react";
 import Spacer from './ui/spacer';
 
 const FAQ = () => {
@@ -33,6 +33,8 @@ const FAQ = () => {
                 </h1>
             </div>
 
+            <Spacer className="md:block lg:hidden" />
+
             {/* Right Section */}
             <div className=" contentWrapper">
                 <div className=" w-fullrounded-lg content-container">
@@ -41,9 +43,9 @@ const FAQ = () => {
                             <Accordion.Item
                                 key={item.id}
                                 value={`item-${item.id}`}
-                                className="px-6 overflow-hidden"
+                                className="px-6 overflow-hidden md:px-0 accordion-item"
                             >
-                                <Accordion.Header className='rounded-sm sm:rounded-md backdrop-blur-sm sm:p-4 bg-[rgba(17,0,0,0.08)]'>
+                                <Accordion.Header className='accordion-header rounded-sm sm:rounded-md backdrop-blur-sm sm:p-4 bg-[rgba(17,0,0,0.08)]'>
                                     <Accordion.Trigger
                                         onClick={() =>
                                             setActiveItem(activeItem === item.id ? null : item.id)
@@ -76,7 +78,7 @@ const FAQ = () => {
                 </div>
             </div>
             <Spacer className="sm:block md:hidden h-14" />
-        </div>
+        </div >
     );
 };
 

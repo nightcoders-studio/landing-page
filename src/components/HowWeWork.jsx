@@ -45,7 +45,7 @@ const HowWeWork = () => {
                 </h1>
                 <Spacer className="md:hidden" />
                 <Spacer className="hidden md:block md:flex-[5%] " />
-                <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[60%] lg:text-right">
+                <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right">
                     A proven process to transform your ideas into powerful digital solutions
                 </h4>
             </div>

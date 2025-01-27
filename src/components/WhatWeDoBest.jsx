@@ -65,12 +65,12 @@ const WhatWeDoBest = () => {
             {/* Header */}
             <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
                 <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8">
+                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8 z-10">
                         What We Do <span>Best</span>
                     </h1>
                     <Spacer className="md:hidden" />
                     <Spacer className="hidden md:block md:flex-[5%] " />
-                    <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[60%] lg:text-right">
+                    <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right">
                         Delivering excellence across every stage of your digital transformation
                     </h4>
                 </div>
@@ -80,7 +80,7 @@ const WhatWeDoBest = () => {
                 <img
                     src={vector1}
                     alt="Vector Background"
-                    className="absolute lg:top-[1000px] xl:top-[1000px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
+                    className="absolute lg:top-[1000px] xl:top-[1000px] 2xl:top-[1200px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
                     style={{
                         transform: 'translateX(-50%)',
                     }}

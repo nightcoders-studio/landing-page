@@ -65,7 +65,8 @@ const Testimonial = () => {
 
             <div className="z-10 flex flex-col items-center w-full">
                 <Carousel className="relative z-10 w-full overflow-hidden sm:my-3 sm:mx-6 ">
-                    <CarouselContent className="flex gap-6 sm:px-10 snap-x snap-mandatory scrollbar-hidden">
+                    {/* Tambahkan gap yang jelas di CarouselContent */}
+                    <CarouselContent className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 sm:px-10 snap-x snap-mandatory scrollbar-hidden">
                         {testimonialContents.map((testimonial) => (
                             <CarouselItem
                                 key={testimonial.id}
@@ -100,6 +101,7 @@ const Testimonial = () => {
                     </CarouselContent>
                 </Carousel>
             </div>
+
             <Spacer />
             {/* Background Decoration */}
             <img
