@@ -78,7 +78,7 @@ const StartProject = () => {
                         />
 
                         {/* Submit Button */}
-                        <Button type="submit">
+                        <Button type="submit" className="sm:w-full md:w-auto">
                             Send Message
                         </Button>
                     </form>
