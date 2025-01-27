@@ -44,7 +44,7 @@ const StartProject = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem className="sm:flex sm:flex-col sm:items-start">
-                                    <FormLabel className="text-base text-text-default sm:mb-2 xl:text-2xl">Name</FormLabel>
+                                    <FormLabel className="text-base text-text-default sm:mb-2 md:text-lg">Name</FormLabel>
                                     <FormControl>
                                         <Input
                                             placeholder="Type your or company name here"
@@ -63,7 +63,7 @@ const StartProject = () => {
                             control={form.control}
                             render={({ field }) => (
                                 <FormItem className="w-full sm:flex sm:flex-col sm:items-start">
-                                    <FormLabel className="text-base text-text-default sm:mb-2 xl:text-2xl">How Can I Help You?</FormLabel>
+                                    <FormLabel className="text-base text-text-default sm:mb-2 md:text-lg">How Can I Help You?</FormLabel>
                                     <FormControl>
                                         <Textarea
                                             placeholder="Type here"
@@ -78,9 +78,7 @@ const StartProject = () => {
                         />
 
                         {/* Submit Button */}
-                        <Button
-                            type="submit"
-                            className="transition ease-in-out w-full text-text-default-quaternary px-4 lg:py-6 flex items-center justify-center text-base bg-transparent hover:shadow-none bg-[#293239] border-solid border-2 border-text-brand rounded-lg lg:text-xl xl:text-2xl xl:py-8 hover:translate-y-1 sm:text-lg md:text-2xl md:py-6">
+                        <Button type="submit">
                             Send Message
                         </Button>
                     </form>
@@ -91,7 +89,7 @@ const StartProject = () => {
             <img
                 src={vector4}
                 alt="Vector Background"
-                className="absolute lg:left-20 w-[150px] sm:w-[220px] sm:bottom-0 lg:bottom-0 sm:left-14 lg:w-[380px] opacity-80 z-0"
+                className="absolute lg:left-56  w-[150px] sm:w-[220px] sm:bottom-0 lg:bottom-0 sm:left-14 lg:w-[500px] opacity-80 z-0"
                 style={{
                     transform: 'translateX(-50%)',
                 }}

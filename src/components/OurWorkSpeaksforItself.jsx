@@ -1,12 +1,7 @@
 import Spacer from "@/components/ui/spacer";
 import { MoveRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-} from "@/components/ui/carousel";
-import Vector3 from "../assets/images/vector3.svg"
+import Vector3 from "../assets/images/vector3.svg";
 
 const OurWorkSpeaksforItself = () => {
 
@@ -44,73 +39,107 @@ const OurWorkSpeaksforItself = () => {
     ];
 
     return (
-        <div id="ourWork-Wrapper" className="sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 lg:w-screen lg:px-12 xl:px-12">
-            {/* Header */}
+        <div id="ourWork-Wrapper" className="sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
 
+            {/* Header */}
             <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
                 <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
                     <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8">
                         Our <span className="text-text-brand">Work</span> Speaks For Itself
                     </h1>
                     <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%] " />
+                    <Spacer className="hidden md:block md:flex-[5%]" />
                     <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed flex-[60%] lg:text-right">
                         Discover the innovative solutions we’ve crafted for our clients
                     </h4>
                 </div>
             </div>
 
-            {/* <Spacer className="hidden sm:block" /> */}
+            {/* Carousel for Small Screens */}
+            <Spacer className="h-11" />
+            <div className="sm:flex sm:overflow-x-scroll sm:gap-4 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
+                {cardPortfolio.map((card) => (
+                    <div
+                        key={card.id}
+                        className="flex justify-between min-w-[360px] max-w-[68px] min-h-[360px] flex-shrink-0 rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
+                    >
+                        {/* Background Image */}
+                        <div className="absolute inset-0 overflow-hidden">
+                            <img
+                                src={Vector3}
+                                className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-150"
+                                alt="background vector"
+                            />
+                        </div>
 
-            {/* Carousel Container */}
-            <Carousel className="relative w-full lg:max-w-6xl xl:max-w-full sm:justify-center">
-                <CarouselContent className="grid gap-6 p-8 sm:ml-0 px-9 lg:grid-cols-3 xl:grid-cols-4">
-                    {cardPortfolio.map((card) => (
-                        <CarouselItem
-                            key={card.id}
-                            className="relative group border-solid bg-[#efefef] border-[1px] backdrop-blur-sm border-border-brand rounded-xl snap-align-center hover:bg-[#e5e6e5]/70 overflow-hidden"
-                        >
-                            <Spacer className="lg:block sm:hidden" />
-                            {/* Gambar Absolute */}
-                            <div className="absolute inset-0 overflow-hidden">
-                                <img
-                                    src={Vector3}
-                                    className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-150"
-                                />
+                        {/* Card Content */}
+                        <div className="relative z-10 flex flex-col gap-6">
+                            <div className="flex flex-col gap-2">
+                                <h3 className="text-3xl font-semibold leading-normal text-text-default-secondary">
+                                    {card.title}
+                                </h3>
+                                <Spacer />
+                                <h4 className="text-2xl text-text-default-secondary">
+                                    {card.subtitle}
+                                </h4>
                             </div>
+                            <Spacer />
+                            {/* Button */}
+                            <Button
+                                variant="secondary"
+                                className="justify-end gap-2 text-xl bg-transparent border-none shadow-none text-text-default min-w-min active:border-none"
+                                onClick={() => (window.location.href = card.detail)}
+                            >
+                                See Detail <MoveRight className="w-4 h-4" />
+                            </Button>
+                        </div>
+                    </div>
+                ))}
+            </div>
 
-                            {/* Text Wrapper */}
-                            <div className="relative z-10 flex flex-col gap-6 p-6 xl:h-72">
-                                <div className="flex flex-col gap-4 lg:gap-2">
-                                    <h3 className="text-xl font-semibold sm:text-2xl lg:text-xl xl:text-3xl text-text-default-secondary">
-                                        {card.title}
-                                    </h3>
-                                    <div className="hidden lg:block lg:h-1 xl:h-1" />
-                                    <h4 className="w-3/4 text-base sm:text-lg lg:text-base xl:text-xl text-text-default-secondary">
-                                        {card.subtitle}
-                                    </h4>
-                                </div>
 
-                                <Spacer className="md:hidden lg:block " />
-                                {/* Button */}
-                                <Button
-                                    variant="secondary"
-                                    className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none xl:text-lg focus-visible:border-none"
-                                    onClick={() => (window.location.href = card.detail)} //tombol ke halaman project detail
-                                >
-                                    See Detail <MoveRight className="w-4 h-4" />
-                                </Button>
+            {/* Grid for Larger Screens */}
+            <Spacer />
+            <div className="hidden bg-blue-200 lg:grid lg:grid-cols-2 xl:grid-cols-4 lg:gap-6 lg:px-10 lg:mt-8">
+                {cardPortfolio.map((card) => (
+                    <div
+                        key={card.id}
+                        className="rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
+                    >
+                        {/* Background Image */}
+                        <div className="absolute inset-0 overflow-hidden">
+                            <img
+                                src={Vector3}
+                                className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-150"
+                                alt="background vector"
+                            />
+                        </div>
+
+                        {/* Card Content */}
+                        <div className="relative z-10 flex flex-col gap-6">
+                            <div className="flex flex-col gap-2">
+                                <h3 className="text-xl font-semibold text-text-default-secondary">
+                                    {card.title}
+                                </h3>
+                                <h4 className="text-base text-text-default-secondary">
+                                    {card.subtitle}
+                                </h4>
                             </div>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-
-            </Carousel>
-
-            <Spacer className="hidden lg:block" />
+                            {/* Button */}
+                            <Button
+                                variant="secondary"
+                                className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none"
+                                onClick={() => (window.location.href = card.detail)}
+                            >
+                                See Detail <MoveRight className="w-4 h-4" />
+                            </Button>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <Spacer className="md:hidden lg:block lg:h-8" />
         </div>
     );
-
 };
 
 export default OurWorkSpeaksforItself;

@@ -45,7 +45,7 @@ ClickLink.propTypes = {
 // Footer Component
 const Footer = () => {
     return (
-        <footer className="relative grid items-center justify-center grid-cols-[30%_40%_30%] overflow-hidden bg-bg-default-quaternary sm:py-12 sm:px-4">
+        <footer className="relative grid items-center justify-between grid-cols-[30%_40%_30%] overflow-hidden bg-bg-default-quaternary sm:h-44 md:h-64 sm:py-12 sm:px-4">
             {/* Background Overlay Logo */}
             <img
                 src={logo}
@@ -70,7 +70,7 @@ const Footer = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="flex gap-4 sm:gap-3 md:gap-6 lg:gap-8 justify-items-center text-text-brand-tertiary">
+            <div className="flex justify-center gap-4 sm:gap-3 md:gap-6 lg:gap-8 text-text-brand-tertiary">
                 {socialMediaIcons.map((icon, index) => (
                     <ClickLink key={index} useHref={icon.useHref}>
                         {icon.component ? (

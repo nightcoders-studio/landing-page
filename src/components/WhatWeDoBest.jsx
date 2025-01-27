@@ -80,7 +80,7 @@ const WhatWeDoBest = () => {
                 <img
                     src={vector1}
                     alt="Vector Background"
-                    className="absolute lg:top-[1000px] xl:top-[1300px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
+                    className="absolute lg:top-[1000px] xl:top-[1000px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
                     style={{
                         transform: 'translateX(-50%)',
                     }}
@@ -91,6 +91,8 @@ const WhatWeDoBest = () => {
                     id="serviceCardContainer"
                     className="z-10 w-full mx-auto max-w-screen md:px-10 lg:px-7 md:w-full sm:w-full xl:w-full sm:p-3"
                 >
+
+                    {/* 👇 ini accordionnnya */}
                     <div
                         id="cardContent"
                         className="w-full 2xl:w-full sm:flex sm:flex-col xl:w-full sm:gap-4 sm:rounded-2xl sm:p-3"
@@ -108,7 +110,7 @@ const WhatWeDoBest = () => {
                                 >
                                     <Accordion.Header>
                                         <Accordion.Trigger
-                                            className="sm:flex sm:items-center  sm:w-full sm:p-4 lg:grid lg:grid-cols-[auto,2.4fr,5fr,auto] lg:items-center lg:gap-4 md:gap-2 xl:gap-4 sm:gap-2 bg-inherit border-none lg:p-10"
+                                            className="sm:flex sm:items-center sm:justify-between sm:w-full sm:p-4 lg:grid lg:grid-cols-[auto,2.4fr,5fr,auto] lg:items-center lg:gap-4 md:gap-2 xl:gap-4 sm:gap-2 bg-inherit border-none lg:p-10"
                                             onClick={() =>
                                                 setActiveItem(activeItem === item.id ? null : item.id)
                                             }
@@ -144,30 +146,32 @@ const WhatWeDoBest = () => {
                                         </Accordion.Trigger>
                                     </Accordion.Header>
 
-                                    {/* <div className="flex flex-wrap containerAccordionContent max-w-screen"> */}
-                                    <Accordion.Content className="sm:p-4 sm:pb-10 transition-all duration-500 sm:max ease-in-out data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out lg:pt-0">
-                                        <p className="sm:pt-4 sm:pb-8 sm:text-xl text-text-default sm:font-normal md:w-full md:text-lg lg:hidden">
-                                            {item.subTitle}
-                                        </p>
-                                        {/* Content Container */}
-                                        <div className="lg:grid lg:grid-cols-[0.4fr,2.4fr,5fr,auto] relative justify-center content-container sm:py-4">
-                                            <ul className="w-full space-y-4 lg:text-left md:text-center lg:max-w-md sm:space-y-2 lg:col-start-3">
-                                                {item.content.map((contentItem, index) => (
-                                                    <li
-                                                        key={index}
-                                                        className="sm:p-4 sm:text-text-default sm:text-lg sm:font-normal sm:rounded-2xl sm:shadow-md md:text-base"
-                                                    >
-                                                        {contentItem}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </Accordion.Content>
-                                    {/* </div> */}
+                                    <div className="flex flex-wrap containerAccordionContent max-w-screen bg-slate-400 Container-containerAccordionContent lg:justify-center lg:items-center">
+                                        <Accordion.Content className="sm:p-4 sm:pb-10 transition-all duration-500 sm:max ease-in-out data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out lg:pt-0 bg-green-200 lg:flex-2 lg:items-center containerAccordionContent lg:max-w-full">
+                                            <p className="sm:pt-4 sm:pb-8 sm:text-xl text-text-default sm:font-normal md:w-full md:text-lg lg:hidden">
+                                                {item.subTitle}
+                                            </p>
+                                            {/* Content Container */}
+                                            <div className="relative items-center justify-center bg-orange-300 xl:flex content-container sm:py-4 ">
+                                                <ul className="w-full space-y-4 xl:flex xl:flex-row xl:gap-4 lg:text-left md:text-center lg:items-start sm:space-y-2">
+                                                    {item.content.map((contentItem, index) => (
+                                                        <li
+                                                            key={index}
+                                                            className="flex items-center h-10 bg-blue-300 flex-nowrap sm:p-4 sm:text-text-default sm:text-lg sm:font-normal sm:rounded-2xl md:text-base"
+                                                        >
+                                                            {contentItem}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </Accordion.Content>
+                                    </div>
+
                                 </Accordion.Item>
                             ))}
                         </Accordion.Root>
                     </div>
+                    {/* 👆habis code accordion */}
                 </div>
             </div>
             <Spacer />
