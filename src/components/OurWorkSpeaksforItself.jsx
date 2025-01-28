@@ -57,7 +57,7 @@ const OurWorkSpeaksforItself = () => {
 
             {/* Carousel for Small Screens */}
             <Spacer className="h-11" />
-            <div className="sm:flex sm:overflow-x-scroll sm:gap-4 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
+            <div className="sm:flex sm:overflow-x-scroll sm:gap-4 lg:gap-8 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
                 {cardPortfolio.map((card) => (
                     <div
                         key={card.id}

@@ -121,22 +121,25 @@ Carousel.propTypes = {
 };
 
 
-const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
+const CarouselContent = React.forwardRef(({ className, gap = "gap-6", ...props }, ref) => {
+  const { carouselRef, orientation } = useCarousel();
 
   return (
-    (<div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-          orientation === "vertical" ? "-m-4 " : " flex-row",
+          orientation === "horizontal" ? `-ml-4 flex-row ${gap}` : `-mt-4 flex-col ${gap}`,
+          className
         )}
-        {...props} />
-    </div>)
+        {...props}
+      />
+    </div>
   );
-})
+});
+
+
 CarouselContent.displayName = "CarouselContent"
 CarouselContent.propTypes = {
   className: PropTypes.string,
@@ -153,7 +156,7 @@ const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0",
-        orientation === "horizontal" ? "pl-4 sm:basis-1/2 lg:basis-1/5 xl:basis-1/5 2xl:gap-6" : "pt-4",
+        orientation === "horizontal" ? "pl-4 sm:basis-1/2 lg:basis-1/4 xl:basis-1/5" : "pt-4",
         className
       )}
       {...props} />)

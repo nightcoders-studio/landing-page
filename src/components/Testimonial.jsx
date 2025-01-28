@@ -66,7 +66,7 @@ const Testimonial = () => {
             <div className="z-10 flex flex-col items-center w-full">
                 <Carousel className="relative z-10 w-full overflow-hidden sm:my-3 sm:mx-6 ">
                     {/* Tambahkan gap yang jelas di CarouselContent */}
-                    <CarouselContent className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 sm:px-10 snap-x snap-mandatory scrollbar-hidden">
+                    <CarouselContent gap="gap-6 sm:gap-4 md:gap-4 lg:gap-8 px-16 xl:gap-10 sm:px-6 snap-x snap-mandatory scrollbar-hidden">
                         {testimonialContents.map((testimonial) => (
                             <CarouselItem
                                 key={testimonial.id}
@@ -99,6 +99,7 @@ const Testimonial = () => {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
+
                 </Carousel>
             </div>
 
