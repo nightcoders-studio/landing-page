@@ -42,7 +42,7 @@ const OurClients = () => {
                 <Spacer />
                 <Spacer className="sm:hidden md:block" />
                 {/* <CarouselContent className="flex items-center justify-center overflow-x-auto snap-x snap-mandatory scrollbar-hidden"> */}
-                <CarouselContent>
+                <CarouselContent className='flex gap-0 sm:mx-16 md:mx-32'>
                     {clientsLogo.map((client) => (
                         <CarouselItem
                             key={client.id}
@@ -51,7 +51,7 @@ const OurClients = () => {
                             <img
                                 src={client.logo}
                                 alt={`Client Logo ${client.id}`}
-                                className="object-contain lg:min-w-36 sm:min-w-20 sm:px-4"
+                                className="object-contain lg:min-w-48 sm:min-w-44 sm:px-4"
                                 style={{
                                     filter: 'grayscale(100%)',
                                     opacity: 1, // Opsional: Jika ingin membuat abu-abu lebih soft
@@ -61,7 +61,7 @@ const OurClients = () => {
                     ))}
                 </CarouselContent>
             </Carousel>
-            <Spacer />
+            <Spacer className='sm:h-auto xl:h-32' />
         </div>
     );
 };

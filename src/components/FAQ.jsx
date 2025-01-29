@@ -45,14 +45,14 @@ const FAQ = () => {
                                 value={`item-${item.id}`}
                                 className="px-6 overflow-hidden md:px-0 accordion-item"
                             >
-                                <Accordion.Header className='accordion-header rounded-sm sm:rounded-md backdrop-blur-sm sm:p-4 bg-[rgba(17,0,0,0.08)]'>
+                                <Accordion.Header className='accordion-header rounded-sm sm:rounded-md backdrop-blur-sm sm:p-4 bg-[rgba(17,0,0,0.08)] transition-all duration-500 sm:max ease-in-out'>
                                     <Accordion.Trigger
                                         onClick={() =>
                                             setActiveItem(activeItem === item.id ? null : item.id)
                                         }
                                         className="flex items-center justify-between w-full text-left bg-transparent"
                                     >
-                                        <span className="text-lg font-medium sm:text-2xl sm:w-3/5 text-text-default ">{item.title}</span>
+                                        <span className="text-lg font-medium sm:text-xl md:text-2xl sm:w-3/5 text-text-default ">{item.title}</span>
                                         <div
                                             className={`transition-transform duration-700 ease-in-out ${activeItem === item.id
                                                 ? "rotate-[1deg] transition-transform duration-700"
@@ -67,7 +67,7 @@ const FAQ = () => {
                                         </div>
 
                                     </Accordion.Trigger>
-                                    <Accordion.Content className="p-4 text-sm sm:text-left ">
+                                    <Accordion.Content className="p-4 text-sm sm:text-left sm:text-base lg:text-lg xl:text-xl transition-all duration-500 sm:max ease-in-out data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out ">
                                         {item.content}
                                     </Accordion.Content>
                                 </Accordion.Header>

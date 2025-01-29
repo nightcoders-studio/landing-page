@@ -56,12 +56,12 @@ const OurWorkSpeaksforItself = () => {
             </div>
 
             {/* Carousel for Small Screens */}
-            <Spacer className="h-11" />
-            <div className="sm:flex sm:overflow-x-scroll sm:gap-4 lg:gap-8 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
+            <Spacer className="block h-11 lg:hidden" />
+            <div className="sm:flex sm:overflow-x-scroll sm:ml-3 sm:gap-6 lg:gap-8 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
                 {cardPortfolio.map((card) => (
                     <div
                         key={card.id}
-                        className="flex justify-between min-w-[360px] max-w-[68px] min-h-[360px] flex-shrink-0 rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
+                        className="flex justify-between min-w-[360px] max-w-[68px] min-h-[360px]  flex-shrink-0 rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
                     >
                         {/* Background Image */}
                         <div className="absolute inset-0 overflow-hidden">
@@ -75,11 +75,11 @@ const OurWorkSpeaksforItself = () => {
                         {/* Card Content */}
                         <div className="relative z-10 flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <h3 className="text-3xl font-semibold leading-normal text-text-default-secondary">
+                                <h3 className="text-3xl font-semibold leading-normal min-w-60 text-text-default-secondary">
                                     {card.title}
                                 </h3>
                                 <Spacer />
-                                <h4 className="text-2xl text-text-default-secondary">
+                                <h4 className="text-xl text-text-default-secondary">
                                     {card.subtitle}
                                 </h4>
                             </div>
@@ -99,18 +99,18 @@ const OurWorkSpeaksforItself = () => {
 
 
             {/* Grid for Larger Screens */}
-            <Spacer />
-            <div className="hidden bg-blue-200 lg:grid lg:grid-cols-2 xl:grid-cols-4 lg:gap-6 lg:px-10 lg:mt-8">
+            <Spacer className='hidden lg:h-10 lg:block' />
+            <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 lg:gap-6 lg:px-10 lg:mt-8">
                 {cardPortfolio.map((card) => (
                     <div
                         key={card.id}
-                        className="rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
+                        className="rounded-xl border transition duration-300 ease-in-out lg:justify-between backdrop:blur-sm hover:bg-[#ffffffe3]  flex bg-[#efefef] lg:min-h-[260px] border-border-brand shadow-md p-10 relative group"
                     >
                         {/* Background Image */}
-                        <div className="absolute inset-0 overflow-hidden">
+                        <div className="absolute inset-0 overflow-hidden xl:h-90">
                             <img
                                 src={Vector3}
-                                className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-150"
+                                className="absolute bottom-0 z-0 transition-transform duration-300 ease-in-out left-8 group-hover:scale-125 xl:w-[110px]"
                                 alt="background vector"
                             />
                         </div>
@@ -118,17 +118,17 @@ const OurWorkSpeaksforItself = () => {
                         {/* Card Content */}
                         <div className="relative z-10 flex flex-col gap-6">
                             <div className="flex flex-col gap-2">
-                                <h3 className="text-xl font-semibold text-text-default-secondary">
+                                <h3 className="text-xl font-semibold text-text-default-secondary sm:text-auto lg:text-2xl xl:text-2xl">
                                     {card.title}
                                 </h3>
-                                <h4 className="text-base text-text-default-secondary">
+                                <h4 className="text-base text-text-default-secondary sm:text-auto lg:text-xl xl:text-xl ">
                                     {card.subtitle}
                                 </h4>
                             </div>
                             {/* Button */}
                             <Button
                                 variant="secondary"
-                                className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none"
+                                className="justify-end gap-2 bg-transparent border-none shadow-none text-text-default min-w-min active:border-none sm:text-auto lg:text-xl"
                                 onClick={() => (window.location.href = card.detail)}
                             >
                                 See Detail <MoveRight className="w-4 h-4" />
@@ -137,7 +137,7 @@ const OurWorkSpeaksforItself = () => {
                     </div>
                 ))}
             </div>
-            <Spacer className="md:hidden lg:block lg:h-8" />
+            <Spacer className="bg-blue-400 md:hidden lg:block lg:h-8 " />
         </div>
     );
 };
