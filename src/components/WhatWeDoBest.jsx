@@ -16,9 +16,9 @@ const WhatWeDoBest = () => {
       subTitle:
         "Empower your business with sleek, user-friendly mobile applications. Whether for iOS or Android, we craft apps that combine exceptional design with high performance",
       content: [
-        "Native & Cross Platform Development",
-        "API Integration for Additional Functionality",
-        "Optimal Performance & High-Level Security",
+        "Cross Platform Development",
+        "API Integration",
+        "Optimal Performance & Security",
       ],
     },
     {
@@ -133,7 +133,7 @@ const WhatWeDoBest = () => {
 
                     {/* Arrow Section */}
                     <div
-                      className={`container-arrow flex top-0 bg-purple-500 transition-transform duration-700 ease-in-out  ${activeItem === item.id
+                      className={`container-arrow flex top-0  transition-transform duration-700 ease-in-out  ${activeItem === item.id
                         ? "rotate-[1deg] transition-transform duration-700"
                         : "rotate-10 transition-transform duration-700"
                         }`}
@@ -157,17 +157,17 @@ const WhatWeDoBest = () => {
                     </p>
 
                     {/* Content Container */}
-                    <div className="items-center bg-green-300 sm:w-full lg:gap-4 container-contentItem lg:w-full">
+                    <div className="items-center sm:w-full lg:gap-4 container-contentItem lg:w-full">
 
                       {/* Content Item */}
                       <div className="sm:py-4 lg:p-0 container-pill-content-item">
 
                         {/* List Wrapper */}
-                        <div className="bg-orange-300 w-fit lg:gap-4 md:inline-grid lg:inline-flex lg:space-y-0 lg:space-x-0 md:gap-x-10 sm:space-y-2 wrapper-pill-content-item">
+                        <div className=" w-fit lg:gap-4 md:inline-grid lg:inline-flex lg:space-y-0 lg:space-x-4 lg:ml-44 md:gap-x-10 sm:space-y-2 wrapper-pill-content-item">
                           {item.content.map((contentItem, index) => (
                             <div
                               key={index}
-                              className="flex px-2 py-1 bg-blue-300 w-fit text-nowrap pill-content-item sm:text-text-default sm:text-base sm:font-normal sm:rounded-lg md:text-base"
+                              className="flex px-2 py-1 w-fit text-nowrap pill-content-item sm:text-text-default sm:text-base sm:font-normal bg-bg-default sm:rounded-lg md:text-base"
                             >
                               {contentItem}
                             </div>
