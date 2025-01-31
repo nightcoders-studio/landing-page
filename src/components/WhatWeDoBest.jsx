@@ -81,7 +81,7 @@ const WhatWeDoBest = () => {
       <img
         src={vector1}
         alt="Vector Background"
-        className="absolute lg:top-[1000px] xl:top-[1000px] 2xl:top-[1200px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] opacity-80 z-0"
+        className="absolute lg:top-[1000px] xl:top-[1000px] 2xl:top-[1200px] lg:left-20 w-[150px] sm:w-[200px] sm:left-10 sm:top-[860px] lg:w-[400px] 3xl:w-[500px] 3xl:top-[2100px] opacity-80 z-0"
         style={{
           transform: 'translateX(-50%)',
         }}
