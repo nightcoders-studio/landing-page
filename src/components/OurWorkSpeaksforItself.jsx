@@ -2,9 +2,9 @@ import Spacer from "@/components/ui/spacer";
 import { MoveRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Vector3 from "../assets/images/vector3.svg";
+import { useEffect, useRef, useState } from "react";
 
 const OurWorkSpeaksforItself = () => {
-
     const cardPortfolio = [
         {
             id: 1,
@@ -38,9 +38,28 @@ const OurWorkSpeaksforItself = () => {
         },
     ];
 
+    const carouselRef = useRef(null);
+    const [isUserInteracting, setIsUserInteracting] = useState(false);
+
+    useEffect(() => {
+        if (!carouselRef.current) return;
+
+        const interval = setInterval(() => {
+            if (!isUserInteracting && carouselRef.current) {
+                const maxScroll = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+                if (carouselRef.current.scrollLeft >= maxScroll) {
+                    carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
+                } else {
+                    carouselRef.current.scrollBy({ left: 385, behavior: "smooth" });
+                }
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [isUserInteracting]);
+
     return (
         <div id="ourWork-Wrapper" className="sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
-
             {/* Header */}
             <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
                 <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
@@ -57,11 +76,16 @@ const OurWorkSpeaksforItself = () => {
 
             {/* Carousel for Small Screens */}
             <Spacer className="block h-11 lg:hidden" />
-            <div className="sm:flex sm:overflow-x-scroll sm:ml-3 sm:gap-6 lg:gap-8 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden">
+            <div
+                ref={carouselRef}
+                className="sm:flex sm:overflow-x-scroll sm:gap-6 lg:gap-8 scrollbar-hidden snap-x snap-start sm:px-4 lg:hidden"
+                onMouseEnter={() => setIsUserInteracting(true)}
+                onMouseLeave={() => setIsUserInteracting(false)}
+            >
                 {cardPortfolio.map((card) => (
                     <div
                         key={card.id}
-                        className="flex justify-between min-w-[360px] max-w-[68px] min-h-[360px]  flex-shrink-0 rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
+                        className="flex justify-between min-w-[360px] max-w-[68px] min-h-[360px] flex-shrink-0 rounded-xl border bg-[#efefef] border-border-brand shadow-md p-6 relative group"
                     >
                         {/* Background Image */}
                         <div className="absolute inset-0 overflow-hidden">
@@ -96,7 +120,7 @@ const OurWorkSpeaksforItself = () => {
                     </div>
                 ))}
             </div>
-
+            {/*End of Carousel for Small Screens */}
 
             {/* Grid for Larger Screens */}
             <Spacer className='hidden lg:h-10 lg:block' />
