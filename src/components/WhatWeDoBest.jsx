@@ -157,22 +157,23 @@ const WhatWeDoBest = () => {
                     </p>
 
                     {/* Content Container */}
-                    <div className="items-center bg-green-300 sm:w-full lg:gap-4 sm:gap-4 sm:flex-col container-contentItem lg:grid lg:grid-cols-2 lg:w-full">
+                    <div className="items-center bg-green-300 sm:w-full lg:gap-4 container-contentItem lg:w-full">
 
                       {/* Content Item */}
-                      <div className="sm:py-4 lg:p-0 container-pill-content-item lg:col-start-2">
+                      <div className="sm:py-4 lg:p-0 container-pill-content-item">
 
                         {/* List Wrapper */}
-                        <ul className="w-full space-y-4 bg-orange-300 lg:gap-4 lg:space-x-8 md:gap-x-10 sm:space-y-2 wrapper-pill-content-item">
+                        <div className="bg-orange-300 w-fit lg:gap-4 md:inline-grid lg:inline-flex lg:space-y-0 lg:space-x-0 md:gap-x-10 sm:space-y-2 wrapper-pill-content-item">
                           {item.content.map((contentItem, index) => (
-                            <li
+                            <div
                               key={index}
-                              className="flex items-center bg-blue-300 sm:inline-flex pill-content-item sm:py-1 sm:px-2 sm:text-text-default sm:text-base sm:font-normal sm:rounded-2xl lg:w-1/3 md:text-base"
+                              className="flex px-2 py-1 bg-blue-300 w-fit text-nowrap pill-content-item sm:text-text-default sm:text-base sm:font-normal sm:rounded-lg md:text-base"
                             >
                               {contentItem}
-                            </li>
+                            </div>
+
                           ))}
-                        </ul>
+                        </div>
                       </div>
 
                     </div>

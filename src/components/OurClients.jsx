@@ -51,7 +51,7 @@ const OurClients = () => {
                             <img
                                 src={client.logo}
                                 alt={`Client Logo ${client.id}`}
-                                className="object-contain lg:min-w-48 sm:min-w-44 sm:px-4"
+                                className="object-contain lg:min-w-32 sm:min-w- sm:px-4"
                                 style={{
                                     filter: 'grayscale(100%)',
                                     opacity: 1, // Opsional: Jika ingin membuat abu-abu lebih soft
