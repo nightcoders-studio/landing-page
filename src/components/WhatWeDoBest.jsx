@@ -152,33 +152,31 @@ const WhatWeDoBest = () => {
                   <Accordion.Content className="sm:p-4 sm:pb-10 transition-all duration-500 sm:max ease-in-out data-[state=open]:animate-fade-in data-[state=closed]:animate-fade-out lg:pt-0 lg:flex-2 lg:items-center containerAccordionContent lg:max-w-full">
 
                     {/* SubTitle pada layar kecil */}
-                    <p className="sm:flex bg-red-400 sm:pt-4 sm:pb-8 sm:text-xl text-text-default sm:font-normal md:w-[100%] md:overflow-none subTitle-wrapper md:text-lg lg:hidden">
+                    <p className="sm:flex sm:pt-4 sm:pb-8 sm:text-xl text-text-default sm:font-normal md:w-[100%] md:overflow-none subTitle-wrapper md:text-lg lg:hidden">
                       {item.subTitle}
                     </p>
 
                     {/* Content Container */}
-                    <div className="flex flex-col bg-green-300 sm:w-full lg:grid lg:grid-cols-3 lg:gap-4 sm:gap-4 sm:flex-col container-contentItem">
+                    <div className="items-center bg-green-300 sm:w-full lg:gap-4 sm:gap-4 sm:flex-col container-contentItem lg:grid lg:grid-cols-2 lg:w-full">
 
                       {/* Content Item */}
-                      <div className="bg-orange-300 lg:col-start-2 sm:py-4 lg:p-0 container-pill-content-item">
+                      <div className="sm:py-4 lg:p-0 container-pill-content-item lg:col-start-2">
 
                         {/* List Wrapper */}
-                        <ul className="w-full space-y-4 lg:flex lg:flex-row lg:gap-4 sm:space-y-2 wrapper-pill-content-item">
-
-                          {/* Loop for content items */}
+                        <ul className="w-full space-y-4 bg-orange-300 lg:gap-4 lg:space-x-8 md:gap-x-10 sm:space-y-2 wrapper-pill-content-item">
                           {item.content.map((contentItem, index) => (
                             <li
                               key={index}
-                              className="flex items-center bg-blue-300 pill-content-item sm:py-1 sm:px-2 sm:text-text-default sm:text-base sm:font-normal sm:rounded-2xl lg:w-full md:text-base"
+                              className="flex items-center bg-blue-300 sm:inline-flex pill-content-item sm:py-1 sm:px-2 sm:text-text-default sm:text-base sm:font-normal sm:rounded-2xl lg:w-1/3 md:text-base"
                             >
                               {contentItem}
                             </li>
                           ))}
-
                         </ul>
                       </div>
 
                     </div>
+
                     {/* Content Container End */}
 
                   </Accordion.Content>
