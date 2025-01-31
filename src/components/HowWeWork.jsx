@@ -55,7 +55,7 @@ const HowWeWork = () => {
                 {weWork.map((step) => (
                     <Card
                         key={step.id}
-                        className="sm:p-0 rounded-xl sm:rounded-3xl lg:p-0 lg:w-[300px] lg:h-[300px] shadow-none bg-[rgba(17, 0, 0, 0.04)] backdrop-blur-sm  border-none lg:rounded-none xl:p-0 xl:w-full xl:h-auto  xl:border-none xl:rounded-none lg:gap-1 xl:gap-1"
+                        className="sm:p-0 rounded-xl sm:rounded-3xl lg:p-0 lg:w-[300px] lg:h-[300px] shadow-none sm:bg-[rgba(17,0,0,0.08)] lg:bg-transparent backdrop-blur-sm border-none lg:rounded-none xl:p-0 xl:w-full xl:h-auto xl:border-none xl:rounded-none lg:gap-1 xl:gap-1"
                     >
                         <CardHeader className='lg:gap-0 lg:p-0 sm:pb-3'>
                             <div className='gap-0 lg:flex xl:flex sm:hidden md:hidden sm:pb-2 '>
