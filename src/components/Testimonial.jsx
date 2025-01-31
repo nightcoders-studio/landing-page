@@ -65,13 +65,13 @@ const Testimonial = () => {
             </div>
 
             <div className="z-10 flex flex-col items-center w-full">
-                <Carousel className="relative z-10 w-full overflow-hidden sm:my-3 sm:mx-6 lg:ml-24 ">
+                <Carousel className="relative z-10 w-full overflow-hidden sm:my-3 sm:mx-6 ">
                     {/* Tambahkan gap yang jelas di CarouselContent */}
-                    <CarouselContent gap="gap-6 sm:gap-5 md:gap-8 lg:gap-8 px-16 xl:gap-6 sm:px-6 snap-x snap-mandatory scrollbar-hidden">
+                    <CarouselContent gap="gap-6 sm:gap-5 md:gap-8 lg:gap-8  xl:gap-6 sm:px-6 snap-x snap-mandatory scrollbar-hidden">
                         {testimonialContents.map((testimonial) => (
                             <CarouselItem
                                 key={testimonial.id}
-                                className="z-10 flex-shrink-0 sm:w-1/2 lg:w-1/4 p-6 lg:py-8 sm:px-4 sm:py-10 lg:px-6 h-[300px] rounded-3xl border border-[#f1c480] backdrop-blur-sm bg-[rgba(17,0,0,0.04)] snap-align-center"
+                                className=" carousel-item z-10 flex-shrink-0 sm:w-1/2 lg:w-1/4 p-6 lg:py-8 sm:px-4 sm:py-10 lg:px-6 h-[300px] rounded-3xl border border-[#f1c480] backdrop-blur-sm bg-[rgba(17,0,0,0.04)] snap-align-center"
                             >
                                 <div className="flex flex-col items-start justify-between gap-0">
                                     {/* Header */}
