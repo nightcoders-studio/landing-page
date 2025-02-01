@@ -50,13 +50,13 @@ const WhatWeDoBest = () => {
 
 
   return (
-    <div id="whatWeDoBestWrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4 3xl:px-16 ">
+    <div id="whatWeDoBestWrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4 3xl:px-16">
       <Spacer className={"sm:h-14 lg:block lg:h-10"} />
       {/* Header */}
 
 
       {/* Header */}
-      <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left howWeWork-Container">
+      <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left whatWedobest-Container">
         <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left 3xl:text-7xl 3xl:px-8">
           What We Do <span>Best</span>
         </h1>

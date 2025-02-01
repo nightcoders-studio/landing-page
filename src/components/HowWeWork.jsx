@@ -35,17 +35,17 @@ const HowWeWork = () => {
     ];
 
     return (
-        <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4 ">
+        <div id="howWeWork-Wrapper" className="hidden sm:flex sm:flex-col sm:items-center sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4 3xl:px-16">
             <Spacer className="md:block sm:hidden" />
 
             {/* Header */}
             <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left howWeWork-Container">
-                <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8">
+                <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left 3xl:text-7xl 3xl:px-8">
                     How We <span className="text-text-brand">Work</span>
                 </h1>
                 <Spacer className="md:hidden" />
                 <Spacer className="hidden md:block md:flex-[5%] " />
-                <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right">
+                <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right 3xl:text-5xl 3xl:w-3/4 3xl:mr-12">
                     A proven process to transform your ideas into powerful digital solutions
                 </h4>
             </div>
