@@ -456,7 +456,7 @@ const Divider = () => {
     return (
         <div
             id="divider"
-            className="relative flex items-center justify-center w-full h-16 px-4 overflow-hidden md:py-2 sm:px-2 bg-bg-default-tertiary xl:text-xl"
+            className="relative flex items-center justify-center w-full h-16 px-4 overflow-hidden sm:text-base 3xl:text-5xl 3xl:p-16 md:py-2 sm:px-2 bg-bg-default-tertiary xl:text-xl"
         >
             <div
                 ref={containerRef}

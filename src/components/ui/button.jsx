@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-base font-normal leading-normal transition-colors focus:outline-none focus:ring-0 active:border-none hover:border-[#e4882b]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg 2xl:rounded-2xl text-base font-normal leading-normal transition-colors focus:outline-none focus:ring-0 active:border-none hover:border-[#e4882b]",
   {
     variants: {
       variant: {
-        default: "bg-[#293239] text-[#e8eaec] border-2 border-[#e4882b] flex inline-flex self-start px-10 py-6 mt-auto text-xl transition duration-300 ease-in-out md:text-base xl:text-xl 2xl:text-2xl 3xl:text-5xl 2xl:py-8 3xl:p-12 3xl:text-5xl hover:bg-[#39434b] hover:translate-y-1 whitespace-nowrap",
+        default: "bg-[#293239] text-[#e8eaec] border-2 3xl:border-4 border-[#e4882b] flex inline-flex self-start px-10 py-6 mt-auto text-xl transition duration-300 ease-in-out md:text-base xl:text-xl 2xl:text-2xl 3xl:text-5xl 2xl:py-8 3xl:p-12 3xl:text-5xl hover:bg-[#39434b] hover:translate-y-1 whitespace-nowrap",
       },
       size: {
         sm: "h-12 px-4 py-3 text-sm w-full inline-flex",

@@ -13,7 +13,7 @@ const Hero = () => {
             <Spacer className="hidden h-28 3xl:block" />
             <div
                 id="heroContainer"
-                className="grid items-center p-6 py-6 m-6 border-2 sm:justify-between shadow-sm lg:m-4 lg:gap-7 xl:gap-4 sm:m-2 rounded-xl border-text-brand-tertiary bg-bg-default-secondary lg:[grid-template-columns:55%_45%] md:gap-20 md:m-2 md:py-10 md:px-10 3xl:p-32"
+                className="grid items-center p-6 py-6 m-6 border-2 3xl:border-4 3xl:rounded-3xl 3xl:mx-12 sm:justify-between shadow-sm lg:m-4 lg:gap-7 xl:gap-4 sm:m-2 rounded-xl border-text-brand-tertiary bg-bg-default-secondary lg:[grid-template-columns:55%_45%] md:gap-20 md:m-2 md:py-10 md:px-10 3xl:p-32"
             >
                 <div
                     id="textHeroWrapper"
