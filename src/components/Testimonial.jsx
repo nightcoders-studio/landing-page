@@ -109,7 +109,7 @@ const Testimonial = () => {
             {/* Background Decoration */}
             <img
                 src={Vector5}
-                className="absolute z-0 h-auto w-96 sm:w-72 md:w-80 lg:w-96 sm:top-[4050px] md:top-[3260px] lg:top-[4000px] xl:top-[3700px] left-1"
+                className="absolute z-0 h-auto w-96 sm:w-72 md:w-80 lg:w-96 sm:top-[4050px] md:top-[3260px] lg:top-[4000px] xl:top-[4000px] 2xl:top-[6000] left-1"
                 alt="Background Decoration"
             />
             <Spacer />
