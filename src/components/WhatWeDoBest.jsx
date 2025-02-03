@@ -95,7 +95,7 @@ const WhatWeDoBest = () => {
               <Accordion.Item
                 key={item.id}
                 value={`item-${item.id}`}
-                className="z-10 shadow-md sm:rounded-xl 2xl:rounded-3xl bg-[rgba(17,0,0,0.08)] overflow-hidden w-full"
+                className="z-10 shadow-md sm:rounded-xl 2xl:rounded-3xl bg-[rgba(17,0,0,0.08)] 3xl:py-6 3xl:px-12 overflow-hidden w-full"
               >
                 <Accordion.Header>
                   <Accordion.Trigger

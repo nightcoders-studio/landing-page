@@ -8,33 +8,27 @@ const OurWorkSpeaksforItself = () => {
     const cardPortfolio = [
         {
             id: 1,
-            title: "Redesign Mugee Application",
-            subtitle: "Improvement of the overall flow and user interface",
-            detail: "/detail-project"
+            title: "Mugee - Digital Grocery",
+            subtitle: "An app for home online grocery & Delivery",
+            detail: "/detail-mugee"
         },
         {
             id: 2,
-            title: "Redesign Mugee Application",
-            subtitle: "Improvement of the overall flow and user interface",
-            detail: "/detail-project",
+            title: "Your Email Validator",
+            subtitle: "Ensures data quality with comprehensive email verification",
+            detail: "/detail-your-email-validator",
         },
         {
             id: 3,
-            title: "Redesign Mugee Application",
-            subtitle: "Improvement of the overall flow and user interface",
-            detail: "https://www.example.com/redesign-mugee",
+            title: "Tes Ujian Online",
+            subtitle: "Reliable online Exam platform offering various packages for job preparations",
+            detail: "/detail-tes-ujian-online",
         },
         {
             id: 4,
-            title: "Redesign Mugee Application",
-            subtitle: "Improvement of the overall flow and user interface",
-            detail: "https://www.example.com/redesign-mugee",
-        },
-        {
-            id: 5,
-            title: "Redesign Mugee Application",
-            subtitle: "Improvement of the overall flow and user interface",
-            detail: "https://www.example.com/redesign-mugee",
+            title: "Pamaba",
+            subtitle: "Interactive web app for learning eaarthquake for kids with fun",
+            detail: "/detail-pamaba",
         },
     ];
 
@@ -61,18 +55,17 @@ const OurWorkSpeaksforItself = () => {
     return (
         <div id="ourWork-Wrapper" className="sm:w-full sm:mt-8 sm:gap-8 xl:w-screen lg:w-screen lg:px-4">
             {/* Header */}
-            <div id="whatWeDoBestContainer" className="sm:flex sm:flex-col xl:w-full xl:px-4 sm:items-center">
-                <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left">
-                    <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left lg:pr-8">
-                        Our <span className="text-text-brand">Work</span> Speaks For Itself
-                    </h1>
-                    <Spacer className="md:hidden" />
-                    <Spacer className="hidden md:block md:flex-[5%]" />
-                    <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right">
-                        Discover the innovative solutions we’ve crafted for our clients
-                    </h4>
-                </div>
+            <div className="flex flex-col w-screen px-0 lg:w-screen lg:px-16 sm:px-7 md:px-7 sm:items-center sm:mx-0 sm:text-center md:flex md:flex-row md:items-center md:gap-8 md:text-left howWeWork-Container">
+                <h1 className="sm:text-3xl md:text-2xl w-screen font-semibold flex-[40%] lg:text-4xl lg:text-left 3xl:text-7xl 3xl:px-8">
+                    Our <span className="text-text-brand">Work</span> Speaks For Itself
+                </h1>
+                <Spacer className="md:hidden" />
+                <Spacer className="hidden md:block md:flex-[5%] " />
+                <h4 className="text-text-default sm:text-lg md:text-base lg:text-xl lg:leading-relaxed lg:flex-[30%] lg:text-right 3xl:text-5xl 3xl:w-3/4 3xl:mr-12">
+                    Discover the innovative solutions we’ve crafted for our clients
+                </h4>
             </div>
+
 
             {/* Carousel for Small Screens */}
             <Spacer className="block h-11 lg:hidden" />

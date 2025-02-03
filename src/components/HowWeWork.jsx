@@ -59,18 +59,18 @@ const HowWeWork = () => {
                     >
                         <CardHeader className='lg:gap-0 lg:p-0 sm:pb-3'>
                             <div className='gap-0 lg:flex xl:flex sm:hidden md:hidden sm:pb-2 '>
-                                <img src={Ellipse} className='w-5 h-5 lg:items-center' alt="" />
+                                <img src={Ellipse} className='w-5 h-5 lg:items-center xl:w-10 xl:h-auto 3xl:w-auto 3xl:h-14' alt="" />
                                 <img src={Line} className='w-screen' alt="" />
                             </div>
                             <CardTitle
                                 id="titleCard"
-                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl xl:text-2xl sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0">
+                                className="font-semibold sm:px-1 sm:pb-0 sm:text-2xl xl:text-2xl 3xl:text-6xl 3xl:leading-loose sm:leading-normal text-text-default-secondary sm:w-full md:text-lg lg:text-lg lg:font-medium lg:leading-relaxed lg:p-0 lg:pb-2 xl:p-0">
                                 {step.title}
                             </CardTitle>
                         </CardHeader>
                         <Spacer className="block sm:hidden" />
                         <CardContent className="sm:px-7 lg:p-0 xl:p-0">
-                            <p className="text-lg font-normal md:text-base lg:text-base xl:text-xl sm:w-3/4 text-text-default-tertiary lg:items-start lg:leading-relaxed lg:p-0 lg:gap-0 xl:gap-0 xl:p-0">
+                            <p className="text-lg font-normal md:text-base lg:text-base xl:text-xl sm:w-3/4 3xl:text-5xl 3xl:leading-normal text-text-default-tertiary lg:items-start lg:leading-relaxed lg:p-0 lg:gap-0 xl:gap-0 xl:p-0">
                                 {step.subTitle}
                             </p>
                             <Spacer className="md:h-8" />
