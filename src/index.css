@@ -66,3 +66,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 640px) {
+  /* For small screens */
+  .zoomable-img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .zoomable-img:hover,
+  .zoomable-img:active {
+    transform: scale(1.5); /* Adjust the scale value as needed */
+  }
+}

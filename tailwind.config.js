@@ -70,6 +70,7 @@ export default {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1680px",
+        "3xl": "3840px",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -203,6 +204,15 @@ export default {
             height: "0",
           },
         },
+
+        marquee: {
+          "0%": {
+            transform: "translateX(0)", // Mulai dari kiri
+          },
+          "100%": {
+            transform: "translateX(-100%)", // Bergerak ke kiri sampai habis
+          },
+        },
       },
       animation: {
         moveLeftRight: "moveLeftRight 15s ease-in-out infinite",
@@ -210,6 +220,7 @@ export default {
         "accordion-up": "accordion-up 2s ease-out",
         "fade-in": "fadeIn 0.5s ease-in-out",
         "fade-out": "fadeOut 0.5s ease-in-out",
+        marquee: "marquee 3000s linear infinite",
       },
     },
   },

@@ -10,7 +10,7 @@ const socialMediaIcons = [
         component: Linkedin,
         alt: "LinkedIn",
         hoverClass: "hover:text-blue-700",
-        useHref: "https://www.linkedin.com/company/nightcoders/",
+        useHref: "https://www.linkedin.com/company/nightcoders-dev",
     },
     {
         component: Instagram,
