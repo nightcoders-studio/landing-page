@@ -36,7 +36,7 @@ const Hero = () => {
                         </h3>
                     </div>
                     <div className="hidden md:flex lg:flex xl:flex 2xl:flex lg:h-12 lg:w-full" />
-                    <Button variant="default" className="flex items-center sm:w-full md:w-auto">
+                    <Button variant="default" className="flex items-center sm:w-full md:w-auto" onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
                         Start Your Project <Rocket className="z-10 w-5 h-5 ml-2 text-current 3xl:w-12 3xl:h-auto" />
                     </Button>
 

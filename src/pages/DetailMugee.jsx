@@ -1,18 +1,11 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import { useForm } from "react-hook-form";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-// import { Input } from "@/components/ui/input";
-// import { Textarea } from "@/components/ui/textarea";
-// import { Button } from "@/components/ui/button";
-// import vector4 from "../assets/images/vector4.svg";
-// import PropTypes from "prop-types";
-import ThumbnailMugee from "../assets/images/thumbnail-Mugee.png";
-import workflowEmailValidation from "../assets/images/workflowEmailValidation.png";
+import ThumbnailMugee from "../assets/images/thumbnail-Mugee.webp";
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, Divide } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
 import StartProject from "@/components/StartProject";
+import { Button } from "@/components/ui/button";
 
 
 
@@ -26,12 +19,12 @@ const HeroSection = () => (
             {/* Text Section */}
             <div id="textHeroWrapper" className="flex flex-col items-stretch order-2 gap-4 md:gap-5 lg:order-1 3xl:gap-11">
                 <div id="textHeroContainer" className="flex flex-col items-stretch gap-4">
-                    <h1 className="text-xl font-semibold text-text-default md:text-2xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-3xl xl:text-4xl xl:leading-normal sm:w-3/4 3xl:text-7xl 3xl:leading-normal">
+                    <h1 className="text-xl font-semibold text-text-default md:text-2xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-4xl xl:text-4xl xl:leading-normal sm:w-3/4 3xl:text-7xl 3xl:leading-normal">
                         Bringing fresh groceries right into your home
                     </h1>
-                    <h3 className="text-xl text-text-default xl:leading-normal md:text-xl 3xl:text-6xl 3xl:leading-normal">
-                        <a href="https://mugee.id"><b className="font-medium text-text-default-tertiary">Mugee</b></a>
-                    </h3>
+                    <Button>
+                        <a href="https://mugee.id"><b className="font-medium text-white">mugee.id</b></a>
+                    </Button>
                 </div>
             </div>
 
@@ -69,59 +62,79 @@ const AboutProjectSection = () => {
         }
     };
 
-    const items = [
+    const itemsKeyFeatures = [
         {
             id: 1,
-            title: "Comprehensive Validation Suite",
+            title: "Wide Range of Products",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Email format verification</li>
-                    <li>Domain validation with MX record checking</li>
-                    <li>Disposable email detection</li>
-                    <li>Bulk validation capabilities for enterprise needs</li>
+                    <li>Extensive selection of grocery and fresh market products</li>
+                    <li>Regular updates to product offerings</li>
+                    <li>High-quality and fresh items</li>
+                    <li>Specialty and seasonal products available</li>
                 </ul>
             ),
         },
         {
             id: 2,
-            title: "Flexible Integration Options",
+            title: "Convenient Ordering",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>RESTful API for seamless integration</li>
-                    <li>SDKs available for multiple languages</li>
-                    <li>Customizable validation rules</li>
-                    <li>Real-time verification</li>
+                    <li>Easy-to-use mobile application</li>
+                    <li>Simple and quick ordering process</li>
+                    <li>Real-time order tracking</li>
+                    <li>Secure payment options</li>
+                </ul>
+            ),
+        },
+        {
+            id: 3,
+            title: "Reliable Delivery Service",
+            detail: (
+                <ul className="pl-5 mt-2 list-disc">
+                    <li>Timely and accurate delivery</li>
+                    <li>Delivery right to your doorstep</li>
+                    <li>Freshness guaranteed</li>
+                    <li>Multiple delivery slots to suit your schedule</li>
                 </ul>
             ),
         },
     ];
 
+
     const itemsUsecase = [
         {
             id: 1,
-            title: "User Registration Systems",
+            title: "Daily Grocery Shopping",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Validate email addresses during sign-up</li>
-                    <li>Prevent fake accounts with disposable email detection</li>
+                    <li>Order daily essentials and fresh produce</li>
+                    <li>Save time with convenient home delivery</li>
                 </ul>
             ),
         },
-
         {
             id: 2,
-            title: "Marketing Platforms",
+            title: "Special Occasions and Events",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Email format verification</li>
-                    <li>Domain validation with MX record checking</li>
-                    <li>Disposable email detection</li>
-                    <li>Bulk validation capabilities for enterprise needs</li>
+                    <li>Get fresh ingredients for special meals</li>
+                    <li>Order specialty products for events and gatherings</li>
                 </ul>
             ),
         },
+        {
+            id: 3,
+            title: "Health-Conscious Shopping",
+            detail: (
+                <ul className="pl-5 mt-2 list-disc">
+                    <li>Access to a variety of fresh and organic products</li>
+                    <li>Order healthy snacks and ingredients</li>
+                </ul>
+            ),
+        },
+    ];
 
-    ]
 
 
 
@@ -131,22 +144,21 @@ const AboutProjectSection = () => {
                 About This Project
             </h1>
             <h4 className="text-text-default md:w-3/4 lg:pl-1 lg:text-xl md:text-xl about-description">
-                Mugee is a web application that offers a wide range of grocery and fresh market products delivered right to your doorstep. With just your mobile phone, you can conveniently order fresh products. We are committed to providing ease, convenience, and top-quality service in every delivery, ensuring you always receive fresh and high-quality items.          </h4>
-
+                Mugee is a web application that offers a wide range of grocery and fresh market products delivered right to your doorstep. With just your mobile phone, you can conveniently order fresh products. We are committed to providing ease, convenience, and top-quality service in every delivery, ensuring you always receive fresh and high-quality items.</h4>
             <Spacer />
 
             {/* Key Features */}
             <div className="md:grid md:gap-2 md:py-0">
-                <h2 className="font-semibold sm:text-xl lg:text-2xl text-text-default lg:pl-1 about-title">
+                <h2 className="font-semibold lg:text-3xl md:text-2xl text-text-default lg:pl-1 about-title">
                     Key Features
                 </h2>
-                {items.map((item, index) => (
+                {itemsKeyFeatures.map((item, index) => (
                     <div key={item.id} className="p-2 pl-1 mb-1">
                         <div
                             className="flex items-center gap-4 cursor-pointer"
                             onClick={() => toggleAccordion(index, "keyFeatures")}
                         >
-                            <h2 className="text-xl font-medium">{item.title}</h2>
+                            <h2 className="text-xl font-medium sm:text-base md:text-xl">{item.title}</h2>
                             {openKeyFeaturesIndexes.includes(index) ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                         </div>
                         {/* Show separator only when the accordion is open */}
@@ -154,7 +166,7 @@ const AboutProjectSection = () => {
                             <Separator className="lg:w-2/6 bg-text-brand-tertiary" />
                         )}
                         <div
-                            className={`mt-2 text-xl transition-all duration-300 ease-in-out max-h-[${openKeyFeaturesIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
+                            className={`mt-2 sm:text-base md:text-xl transition-all duration-300 ease-in-out max-h-[${openKeyFeaturesIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
                         >
                             {openKeyFeaturesIndexes.includes(index) && item.detail}
                         </div>
@@ -164,7 +176,7 @@ const AboutProjectSection = () => {
 
             {/* Use Case */}
             <div className="md:grid md:gap-2 md:py-0">
-                <h2 className="font-semibold sm:text-xl lg:text-2xl text-text-default lg:pl-1 about-title">
+                <h2 className="font-semibold sm:text-xl lg:text-3xl md:text-2xl text-text-default lg:pl-1 about-title">
                     Use Case
                 </h2>
                 {itemsUsecase.map((item, index) => (
@@ -173,7 +185,7 @@ const AboutProjectSection = () => {
                             className="flex items-center gap-4 cursor-pointer"
                             onClick={() => toggleAccordion(index, "useCase")}
                         >
-                            <h2 className="text-xl font-medium">{item.title}</h2>
+                            <h2 className="text-xl font-medium sm:text-base md:text-xl ">{item.title}</h2>
                             {openUseCaseIndexes.includes(index) ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                         </div>
                         {/* Show separator only when the accordion is open */}
@@ -181,17 +193,12 @@ const AboutProjectSection = () => {
                             <Separator className="lg:w-2/6 bg-text-brand-tertiary" />
                         )}
                         <div
-                            className={`mt-2 text-xl transition-all duration-300 ease-in-out max-h-[${openUseCaseIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
+                            className={`mt-2 text-xl sm:text-base md:text-xl text-text-default-secondary transition-all duration-300 ease-in-out max-h-[${openUseCaseIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
                         >
                             {openUseCaseIndexes.includes(index) && item.detail}
                         </div>
                     </div>
                 ))}
-            </div>
-
-            {/* Workflow Diagram */}
-            <div className="flex items-center justify-center w-full mt-8">
-                <img src={workflowEmailValidation} alt="Workflow Diagram" className="h-auto max-w-1.5/6 px-20" />
             </div>
         </div>
     );
