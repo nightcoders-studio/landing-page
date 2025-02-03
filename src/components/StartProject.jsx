@@ -22,8 +22,18 @@ const StartProject = () => {
     })
 
     const onSubmit = (data) => {
-        console.log("Form Data:", data)
-    }
+        console.log("Form Data:", data);
+        sendMessageToWhatsApp(data);
+    };
+
+    const sendMessageToWhatsApp = (data) => {
+        const { name, help } = data;
+        const phoneNumber = "6285372603154";
+        const message = `Name: ${name}%0AHow Can I Help You?: ${help}`;
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+        window.open(whatsappURL, "_blank");
+    };
 
     return (
         <div className="relative grid grid-cols-1 lg:grid-cols-[35%,65%] w-screen px-0 lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:text-left md:pb-36 lg:pt-16 lg:gap-8 lg:items-start lg:align-top">

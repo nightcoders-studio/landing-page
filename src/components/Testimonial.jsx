@@ -7,45 +7,45 @@ const Testimonial = () => {
     const testimonialContents = [
         {
             id: 1,
-            name: "Roberto Carlos",
-            profile: { src: profilePhoto, alt: "Profile of Roberto Carlos" }, // Properti profile menjadi objek
+            name: "Pranaputra",
+            profile: "https://storage.googleapis.com/fastwork-static/69ab99fb-a7f2-4672-b8f5-f51d2bd10abf.jpg", // Properti profile menjadi objek
             position: "Project Manager",
-            message: "Pekerja yang handal dan dapat dipercaya sangat memuaskan",
+            message: "Pekerja yang handal dan dapat dipercaya sangat memuaskan, Rekomen Banget",
         },
         {
             id: 2,
-            name: "Jane Doe",
-            profile: "https://via.placeholder.com/48x48",
-            position: "Software Engineer",
-            message: "Kualitas kerja yang luar biasa, sangat memuaskan!",
+            name: "Sandy Dwi",
+            profile: "https://fw-fileupload-id.s3.ap-southeast-1.amazonaws.com/users/0d34d16e-ca61-4ec1-b261-c4508e921d35/profile/d0e2bd98-29db-4f12-b5bd-bbe4007235d8.jpg",
+            // position: "Software Engineer",
+            message: "kerjanya oke dan cepet. tks yaa.. good",
         },
         {
             id: 3,
-            name: "John Smith",
-            profile: "https://via.placeholder.com/48x48",
-            position: "Product Owner",
-            message: "Sangat komunikatif dan hasil kerja sesuai harapan.",
+            name: "Yudhis",
+            profile: "https://lh3.googleusercontent.com/a/AGNmyxapUBgr632TV00SCzxyHdCgzjnam3qD7Lh5bPluDg",
+            position: "Wiraswasta",
+            message: "Cepat, sangat komunikatif dan hasil kerja sesuai harapan.",
         },
         {
             id: 4,
-            name: "Jane Smith",
-            profile: "https://via.placeholder.com/48x48",
-            position: "Product Owner",
-            message: "Sangat komunikatif dan hasil kerja sesuai harapan.",
+            name: "Kalam Adhiansyah Lutfie",
+            profile: "https://storage.googleapis.com/fastwork-static/47c28f03-8025-46ab-ab62-6a58c535d774.jpg",
+            // position: "Product Owner",
+            message: "Konsultasinya bener² membekali aku buat bisa kaji lebih lanjut ^^",
         },
         {
             id: 5,
-            name: "John Doe",
-            profile: "https://via.placeholder.com/48x48",
-            position: "Product Owner",
+            name: "Zanio Web",
+            profile: "https://storage.googleapis.com/fastwork-static/47c28f03-8025-46ab-ab62-6a58c535d774.jpg",
+            position: "Web Dev",
             message: "Sangat komunikatif dan hasil kerja sesuai harapan.",
         },
         {
             id: 6,
-            name: "Emily Davis",
-            profile: "https://via.placeholder.com/48x48",
+            name: "andreassog",
+            profile: "https://storage.googleapis.com/fastwork-static/e217226c-757d-4d6b-8c5c-932728e43b97.jpg",
             position: "Designer",
-            message: "Desainnya luar biasa, sangat kreatif!",
+            message: "Benar-benar bekerja di atas ekspektasi saya. Sangat senang dengan hasilnya",
         },
     ];
 
@@ -78,8 +78,7 @@ const Testimonial = () => {
                                     <div className="flex items-center justify-center gap-4 sm:px-4 lg:px-0">
                                         <img
                                             className="w-12 h-12 rounded-full sm:w-10 lg:w-16 lg:h-auto"
-                                            src={testimonial.profile.src}
-                                            alt={testimonial.profile.alt}
+                                            src={testimonial.profile}
                                         />
                                         <div>
                                             <h3 className="font-semibold sm:text-xl md:text-2xl text-text-default xl:text-2xl">

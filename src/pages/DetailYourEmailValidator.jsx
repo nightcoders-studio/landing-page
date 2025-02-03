@@ -1,17 +1,12 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import { useForm } from "react-hook-form";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import vector4 from "../assets/images/vector4.svg";
-import PropTypes from "prop-types";
 import thumbnailYourEmailValidator from "../assets/images/thumbnailYourEmailValidator.png";
 import workflowEmailValidation from "../assets/images/workflowEmailValidation.png";
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, Divide } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
+import StartProject from "@/components/StartProject";
 
 
 const HeroSection = () => (
@@ -27,9 +22,9 @@ const HeroSection = () => (
                     <h1 className="text-xl font-semibold text-text-default md:text-2xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-3xl xl:text-4xl xl:leading-normal sm:w-3/4 3xl:text-7xl 3xl:leading-normal">
                         Solution for ensuring data quality with comprehensive email verification
                     </h1>
-                    <h3 className="text-xl text-text-default xl:leading-normal md:text-xl 3xl:text-6xl 3xl:leading-normal">
-                        <a href="https://youremailvalidator.com"><b className="font-medium text-text-default-tertiary">Your Email Validator</b></a>
-                    </h3>
+                    <Button>
+                        <a href="https://youremailvalidator.com"><b className="font-medium text-white">Your Email Validator</b></a>
+                    </Button>
                 </div>
             </div>
 
@@ -134,7 +129,7 @@ const AboutProjectSection = () => {
 
             {/* Key Features */}
             <div className="md:grid md:gap-2 md:py-0">
-                <h2 className="font-semibold sm:text-xl lg:text-2xl text-text-default lg:pl-1 about-title">
+                <h2 className="font-semibold lg:text-3xl md:text-2xl text-text-default lg:pl-1 about-title">
                     Key Features
                 </h2>
                 {items.map((item, index) => (
@@ -143,7 +138,7 @@ const AboutProjectSection = () => {
                             className="flex items-center gap-4 cursor-pointer"
                             onClick={() => toggleAccordion(index, "keyFeatures")}
                         >
-                            <h2 className="text-xl font-medium sm:text-base">{item.title}</h2>
+                            <h2 className="text-xl font-medium sm:text-base md:text-xl">{item.title}</h2>
                             {openKeyFeaturesIndexes.includes(index) ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                         </div>
                         {/* Show separator only when the accordion is open */}
@@ -161,7 +156,7 @@ const AboutProjectSection = () => {
 
             {/* Use Case */}
             <div className="md:grid md:gap-2 md:py-0">
-                <h2 className="font-semibold sm:text-xl lg:text-2xl text-text-default lg:pl-1 about-title">
+                <h2 className="font-semibold sm:text-xl lg:text-3xl md:text-2xl text-text-default lg:pl-1 about-title">
                     Use Case
                 </h2>
                 {itemsUsecase.map((item, index) => (
@@ -170,7 +165,7 @@ const AboutProjectSection = () => {
                             className="flex items-center gap-4 cursor-pointer"
                             onClick={() => toggleAccordion(index, "useCase")}
                         >
-                            <h2 className="text-xl font-medium sm:text-base md:text-xl">{item.title}</h2>
+                            <h2 className="text-xl font-medium sm:text-base md:text-xl ">{item.title}</h2>
                             {openUseCaseIndexes.includes(index) ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                         </div>
                         {/* Show separator only when the accordion is open */}
@@ -178,7 +173,7 @@ const AboutProjectSection = () => {
                             <Separator className="lg:w-2/6 bg-text-brand-tertiary" />
                         )}
                         <div
-                            className={`mt-2 text-xl sm:text-base transition-all duration-300 ease-in-out max-h-[${openUseCaseIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
+                            className={`mt-2 text-xl sm:text-base md:text-xl text-text-default-secondary transition-all duration-300 ease-in-out max-h-[${openUseCaseIndexes.includes(index) ? '500px' : '0'}] overflow-hidden`}
                         >
                             {openUseCaseIndexes.includes(index) && item.detail}
                         </div>
@@ -193,7 +188,7 @@ const AboutProjectSection = () => {
                         Technical Stacks
                     </h2>
                     <Separator className="my-4 bg-text-brand-tertiary" />
-                    <div className="grid gap-4 mt-4 md:grid-cols-3 sm:grid-cols-1 text-text-xl">
+                    <div className="grid gap-4 mt-4 md:grid-cols-3 md:text-xl sm:text-basesm:grid-cols-1 text-text-xl">
                         {/* Backend Section */}
                         <div className="flex items-center gap-2">
                             <Code size={24} />
@@ -242,7 +237,9 @@ const AboutProjectSection = () => {
                 </div>
 
             </div>
-            <Spacer />
+
+
+            <Spacer className={"sm:h-4 md:h-20 "} />
             {/* Workflow Diagram */}
             <div className="flex items-center justify-center w-full mt-8 sm:m-0">
                 <img
@@ -258,117 +255,23 @@ const AboutProjectSection = () => {
             {/* Implementations benefit  */}
             <div className="grid gap-6 implementation-benefit">
                 <h2 className="font-semibold sm:text-3xl lg:text-4xl text-text-default lg:pl-1 about-title">Implementation Benefits</h2>
-                <div className="md:w-3/4 lg:pl-1 lg:text-xl ! md:text-3xl">
-                    <ul className="text-xl">Reduced bounce rates by up to 95%</ul>
-                    <ul className="text-xl">Improved deliverability in email campaigns</ul>
-                    <ul className="text-xl">Prevention of fake account creation</ul>
-                    <ul className="text-xl">Enhanced data quality in customer databases</ul>
+                <div className="md:w-3/4 lg:pl-1 sm:pl-2 md:pl-6 lg:text-xl md:text-3xl">
+                    <ul className="pl-5 list-disc sm:text-base md:text-xl">
+                        <li >Reduced bounce rates by up to 95%</li>
+                        <li >Improved deliverability in email campaigns</li>
+                        <li >Prevention of fake account creation</li>
+                        <li >Enhanced data quality in customer databases</li>
+                    </ul>
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 };
 
 
 
-
-
-const StartProjectSection = ({ form, onSubmit }) => (
-    <div className="relative grid grid-cols-1 lg:grid-cols-[35%,65%] w-screen px-0 lg:px-16 md:px-7 sm:items-center sm:mx-0 sm:text-center md:text-left md:pb-36 lg:pt-16 lg:gap-8">
-        {/* Header Section */}
-        <div className="relative flex flex-col md:w-[364px] lg:w-full text-4xl font-semibold leading-[44px] sm:text-left lg:items-start">
-            <span className="relative z-10 align-text-top text-text-default sm:text-3xl lg:text-5xl lg:mb-6 sm:pl-7 lg:self-start sm:pb-5 lg:leading-normal">
-                Start Your Project
-            </span>
-        </div>
-
-        {/* Form Section */}
-        <div className="z-10 flex flex-col flex-grow gap-10 sm:w-full sm:px-8 sm:align-text-left">
-            <Form {...form} className="md:w-full">
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    {/* Name Field */}
-                    <FormField
-                        name="name"
-                        control={form.control}
-                        render={({ field }) => (
-                            <FormItem className="sm:flex sm:flex-col sm:items-start">
-                                <FormLabel className="text-base text-text-default sm:mb-2 sm:text-xl md:text-2xl">Name</FormLabel>
-                                <FormControl>
-                                    <Input
-                                        placeholder="Type your or company name here"
-                                        className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400"
-                                        {...field}
-                                    />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-
-                    {/* How Can I Help Field */}
-                    <FormField
-                        name="help"
-                        control={form.control}
-                        render={({ field }) => (
-                            <FormItem className="w-full sm:flex sm:flex-col sm:items-start">
-                                <FormLabel className="text-base text-text-default sm:mb-2 sm:text-xl md:text-2xl">How Can I Help You?</FormLabel>
-                                <FormControl>
-                                    <Textarea
-                                        placeholder="Type here"
-                                        rows={4}
-                                        className="px-4 py-3 bg-[#e8eaec] rounded-lg focus:ring-2 focus:ring-blue-400"
-                                        {...field}
-                                    />
-                                </FormControl>
-                                <FormMessage />
-                            </FormItem>
-                        )}
-                    />
-
-                    {/* Submit Button */}
-                    <Button
-                        type="submit"
-                        className="transition ease-in-out w-full text-text-default-quaternary px-4 lg:py-6 flex items-center justify-center text-base bg-transparent hover:shadow-none bg-[#293239] border-solid border-2 border-[#e4882b] rounded-lg lg:text-xl hover:translate-y-1 sm:text-lg md:text-2xl md:py-6"
-                    >
-                        Send Message
-                    </Button>
-                </form>
-            </Form>
-        </div>
-
-        {/* Vector Background */}
-        <img
-            src={vector4}
-            alt="Vector Background"
-            className="absolute lg:left-20 w-[150px] sm:w-[220px] sm:bottom-0 lg:bottom-0 sm:left-14 lg:w-[380px] opacity-80 z-0"
-            style={{
-                transform: 'translateX(-50%)',
-            }}
-        />
-        <Spacer className="sm:h-1 lg:h-12" />
-    </div>
-);
-
-StartProjectSection.propTypes = {
-    form: PropTypes.shape({
-        handleSubmit: PropTypes.func.isRequired,
-        control: PropTypes.object.isRequired,
-    }).isRequired,
-    onSubmit: PropTypes.func.isRequired,
-};
-
 const DetailYourEmailValidator = () => {
-    const form = useForm({
-        defaultValues: {
-            name: "",
-            help: "",
-        },
-    });
-
-    const onSubmit = (data) => {
-        console.log("Form Data:", data);
-    };
 
     return (
         <div>
@@ -377,7 +280,7 @@ const DetailYourEmailValidator = () => {
             <AboutProjectSection />
             <Spacer />
             <Spacer className="md:h-20 sm:block" />
-            <StartProjectSection form={form} onSubmit={onSubmit} />
+            <StartProject className="px-0 mx-0 sm:block" />
             <Spacer className="md:h-20 sm:block lg:hidden" />
             <Footer />
         </div>

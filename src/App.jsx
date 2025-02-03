@@ -3,8 +3,8 @@ import HomePage from './pages/HomePage';
 import './App.css'
 import Navbar from './components/Navbar';
 import DetailMugee from './pages/DetailMugee';
-// import DetailPamaba from './pages/DetailPamaba';
-// import DetailTesUjianOnline from './pages/DetailTesUjianOnline';
+import DetailPamaba from './pages/DetailPamaba';
+import DetailTesUjianOnline from './pages/DetailTesUjianOnline';
 import DetailYourEmailValidator from './pages/DetailYourEmailValidator';
 
 
@@ -18,8 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/detail-mugee" element={<DetailMugee />} />
-            {/* <Route path="/detail-pamaba" element={<DetailPamaba />} /> */}
-            {/* <Route path="/detail-tes-ujian-online" element={<DetailTesUjianOnline />} /> */}
+            <Route path="/detail-pamaba" element={<DetailPamaba />} />
+            <Route path="/detail-tes-ujian-online" element={<DetailTesUjianOnline />} />
             <Route path="/detail-your-email-validator" element={<DetailYourEmailValidator />} />
           </Routes>
         </div>

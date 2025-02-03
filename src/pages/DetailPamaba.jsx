@@ -1,6 +1,6 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import thumbnailTestujianonline from "../assets/images/thumbnail-tesujianonline.png";
+import thumbnailPamaba from "../assets/images/thumbnailPamaba.png";
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, LaptopMinimalCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
@@ -20,10 +20,9 @@ const HeroSection = () => (
             <div id="textHeroWrapper" className="flex flex-col items-stretch order-2 gap-4 md:gap-5 lg:order-1 3xl:gap-11">
                 <div id="textHeroContainer" className="flex flex-col items-stretch gap-4">
                     <h1 className="text-xl font-semibold text-text-default md:text-2xl sm:leading-snug md:leading-normal lg:leading-normal lg:text-3xl xl:text-4xl xl:leading-normal sm:w-3/4 3xl:text-7xl 3xl:leading-normal">
-                        Reliable online Exam platform offering various packages for job preparations
-                    </h1>
+                        Providing interactive and meaningful earthquake disaster mitigation education for children.</h1>
                     <Button>
-                        <a href="https://tesujianonline.com"><b className="font-medium text-white">Tes Ujian Online</b></a>
+                        <a href="https://tesujianonline.com"><b className="font-medium text-white">Pamaba</b></a>
                     </Button>
                 </div>
             </div>
@@ -31,7 +30,7 @@ const HeroSection = () => (
             {/* Image Section */}
             <div className="order-1 w-full h-auto overflow-auto justify-self-end lg:w-full lg:h-auto gambarHero lg:order-2 lg:pr-3 3xl:w-full 3xl:h-auto" style={{ height: '100%', overflow: 'auto' }}>
                 <img
-                    src={thumbnailTestujianonline}
+                    src={thumbnailPamaba}
                     alt="mugee thumbnail"
                     className="object-cover w-full h-full"
                 />
@@ -65,25 +64,25 @@ const AboutProjectSection = () => {
     const itemsKeyFeatures = [
         {
             id: 1,
-            title: "Realistic Test Simulations",
+            title: "Interactive Learning Modules",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Questions based on actual job preparation exams</li>
-                    <li>Timed tests to simulate real exam conditions</li>
-                    <li>Instant feedback on answers</li>
-                    <li>Performance tracking and analysis</li>
+                    <li>Engaging and child-friendly educational content</li>
+                    <li>Quizzes and activities to reinforce learning</li>
+                    <li>Animated and interactive simulations</li>
+                    <li>Multilingual support</li>
                 </ul>
             ),
         },
         {
             id: 2,
-            title: "Comprehensive Question Bank",
+            title: "Localized Content",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Large repository of diverse questions</li>
-                    <li>Regular updates to the question bank</li>
-                    <li>Questions covering various job categories</li>
-                    <li>Options for custom test creation</li>
+                    <li>Content tailored to regional disaster scenarios</li>
+                    <li>Real-life case studies from affected areas</li>
+                    <li>Relevant resources for local communities</li>
+                    <li>Frequent updates with current data</li>
                 </ul>
             ),
         },
@@ -92,48 +91,48 @@ const AboutProjectSection = () => {
             title: "User-Friendly Interface",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Intuitive and easy-to-navigate design</li>
-                    <li>Responsive layout for all device types</li>
+                    <li>Easy-to-navigate design for children</li>
                     <li>Accessible for users with different needs</li>
                     <li>Detailed instructions and help resources</li>
+                    <li>Parental controls and guidance</li>
                 </ul>
             ),
         },
     ];
 
-
     const itemsUsecase = [
         {
             id: 1,
-            title: "Job Preparation",
+            title: "School Education Programs",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Practice tests for CPNS, BUMN, and other job exams</li>
-                    <li>Assess readiness and identify areas for improvement</li>
+                    <li>Integrate disaster mitigation into school curriculums</li>
+                    <li>Conduct interactive classroom activities</li>
                 </ul>
             ),
         },
         {
             id: 2,
-            title: "Educational Institutions",
+            title: "Community Outreach",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Provide practice exams for students</li>
-                    <li>Evaluate student performance and progress</li>
+                    <li>Educate local communities about disaster preparedness</li>
+                    <li>Organize community workshops and events</li>
                 </ul>
             ),
         },
         {
             id: 3,
-            title: "Corporate Training Programs",
+            title: "Emergency Response Training",
             detail: (
                 <ul className="pl-5 mt-2 list-disc">
-                    <li>Use as part of employee training and assessment</li>
-                    <li>Measure knowledge and skills relevant to job roles</li>
+                    <li>Train children on emergency response actions</li>
+                    <li>Provide resources for family emergency planning</li>
                 </ul>
             ),
         },
     ];
+
 
 
 
@@ -144,7 +143,7 @@ const AboutProjectSection = () => {
                 About This Project
             </h1>
             <h4 className="text-text-default md:w-3/4 lg:pl-1 lg:text-xl md:text-xl about-description">
-                Tes Ujian Online is a straightforward web application designed to provide job seekers with realistic tests. These tests are modeled after genuine questions encountered during preparation for various job applications, including CPNS, BUMN, and other widely recognized examinations. This platform aims to equip candidates with the necessary tools and experience to excel in their job search and career ambitions. </h4>
+                The PAMABA app (Palu Aman Bencana) aims to provide interactive and meaningful earthquake disaster mitigation education for children. The name "Palu" refers to the capital of Central Sulawesi, often affected by earthquakes, highlighting the app's contextual relevance to disaster-prone areas. "Aman" signifies the aim to create a sense of safety for children after learning about disaster mitigation, while "Bencana" emphasizes the focus on disaster preparedness. "PAMABA" is an abbreviation designed to be memorable and child-friendly, attracting the attention of young users. </h4>
             <Spacer />
 
             {/* Key Features */}
@@ -215,42 +214,7 @@ const AboutProjectSection = () => {
                             <div className="flex flex-col">
                                 <b>Frontend</b>
                                 <ul>React JS</ul>
-                            </div>
-                        </div>
-
-                        {/* Backend Section */}
-                        <div className="flex items-center gap-2">
-                            <Code size={24} />
-                            <div className="flex flex-col">
-                                <b>Backend</b>
-                                <ul>Python with FastAPI</ul>
-                            </div>
-                        </div>
-
-                        {/* Database Section */}
-                        <div className="flex items-center gap-2">
-                            <Database size={24} />
-                            <div className="flex flex-col">
-                                <b>Database</b>
-                                <ul>MySQL</ul>
-                            </div>
-                        </div>
-
-                        {/* Authentication Section */}
-                        <div className="flex items-center gap-2">
-                            <Lock size={24} />
-                            <div className="flex flex-col">
-                                <b>Authentication</b>
-                                <ul>JWT-Based Token System</ul>
-                            </div>
-                        </div>
-
-                        {/* Email Services Section */}
-                        <div className="flex items-center gap-2">
-                            <Mail size={24} />
-                            <div className="flex flex-col">
-                                <b>Email Services</b>
-                                <ul>SMTP Integration</ul>
+                                <ul>Tailwind</ul>
                             </div>
                         </div>
 
@@ -289,7 +253,7 @@ const AboutProjectSection = () => {
 };
 
 
-const DetailTesUjianOnline = () => {
+const DetailPamaba = () => {
 
     return (
         <div>
@@ -305,4 +269,4 @@ const DetailTesUjianOnline = () => {
 };
 
 
-export default DetailTesUjianOnline;
+export default DetailPamaba;
