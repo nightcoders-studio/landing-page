@@ -21,7 +21,7 @@ const WhatWeDoBest = () => {
       icon: (size) => <Globe strokeWidth={1} className="h-auto" size={size} />,
       title: "Web Development",
       subTitle: "We create fast, secure, and visually appealing websites tailored to your business, from simple sites to complex cloud platforms.",
-      content: ["Modern Web Technologies", "Responsive Design", "Scalable Infrastructure"],
+      content: ["SEO-Friendly", "Reliable Backend", "Integration Support"],
     },
     {
       id: 3,
@@ -29,14 +29,14 @@ const WhatWeDoBest = () => {
       title: "AI Integration & Automation",
       subTitle:
         "Leverage the power of AI to automate processes, enhance decision-making, and unlock new business opportunities. We bring smart solutions that drive efficiency",
-      content: ["Modern Web Technologies", "Responsive Design", "Scalable Infrastructure"],
+      content: ["Automation", "Data-driven Predictions", "Smart Chatbot", "Analytics for Bussiness Predictions"],
     },
     {
       id: 4,
       icon: (size) => <PenTool strokeWidth={1} className="h-auto" size={size} />,
       title: "Digital Product Design",
       subTitle: "We create user-focused designs that are both engaging and efficient, from wireframes to prototypes, ensuring great looks and functionality.",
-      content: ["Modern Web Technologies", "Responsive Design", "Scalable Infrastructure"],
+      content: ["In Deph User Research", "Wireframes & Prototypes", "Responsive Design"],
     }
   ];
 
