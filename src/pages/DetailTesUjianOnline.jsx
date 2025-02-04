@@ -42,7 +42,6 @@ const HeroSection = () => (
 
 
 const AboutProjectSection = () => {
-    const [openIndexes, setOpenIndexes] = useState([]);
     const [openKeyFeaturesIndexes, setOpenKeyFeaturesIndexes] = useState([]);
     const [openUseCaseIndexes, setOpenUseCaseIndexes] = useState([]);
 

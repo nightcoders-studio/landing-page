@@ -2,7 +2,7 @@ import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
 import thumbnailPamaba from "../assets/images/thumbnailPamaba.png";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, LaptopMinimalCheck } from "lucide-react";
+import { ChevronDown, ChevronUp, Settings, LaptopMinimalCheck } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import StartProject from "@/components/StartProject"
@@ -41,7 +41,7 @@ const HeroSection = () => (
 
 
 const AboutProjectSection = () => {
-    const [openIndexes, setOpenIndexes] = useState([]);
+    // const [openIndexes, setOpenIndexes] = useState([]);
     const [openKeyFeaturesIndexes, setOpenKeyFeaturesIndexes] = useState([]);
     const [openUseCaseIndexes, setOpenUseCaseIndexes] = useState([]);
 
@@ -143,7 +143,7 @@ const AboutProjectSection = () => {
                 About This Project
             </h1>
             <h4 className="text-text-default md:w-3/4 lg:pl-1 lg:text-xl md:text-xl about-description">
-                The PAMABA app (Palu Aman Bencana) aims to provide interactive and meaningful earthquake disaster mitigation education for children. The name "Palu" refers to the capital of Central Sulawesi, often affected by earthquakes, highlighting the app's contextual relevance to disaster-prone areas. "Aman" signifies the aim to create a sense of safety for children after learning about disaster mitigation, while "Bencana" emphasizes the focus on disaster preparedness. "PAMABA" is an abbreviation designed to be memorable and child-friendly, attracting the attention of young users. </h4>
+                The PAMABA app (Palu Aman Bencana) aims to provide interactive and meaningful earthquake disaster mitigation education for children. The name &#34;Palu&#34; refers to the capital of Central Sulawesi, often affected by earthquakes, highlighting the app&#34;s contextual relevance to disaster-prone areas. &#34;Aman&#34; signifies the aim to create a sense of safety for children after learning about disaster mitigation, while &#34;Bencana&#34; emphasizes the focus on disaster preparedness. &#34;PAMABA&#34; is an abbreviation designed to be memorable and child-friendly, attracting the attention of young users. </h4>
             <Spacer />
 
             {/* Key Features */}

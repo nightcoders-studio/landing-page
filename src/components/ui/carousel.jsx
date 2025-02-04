@@ -82,7 +82,11 @@ const CarouselContent = React.forwardRef(({ className, gap = "gap-6", ...props }
   );
 });
 CarouselContent.displayName = "CarouselContent";
-CarouselContent.propTypes = { className: PropTypes.string };
+CarouselContent.propTypes = {
+  className: PropTypes.string,
+  gap: PropTypes.string,
+};
+
 
 const CarouselItem = React.forwardRef(({ className, ...props }, ref) => {
   const { orientation } = useCarousel();
@@ -122,6 +126,9 @@ const CarouselPrevious = React.forwardRef(({ className, ...props }, ref) => {
   );
 });
 CarouselPrevious.displayName = "CarouselPrevious";
+CarouselPrevious.propTypes = {
+  className: PropTypes.string,
+}
 
 const CarouselNext = React.forwardRef(({ className, ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -142,5 +149,8 @@ const CarouselNext = React.forwardRef(({ className, ...props }, ref) => {
   );
 });
 CarouselNext.displayName = "CarouselNext";
+CarouselNext.propTypes = {
+  className: PropTypes.string,
+}
 
 export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };
