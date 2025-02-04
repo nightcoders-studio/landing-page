@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import thumbnailYourEmailValidator from "../assets/images/thumbnailYourEmailValidator.png";
 import workflowEmailValidation from "../assets/images/workflowEmailValidation.png";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, Divide } from "lucide-react";
+import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
 import StartProject from "@/components/StartProject";
 
@@ -40,7 +40,6 @@ const HeroSection = () => (
 
 
 const AboutProjectSection = () => {
-    const [openIndexes, setOpenIndexes] = useState([]);
     const [openKeyFeaturesIndexes, setOpenKeyFeaturesIndexes] = useState([]);
     const [openUseCaseIndexes, setOpenUseCaseIndexes] = useState([]);
 

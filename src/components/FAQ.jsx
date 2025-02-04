@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as Accordion from '@radix-ui/react-accordion';
-import { MoveUpRight, MoveDownRight, Space } from "lucide-react";
+import { MoveUpRight, MoveDownRight } from "lucide-react";
 import Spacer from './ui/spacer';
 
 const FAQ = () => {

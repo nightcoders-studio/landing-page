@@ -63,12 +63,14 @@ const Button = React.forwardRef(
   }
 );
 
+
 Button.displayName = "Button";
 Button.propTypes = {
   className: PropTypes.string,
   variant: PropTypes.oneOf(["default"]),
   size: PropTypes.oneOf(["sm", "md", "lg", "xl", "2xl"]),
   asChild: PropTypes.bool,
+  children: PropTypes.node,
 };
 
-export { Button, buttonVariants };
+export { Button };

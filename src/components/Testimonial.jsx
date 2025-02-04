@@ -1,7 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import Vector5 from "../assets/images/vector5.svg";
 import Spacer from "./ui/spacer";
-import profilePhoto from "../assets/images/profile photo.svg";
 
 const Testimonial = () => {
     const testimonialContents = [

@@ -2,7 +2,7 @@ import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
 import ThumbnailMugee from "../assets/images/thumbnail-Mugee.webp";
 import { useState } from "react";
-import { ChevronDown, ChevronUp, Database, Lock, Mail, Settings, Code, Divide } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
 import StartProject from "@/components/StartProject";
 import { Button } from "@/components/ui/button";
@@ -42,7 +42,6 @@ const HeroSection = () => (
 
 
 const AboutProjectSection = () => {
-    const [openIndexes, setOpenIndexes] = useState([]);
     const [openKeyFeaturesIndexes, setOpenKeyFeaturesIndexes] = useState([]);
     const [openUseCaseIndexes, setOpenUseCaseIndexes] = useState([]);
 
