@@ -1,0 +1,138 @@
+:root {
+  /* Background Colors */
+  --color-bg-default: #f8f9f9;
+  --color-bg-default-secondary: #e8eaec;
+  --color-bg-default-tertiary: #39434b;
+  --color-bg-default-quaternary: #293239;
+
+  --color-bg-brand: #e4882b;
+  --color-bg-brand-secondary: #eaa24d;
+  --color-bg-brand-tertiary: #f1c480;
+
+  --color-bg-disabled: #e8eaec;
+
+  --color-bg-success: #94c1b0;
+
+  --color-bg-warning: #fca347;
+
+  --color-bg-danger: #f2a1a8;
+
+  /* Text Colors */
+  --color-text-default: #293239;
+  --color-text-default-secondary: #39434b;
+  --color-text-default-tertiary: #5b6970;
+  --color-text-default-quaternary: #e8eaec;
+
+  --color-text-brand: #e4882b;
+  --color-text-brand-secondary: #eaa24d;
+  --color-text-brand-tertiary: #f1c480;
+
+  --color-text-disabled: #d8dcde;
+
+  --color-text-success: #104b36;
+
+  --color-text-warning: #673615;
+
+  --color-text-danger: #7e1c25;
+
+  /* Icon Colors */
+  --color-icon-default: #616161;
+  --color-icon-default-secondary: #39434b;
+  --color-icon-default-tertiary: #5b6970;
+  --color-icon-default-quaternary: #e8eaec;
+
+  --color-icon-brand: #e4882b;
+  --color-icon-brand-secondary: #eaa24d;
+  --color-icon-brand-tertiary: #f1c480;
+
+  --color-icon-disabled: #d8dcde;
+
+  --color-icon-success: #104b36;
+
+  --color-icon-warning: #673615;
+
+  --color-icon-danger: #7e1c25;
+
+  /* Border Colors */
+  --color-border-default: #293239;
+  --color-border-default-secondary: #39434b;
+  --color-border-default-tertiary: #5b6970;
+  --color-border-default-quaternary: #e8eaec;
+
+  --color-border-brand: #e4882b;
+  --color-border-brand-secondary: #eaa24d;
+  --color-border-brand-tertiary: #f1c480;
+
+  --color-border-disabled: #d8dcde;
+
+  --color-border-success: #104b36;
+
+  --color-border-warning: #673615;
+
+  --color-border-danger: #7e1c25;
+
+  /* Font Tokens */
+  --dt-font-family-default: "Futura", sans-serif;
+  --dt-font-family-secondary: "Inter", sans-serif;
+
+  --dt-font-weight-regular: 400;
+  --dt-font-weight-medium: 500;
+  --dt-font-weight-semibold: 600;
+  --dt-font-weight-bold: 700;
+
+  --dt-font-size-1200: 48px;
+  --dt-font-size-800: 32px;
+  --dt-font-size-700: 28px;
+  --dt-font-size-600: 24px;
+  --dt-font-size-500: 20px;
+  --dt-font-size-450: 18px;
+  --dt-font-size-400: 16px;
+  --dt-font-size-350: 14px;
+  --dt-font-size-300: 12px;
+  --dt-font-size-250: 10px;
+
+  --dt-font-line-height-1650: 68px;
+  --dt-font-line-height-1100: 44px;
+  --dt-font-line-height-800: 32px;
+  --dt-font-line-height-700: 28px;
+  --dt-font-line-height-650: 26px;
+  --dt-font-line-height-600: 24px;
+  --dt-font-line-height-500: 20px;
+  --dt-font-line-height-450: 18px;
+  --dt-font-line-height-350: 14px;
+
+  --dt-font-letter-spacing-normal: 0px;
+  --dt-font-letter-spacing-dense: -0.2px;
+  --dt-font-letter-spacing-denser: -0.3px;
+  --dt-font-letter-spacing-densest: -0.54px;
+
+  /* Shadow Tokens */
+  --shadow-x1: 0px 1px 0px 0px rgba(24, 39, 75, 0.12);
+  --shadow-x2: 0px 3px 1px -1px rgba(24, 39, 75, 0.08);
+  --shadow-x3: 0px 4px 6px -2px rgba(24, 39, 75, 0.08);
+  --shadow-x4: 0px 8px 16px -4px rgba(24, 39, 75, 0.08);
+  --shadow-x5: 0px 12px 20px -8px rgba(24, 39, 75, 0.12);
+  --shadow-x6: 0px 20px 20px -8px rgba(24, 39, 75, 0.12);
+
+  /* Spacing Tokens */
+  --space-zero: 0px;
+  --space-x1: 4px;
+  --space-x2: 8px;
+  --space-x3: 12px;
+  --space-x4: 16px;
+  --space-x5: 20px;
+  --space-x6: 24px;
+  --space-x7: 28px;
+  --space-x8: 32px;
+  --space-x9: 40px;
+  --space-x10: 48px;
+  --space-x11: 64px;
+  --space-x12: 80px;
+
+  /* Body Variants */
+  --dt-text-body-xxs-font-size: var(--dt-font-size-250);
+  --dt-text-body-xxs-font-line-height: var(--dt-font-line-height-350);
+  --dt-text-body-xxs-font-weight: var(--dt-font-weight-regular);
+  --dt-text-body-xxs-font-family: var(--dt-font-family-secondary);
+  --dt-text-body-xxs-font-letter-spacing: var(--dt-font-letter-spacing-normal);
+}

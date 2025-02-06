@@ -1,37 +1,15 @@
-# syntax=docker/dockerfile:1
-ARG PYTHON_VERSION=3.10.15
-FROM python:${PYTHON_VERSION}-slim as base
-
-# Prevents Python from writing pyc files.
-ENV PYTHONDONTWRITEBYTECODE=1
-
-# Prevents Python from buffering stdout and stderr.
-ENV PYTHONUNBUFFERED=1
+FROM node:22-alpine
 
 WORKDIR /app
 
-ARG UID=10001
-RUN adduser \
-    --disabled-password \
-    --gecos "" \
-    --home "/nonexistent" \
-    --shell "/sbin/nologin" \
-    --no-create-home \
-    --uid "${UID}" \
-    appuser
+COPY package*.json ./
 
-RUN --mount=type=cache,target=/root/.cache/pip \
-    --mount=type=bind,source=requirements.txt,target=requirements.txt \
-    python -m pip install -r requirements.txt
+RUN npm install
 
-# Switch to the non-privileged user to run the application.
-USER appuser
+COPY . . 
 
-# Copy the source code into the container.
-COPY . .
+ENV PORT=5173
 
-# Expose the port that the application listens on.
-EXPOSE 8000
+EXPOSE 5173
 
-# Run the application.
-CMD uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+CMD ["npm", "run", "dev"] 
