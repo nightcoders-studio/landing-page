@@ -14,6 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import vector4 from "@/assets/images/vector4.svg";
 import PropTypes from "prop-types";
+import mockupWebsite from "@/assets/images/mockup-website.png";
 
 const HeroSection = () => (
   <div
@@ -45,7 +46,7 @@ const HeroSection = () => (
       {/* Image Section */}
       <img
         className="order-1 w-full h-auto justify-self-end lg:w-3/4 gambarHero lg:order-2 lg:pr-3"
-        src="@/assets/images/mockup_website.svg"
+        src={mockupWebsite}
         alt="Illustration"
       />
     </div>

@@ -1,6 +1,7 @@
 import { Button } from "../components/ui/button";
 import Spacer from "./ui/spacer";
 import { Rocket } from "lucide-react";
+import heroImage from "@/assets/images/heroImage.svg";
 
 const Hero = () => {
   return (
@@ -52,7 +53,7 @@ const Hero = () => {
         </div>
 
         <img
-          src="@/assets/images/heroImage.svg"
+          src={heroImage}
           alt="Illustration"
           className="hidden w-full h-auto lg:block "
         />
