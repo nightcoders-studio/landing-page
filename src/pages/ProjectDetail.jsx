@@ -45,7 +45,7 @@ const HeroSection = () => (
       {/* Image Section */}
       <img
         className="order-1 w-full h-auto justify-self-end lg:w-3/4 gambarHero lg:order-2 lg:pr-3"
-        src="src/assets/images/Mockup website.svg"
+        src="@/assets/images/mockup_website.svg"
         alt="Illustration"
       />
     </div>
