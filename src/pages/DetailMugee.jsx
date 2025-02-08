@@ -1,6 +1,6 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import thumbnailMugee from "@/assets/images/thumbnail-Mugee.png";
+import thumbnailMugee from "@/assets/images/thumbnail-mugee.png";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
