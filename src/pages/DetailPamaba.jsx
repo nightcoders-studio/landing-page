@@ -1,6 +1,6 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import thumbnailPamaba from "@/assets/images/thumbnailPamaba.png";
+import thumbnailPamaba from "../assets/images/thumbnailPamaba.png";
 import { useState } from "react";
 import {
   ChevronDown,

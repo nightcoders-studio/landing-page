@@ -1,8 +1,8 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import thumbnailYourEmailValidator from "@/assets/images/thumbnailYourEmailValidator.png";
-import workflowEmailValidation from "@/assets/images/workflowEmailValidation.png";
+import thumbnailYourEmailValidator from "../assets/images/thumbnailYourEmailValidator.png";
+import workflowEmailValidation from "../assets/images/workflowEmailValidation.png";
 import { useState } from "react";
 import {
   ChevronDown,
