@@ -1,6 +1,6 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import thumbnailTestujianonline from "../assets/images/thumbnail-tesujianonline.png";
+import thumbnailTestujianonline from "@/assets/images/thumbnail-tesujianonline.png";
 import { useState } from "react";
 import {
   ChevronDown,

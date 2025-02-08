@@ -1,6 +1,6 @@
 import Spacer from "../components/ui/spacer";
 import Footer from "../components/Footer";
-import ThumbnailMugee from "../assets/images/thumbnail-Mugee.webp";
+import thumbnailMugee from "@/assets/images/thumbnail-Mugee.png";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -43,7 +43,7 @@ const HeroSection = () => (
         style={{ height: "100%", overflow: "auto" }}
       >
         <img
-          src={ThumbnailMugee}
+          src={thumbnailMugee}
           alt="mugee thumbnail"
           className="object-cover w-full h-full"
         />

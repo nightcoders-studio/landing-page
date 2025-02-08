@@ -12,7 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import vector4 from "../assets/images/vector4.svg";
+import vector4 from "@/assets/images/vector4.svg";
 import PropTypes from "prop-types";
 
 const HeroSection = () => (
