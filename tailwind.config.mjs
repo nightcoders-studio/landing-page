@@ -81,13 +81,19 @@ const config = {
           foreground: 'hsl(var(--popover-foreground))',
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
         },
         ring: 'hsl(var(--ring))',
+        brand: {
+          DEFAULT: 'var(--brand)',
+          secondary: 'var(--brand-secondary)',
+        },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: 'var(--secondary)',
+        },
+        quaternary: {
+          DEFAULT: 'var(--quaternary)',
         },
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',

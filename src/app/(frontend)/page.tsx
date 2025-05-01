@@ -1,5 +1,14 @@
-import PageTemplate, { generateMetadata } from './[slug]/page'
+import { generateMetadata } from './[slug]/page'
+import Home from './home'
 
-export default PageTemplate
+const app = () => {
+  return (
+    <>
+      <Home />
+    </>
+  )
+}
+
+export default app
 
 export { generateMetadata }

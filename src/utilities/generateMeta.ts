@@ -27,8 +27,9 @@ export const generateMeta = async (args: {
   const ogImage = getImageURL(doc?.meta?.image)
 
   const title = doc?.meta?.title
-    ? doc?.meta?.title + ' | Payload Website Template'
-    : 'Payload Website Template'
+    ? doc?.meta?.title +
+      ' | Nightcoders – Digital Agency for Websites, Mobile Apps, Web Templates & Design'
+    : 'Nightcoders – Digital Agency for Websites, Mobile Apps, Web Templates & Design'
 
   return {
     description: doc?.meta?.description,

@@ -3,14 +3,15 @@ import { getServerSideURL } from './getURL'
 
 const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
-  description: 'An open-source website built with Payload and Next.js.',
+  description:
+    'Nightcoders is a creative web and mobile development agency based in Aceh, Indonesia. We specialize in building websites, mobile apps, and also offer premium web templates and UI/UX design services.',
   images: [
     {
       url: `${getServerSideURL()}/website-template-OG.webp`,
     },
   ],
-  siteName: 'Payload Website Template',
-  title: 'Payload Website Template',
+  siteName: 'Nightcoders – Digital Agency for Websites, Mobile Apps, Web Templates & Design',
+  title: 'Nightcoders – Digital Agency for Websites, Mobile Apps, Web Templates & Design',
 }
 
 export const mergeOpenGraph = (og?: Metadata['openGraph']): Metadata['openGraph'] => {
