@@ -75,6 +75,11 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
       required: true,
     },
     {
+      name: 'year',
+      type: 'number',
+      required: true,
+    },
+    {
       type: 'tabs',
       tabs: [
         {

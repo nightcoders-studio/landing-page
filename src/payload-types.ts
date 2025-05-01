@@ -736,6 +736,7 @@ export interface Form {
 export interface Portfolio {
   id: number;
   title: string;
+  year: number;
   heroImage?: (number | null) | Media;
   content: {
     root: {
@@ -1334,6 +1335,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface PortfoliosSelect<T extends boolean = true> {
   title?: T;
+  year?: T;
   heroImage?: T;
   content?: T;
   categories?: T;
