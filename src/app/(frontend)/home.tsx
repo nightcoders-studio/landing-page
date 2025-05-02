@@ -37,14 +37,12 @@ export default function Home() {
       <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
         Who are our <span className="text-brand">Client?</span>
       </h2>
-      <div className="overflow-x-auto">
-        <div className="flex gap-4 flex-nowrap md:w-full w-max">
-          <MitraCard image={'/mugee.png'} />
-          <MitraCard image={'/ministry_of_finance.png'} />
-          <MitraCard image={'/polda.png'} />
-          <MitraCard image={'/tou.png'} />
-          <MitraCard image={'/kasyapi.png'} />
-        </div>
+      <div className="flex gap-6 flex-nowrap w-screen justify-center">
+        <MitraCard image={'/mugee.png'} />
+        <MitraCard image={'/ministry_of_finance.png'} />
+        <MitraCard image={'/polda.png'} />
+        <MitraCard image={'/tou.png'} />
+        <MitraCard image={'/kasyapi.png'} />
       </div>
 
       <Contact />

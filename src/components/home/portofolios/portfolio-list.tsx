@@ -29,7 +29,7 @@ const PortofolioList = async () => {
           docs.map((portfolio) => (
             <ContentCard
               key={portfolio.slug}
-              image={portfolio.heroImage?.thumbnailURL || '/placeholder.jpg'}
+              image={portfolio.heroImage?.url || '/placeholder.jpg'}
               title={portfolio.title}
               description={portfolio.meta?.description || 'No description available.'}
               slug={`/portfolios/${portfolio.slug}`}
