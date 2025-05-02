@@ -1,6 +1,7 @@
 import PortfolioList from '@/components/home/portofolios/portfolio-list'
 import FilterButton from '@/components/ui/filter-button'
 import configPromise from '@payload-config'
+import { Metadata } from 'next/types'
 import { getPayload } from 'payload'
 import React from 'react'
 
@@ -30,3 +31,9 @@ const PortfolioPage = async () => {
 }
 
 export default PortfolioPage
+
+export function generateMetadata(): Metadata {
+  return {
+    title: `Portofolios | Nightcoders`,
+  }
+}

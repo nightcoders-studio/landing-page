@@ -37,7 +37,7 @@ export default function Home() {
       <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
         Who are our <span className="text-brand">Client?</span>
       </h2>
-      <div className="flex gap-6 flex-nowrap w-screen justify-center">
+      <div className="flex gap-6 flex-nowrap w-full justify-between">
         <MitraCard image={'/mugee.png'} />
         <MitraCard image={'/ministry_of_finance.png'} />
         <MitraCard image={'/polda.png'} />
