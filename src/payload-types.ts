@@ -738,7 +738,20 @@ export interface Portfolio {
   title: string;
   year: number;
   heroImage?: (number | null) | Media;
-  content: {
+  aboutThisProject: string;
+  review: {
+    reviewImage?: (number | null) | Media;
+    reviewText: string;
+    reviewAuthor: string;
+  };
+  features: string;
+  useCases: string;
+  techStacks: {
+    frontEnd: string;
+    backEnd: string;
+    design: string;
+  };
+  content?: {
     root: {
       type: string;
       children: {
@@ -752,7 +765,7 @@ export interface Portfolio {
       version: number;
     };
     [k: string]: unknown;
-  };
+  } | null;
   categories?: (number | Category)[] | null;
   meta?: {
     title?: string | null;
@@ -1337,6 +1350,23 @@ export interface PortfoliosSelect<T extends boolean = true> {
   title?: T;
   year?: T;
   heroImage?: T;
+  aboutThisProject?: T;
+  review?:
+    | T
+    | {
+        reviewImage?: T;
+        reviewText?: T;
+        reviewAuthor?: T;
+      };
+  features?: T;
+  useCases?: T;
+  techStacks?:
+    | T
+    | {
+        frontEnd?: T;
+        backEnd?: T;
+        design?: T;
+      };
   content?: T;
   categories?: T;
   meta?:

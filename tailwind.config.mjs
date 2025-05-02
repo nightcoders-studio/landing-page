@@ -95,6 +95,9 @@ const config = {
         quaternary: {
           DEFAULT: 'var(--quaternary)',
         },
+        tertiary: {
+          DEFAULT: 'var(--tertiary)',
+        },
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',

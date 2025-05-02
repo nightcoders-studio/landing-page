@@ -9,9 +9,9 @@ type ImageSize = {
   filename: string
 }
 
-type HeroImage = {
+type ImageData = {
   id: number
-  alt: string | null
+  alt: string
   caption: string | null
   updatedAt: string
   createdAt: string
@@ -102,11 +102,28 @@ type Author = {
   loginAttempts: number
 }
 
+type TechStacks = {
+  frontEnd: string
+  backEnd: string
+  design: string
+}
+
+type Review = {
+  reviewImage: ImageData
+  reviewText: string
+  reviewAuthor: string
+}
+
 export type Portfolio = {
   id: number
   title: string
   year: number
-  heroImage: HeroImage
+  heroImage: ImageData
+  aboutThisProject: string
+  review: Review
+  features: string
+  useCases: string
+  techStacks: TechStacks
   content: Content | DefaultTypedEditorState
   categories: Category[]
   meta: Meta

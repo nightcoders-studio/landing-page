@@ -27,9 +27,9 @@ const PortfolioHero = ({ portfolio }: { portfolio: Portfolio }) => {
             )
           })}
         </div>
-        <div className="text-md text-brand">Year</div>
+        <div className="text-md text-brand hidden md:block">Year</div>
       </div>
-      <div className="flex justify-between my-4">
+      <div className="flex flex-col md:flex-row justify-between my-4">
         <h1 className="text-3xl text-primary font-bold">{portfolio.title}</h1>
         <div className="text-3xl text-primary">{portfolio.year}</div>
       </div>

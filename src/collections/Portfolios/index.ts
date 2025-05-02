@@ -90,6 +90,63 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
               relationTo: 'media',
             },
             {
+              name: 'aboutThisProject',
+              type: 'textarea',
+              required: true,
+            },
+            {
+              name: 'review',
+              type: 'group',
+              fields: [
+                {
+                  name: 'reviewImage',
+                  type: 'upload',
+                  relationTo: 'media',
+                },
+                {
+                  name: 'reviewText',
+                  type: 'text',
+                  required: true,
+                },
+                {
+                  name: 'reviewAuthor',
+                  type: 'text',
+                  required: true,
+                },
+              ],
+            },
+            {
+              name: 'features',
+              type: 'textarea',
+              required: true,
+            },
+            {
+              name: 'useCases',
+              type: 'textarea',
+              required: true,
+            },
+            {
+              name: 'techStacks',
+              type: 'group',
+              fields: [
+                {
+                  name: 'frontEnd',
+                  type: 'textarea',
+                  required: true,
+                },
+                {
+                  name: 'backEnd',
+                  type: 'textarea',
+                  required: true,
+                },
+                {
+                  name: 'design',
+                  type: 'textarea',
+                  required: true,
+                },
+              ],
+            },
+            {
               name: 'content',
               type: 'richText',
               editor: lexicalEditor({
@@ -104,8 +161,6 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
                   ]
                 },
               }),
-              label: false,
-              required: true,
             },
           ],
           label: 'Content',
