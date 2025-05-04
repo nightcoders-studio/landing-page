@@ -73,6 +73,7 @@ export interface Config {
     categories: Category;
     users: User;
     portfolios: Portfolio;
+    stores: Store;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -90,6 +91,7 @@ export interface Config {
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     portfolios: PortfoliosSelect<false> | PortfoliosSelect<true>;
+    stores: StoresSelect<false> | StoresSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -791,6 +793,67 @@ export interface Portfolio {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "stores".
+ */
+export interface Store {
+  id: number;
+  title: string;
+  priceWithCurrency: string;
+  period?: string | null;
+  heroImage?: (number | null) | Media;
+  aboutThisProject: string;
+  features: string;
+  useCases: string;
+  techStacks: {
+    frontEnd: string;
+    backEnd: string;
+    design: string;
+  };
+  review?: {
+    reviewImage?: (number | null) | Media;
+    reviewText?: string | null;
+    reviewAuthor?: string | null;
+  };
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  categories?: (number | Category)[] | null;
+  meta?: {
+    title?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    description?: string | null;
+  };
+  publishedAt?: string | null;
+  authors?: (number | User)[] | null;
+  populatedAuthors?:
+    | {
+        id?: string | null;
+        name?: string | null;
+      }[]
+    | null;
+  slug?: string | null;
+  slugLock?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -984,6 +1047,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'portfolios';
         value: number | Portfolio;
+      } | null)
+    | ({
+        relationTo: 'stores';
+        value: number | Store;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -1392,6 +1459,55 @@ export interface PortfoliosSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "stores_select".
+ */
+export interface StoresSelect<T extends boolean = true> {
+  title?: T;
+  priceWithCurrency?: T;
+  period?: T;
+  heroImage?: T;
+  aboutThisProject?: T;
+  features?: T;
+  useCases?: T;
+  techStacks?:
+    | T
+    | {
+        frontEnd?: T;
+        backEnd?: T;
+        design?: T;
+      };
+  review?:
+    | T
+    | {
+        reviewImage?: T;
+        reviewText?: T;
+        reviewAuthor?: T;
+      };
+  content?: T;
+  categories?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        image?: T;
+        description?: T;
+      };
+  publishedAt?: T;
+  authors?: T;
+  populatedAuthors?:
+    | T
+    | {
+        id?: T;
+        name?: T;
+      };
+  slug?: T;
+  slugLock?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects_select".
  */
 export interface RedirectsSelect<T extends boolean = true> {
@@ -1768,6 +1884,10 @@ export interface TaskSchedulePublish {
       | ({
           relationTo: 'portfolios';
           value: number | Portfolio;
+        } | null)
+      | ({
+          relationTo: 'stores';
+          value: number | Store;
         } | null);
     global?: string | null;
     user?: (number | null) | User;

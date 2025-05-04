@@ -3,21 +3,21 @@ import ContentCard from '../ui/content-card'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 
-const PortofolioList = async () => {
+const PortofolioList = async ({ slug }: { slug: string }) => {
   const payload = await getPayload({ config: configPromise })
+  const limit = slug === '/' ? 6 : undefined
 
   const portfolios = await payload.find({
     collection: 'portfolios',
     depth: 1,
-    limit: 12,
+    limit,
     overrideAccess: false,
     select: {
       title: true,
       heroImage: true,
       slug: true,
-      content: true,
       categories: true,
-      meta: true,
+      aboutThisProject: true,
     },
   })
   const docs = portfolios.docs as Portfolio[]
@@ -31,7 +31,7 @@ const PortofolioList = async () => {
               key={portfolio.slug}
               image={portfolio.heroImage?.url || '/placeholder.jpg'}
               title={portfolio.title}
-              description={portfolio.meta?.description || 'No description available.'}
+              description={portfolio.aboutThisProject || 'No description available.'}
               slug={`/portfolios/${portfolio.slug}`}
             />
           ))}

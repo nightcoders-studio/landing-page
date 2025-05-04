@@ -11,7 +11,7 @@ const ServiceCard = ({ image, title, description, imagePosition = 'left' }: Serv
   const isLeft = imagePosition === 'left'
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 bg-neutral-400/10 p-3 items-center rounded-2xl">
+    <div className="flex flex-row gap-6 bg-neutral-400/10 p-3 items-center rounded-2xl">
       <div className={`w-full md:w-1/2 ${isLeft ? 'order-1' : 'order-2'}`}>
         <Image
           src={image}
