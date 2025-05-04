@@ -20,7 +20,7 @@ const PortofolioList = async ({ slug }: { slug?: string }) => {
       aboutThisProject: true,
     },
   })
-  const docs = portfolios.docs as Portfolio[]
+  const docs = portfolios.docs as unknown as Portfolio[]
 
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-4">

@@ -46,7 +46,7 @@ export default async function PortfolioDetail({ params: paramsPromise }: Args) {
   const { isEnabled: draft } = await draftMode()
   const { slug = '' } = await paramsPromise
   const url = '/portfolios/' + slug
-  const portfolio = (await queryPostBySlug({ slug })) as Portfolio
+  const portfolio = (await queryPostBySlug({ slug })) as unknown as Portfolio
 
   if (!portfolio) return <PayloadRedirects url={url} />
 

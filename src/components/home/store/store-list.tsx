@@ -26,7 +26,7 @@ const StoreList = async ({ slug }: StoreListProps) => {
     },
   })
 
-  const docs = stores.docs as Store[]
+  const docs = stores.docs as unknown as Store[]
 
   return (
     <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-4">
