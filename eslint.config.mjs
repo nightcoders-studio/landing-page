@@ -31,7 +31,12 @@ const eslintConfig = [
     },
   },
   {
-    ignores: ['.next/'],
+    ignores: [
+      '.next/',
+      './src/Footer/*',
+      './src/migrations/*',
+      './src/payload-generated-schema.ts',
+    ],
   },
 ]
 

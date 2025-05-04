@@ -3,7 +3,7 @@ import ContentCard from '../ui/content-card'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 
-const PortofolioList = async ({ slug }: { slug: string }) => {
+const PortofolioList = async ({ slug }: { slug?: string }) => {
   const payload = await getPayload({ config: configPromise })
   const limit = slug === '/' ? 6 : undefined
 
