@@ -13,6 +13,8 @@ import { beforeSyncWithSearch } from '@/search/beforeSync'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { s3Storage } from '@payloadcms/storage-s3'
+import { Media } from '@/collections/Media'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Nightcoders` : 'Nightcoders'
@@ -88,6 +90,19 @@ export const plugins: Plugin[] = [
       fields: ({ defaultFields }) => {
         return [...defaultFields, ...searchFields]
       },
+    },
+  }),
+  s3Storage({
+    collections: {
+      media: true,
+    },
+    bucket: process.env.S3_BUCKET,
+    config: {
+      credentials: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      },
+      region: process.env.S3_REGION,
     },
   }),
   payloadCloudPlugin(),
