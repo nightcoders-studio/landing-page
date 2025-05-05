@@ -3,7 +3,7 @@
 import { Portfolio } from '@/types/Portfolio'
 import ContentCard from '../ui/content-card'
 import FilterButton from '@/components/ui/filter-button'
-import useFilterStore from '@/stores/useFilterStore'
+import { useState } from 'react'
 
 type Props = {
   portfolios: Portfolio[]
@@ -11,7 +11,7 @@ type Props = {
 }
 
 const ClientPortofolioList = ({ portfolios, limit }: Props) => {
-  const { filterCategory, setFilterCategory } = useFilterStore()
+  const [filterCategory, setFilterCategory] = useState<string>('All')
 
   const parentCategories = [...new Set(portfolios.flatMap((p) => p.categories.map((c) => c.title)))]
 
