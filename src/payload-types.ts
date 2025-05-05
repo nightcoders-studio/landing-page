@@ -264,7 +264,7 @@ export interface Post {
  */
 export interface Media {
   id: string;
-  alt?: string | null;
+  alt: string;
   caption?: {
     root: {
       type: string;
@@ -872,6 +872,14 @@ export interface Redirect {
       | ({
           relationTo: 'posts';
           value: string | Post;
+        } | null)
+      | ({
+          relationTo: 'portfolios';
+          value: string | Portfolio;
+        } | null)
+      | ({
+          relationTo: 'stores';
+          value: string | Store;
         } | null);
     url?: string | null;
   };
