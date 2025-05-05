@@ -35,7 +35,7 @@ const StoreList = async ({ slug }: StoreListProps) => {
           docs.map((store) => (
             <ContentCard
               key={store.slug}
-              image={store.heroImage?.url || '/placeholder.jpg'}
+              image={store.heroImage?.url || '/placeholder.svg'}
               title={store.title}
               description={store.aboutThisProject || 'No description available.'}
               slug={`/stores/${store.slug}`}

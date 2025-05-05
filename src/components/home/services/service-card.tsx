@@ -12,7 +12,7 @@ const ServiceCard = ({ image, title, description, imagePosition = 'left' }: Serv
 
   return (
     <div className="flex flex-row gap-6 bg-neutral-400/10 p-3 items-center rounded-2xl">
-      <div className={`w-full md:w-1/2 ${isLeft ? 'order-1' : 'order-2'}`}>
+      <div className={`w-full md:w-1/3 ${isLeft ? 'order-1' : 'order-2'}`}>
         <Image
           src={image}
           alt={`${title} image`}
@@ -22,7 +22,7 @@ const ServiceCard = ({ image, title, description, imagePosition = 'left' }: Serv
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
-      <div className={`w-full md:w-1/2 flex flex-col gap-2 ${isLeft ? 'order-2' : 'order-1'}`}>
+      <div className={`w-full md:w-2/3 flex flex-col gap-2 ${isLeft ? 'order-2' : 'order-1'}`}>
         <h1 className="text-xl text-default font-bold">{title}</h1>
         <p className="text-text-default-tertiary text-md font-sm">{description}</p>
       </div>

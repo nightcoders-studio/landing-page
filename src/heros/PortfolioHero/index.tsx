@@ -6,8 +6,8 @@ const PortfolioHero = ({ portfolio }: { portfolio: Portfolio }) => {
     <>
       <div className="rounded-2xl">
         <Image
-          src={portfolio.heroImage.url}
-          alt={`${portfolio.title} image`}
+          src={portfolio.heroImage.url || '/placeholder.svg'}
+          alt={portfolio.heroImage.alt || `${portfolio.title} image`}
           width={1200}
           height={600}
           sizes="100vw"

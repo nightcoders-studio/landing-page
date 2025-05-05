@@ -71,8 +71,8 @@ export default async function PortfolioDetail({ params: paramsPromise }: Args) {
           <h2 className="text-2xl font-bold text-primary">What Client Say?</h2>
           <div className="flex gap-4">
             <Image
-              src={portfolio.review.reviewImage.url}
-              alt={portfolio.review.reviewImage.alt}
+              src={portfolio.review.reviewImage.url || '/placeholder.svg'}
+              alt={portfolio.review.reviewImage.alt || 'Review Image'}
               width={300}
               height={300}
               className="w-24 h-24 object-cover rounded-2xl mt-4 bg-neutral-400/10"

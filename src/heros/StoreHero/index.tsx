@@ -6,8 +6,8 @@ const StoreHero = ({ store }: { store: Store }) => {
     <>
       <div className="rounded-2xl">
         <Image
-          src={store.heroImage.url}
-          alt={`${store.title} image`}
+          src={store.heroImage.url || '/placeholder.svg'}
+          alt={store.heroImage.alt || `${store.title} Image`}
           width={1200}
           height={600}
           sizes="100vw"

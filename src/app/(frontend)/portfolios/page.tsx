@@ -17,14 +17,6 @@ const PortfolioPage = async () => {
         Our <span className="text-brand">Work</span> Speaks for Itself
       </h2>
 
-      <div className="flex justify-center items-center w-full gap-6 my-6">
-        <FilterButton name="All" variant="active" />
-        {categories.totalDocs > 1 &&
-          categories.docs.map((category) => (
-            <FilterButton key={category.id} name={category.title} />
-          ))}
-      </div>
-
       <PortfolioList />
     </div>
   )
