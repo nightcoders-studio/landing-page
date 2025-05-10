@@ -14,7 +14,6 @@ import { beforeSyncWithSearch } from '@/search/beforeSync'
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 import { s3Storage } from '@payloadcms/storage-s3'
-import { Media } from '@/collections/Media'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Nightcoders` : 'Nightcoders'

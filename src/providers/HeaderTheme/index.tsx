@@ -4,7 +4,6 @@ import type { Theme } from '@/providers/Theme/types'
 
 import React, { createContext, useCallback, use, useState, useEffect } from 'react'
 
-import canUseDOM from '@/utilities/canUseDOM'
 import { themeLocalStorageKey } from '../Theme/ThemeSelector/types'
 
 export interface ContextType {

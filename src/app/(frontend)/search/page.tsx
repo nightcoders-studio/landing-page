@@ -48,7 +48,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     : {}
 
   // Search portfolios
-  //@ts-ignore
+  //@ts-expect-error
   const portfolios = await payload.find({
     collection: 'portfolios',
     depth: 1,
@@ -61,10 +61,10 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     },
     pagination: false,
     ...searchParams,
-  })
+  }) // error is just because searchParams have to declare the types
 
   // Search stores
-  //@ts-ignore
+  //@ts-expect-error
   const stores = await payload.find({
     collection: 'stores',
     depth: 1,
@@ -77,7 +77,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     },
     pagination: false,
     ...searchParams,
-  })
+  }) // error is just because searchParams have to declare the types
 
   return (
     <div className="pt-24 pb-24">

@@ -3,6 +3,9 @@ import PortfolioList from '@/components/home/portofolios/portfolio-list'
 import { Metadata } from 'next/types'
 import React from 'react'
 
+export const dynamic = 'force-static'
+export const revalidate = 600
+
 const PortfolioPage = async () => {
   return (
     <div className="min-w-screen min-h-screen">

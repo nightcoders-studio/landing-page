@@ -1,6 +1,5 @@
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
-import ContentCard from '../ui/content-card'
 import { Store } from '@/types/Store'
 import ClientStoreList from './ClientStoreList'
 

@@ -7,14 +7,15 @@ import { draftMode } from 'next/headers'
 import React, { cache } from 'react'
 import RichText from '@/components/RichText'
 
-import { generateMeta } from '@/utilities/generateMeta'
-import PageClient from './page.client'
-import { LivePreviewListener } from '@/components/LivePreviewListener'
-import { DefaultTypedEditorState } from '@payloadcms/richtext-lexical'
 import Image from 'next/image'
 import Contact from '@/components/home/contact'
 import { Store } from '@/types/Store'
 import StoreHero from '@/heros/StoreHero'
+
+import { generateMeta } from '@/utilities/generateMeta'
+import PageClient from './page.client'
+import { LivePreviewListener } from '@/components/LivePreviewListener'
+import { DefaultTypedEditorState } from '@payloadcms/richtext-lexical'
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })

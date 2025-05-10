@@ -45,7 +45,7 @@ export default async function Page() {
         />
       </div>
 
-      <CollectionArchive posts={posts.docs} />
+      <CollectionArchive posts={posts.docs} relationTo="posts" />
 
       <div className="container">
         {posts.totalPages > 1 && posts.page && (
@@ -58,6 +58,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Payload Website Template Posts`,
+    title: `Template Posts`,
   }
 }

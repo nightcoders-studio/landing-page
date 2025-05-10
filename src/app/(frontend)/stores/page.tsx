@@ -3,6 +3,9 @@ import StoreList from '@/components/home/store/store-list'
 import { Metadata } from 'next/types'
 import React from 'react'
 
+export const dynamic = 'force-static'
+export const revalidate = 600
+
 const StorePage = async () => {
   return (
     <div className="min-w-screen min-h-screen">
