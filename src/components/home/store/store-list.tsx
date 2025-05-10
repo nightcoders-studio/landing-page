@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import configPromise from '@payload-config'
 import ContentCard from '../ui/content-card'
 import { Store } from '@/types/Store'
+import ClientStoreList from './ClientStoreList'
 
 interface StoreListProps {
   slug?: string
@@ -28,24 +29,7 @@ const StoreList = async ({ slug }: StoreListProps) => {
 
   const docs = stores.docs as unknown as Store[]
 
-  return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col gap-8 px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {stores.totalDocs >= 1 &&
-          docs.map((store) => (
-            <ContentCard
-              key={store.slug}
-              image={store.heroImage?.url || '/placeholder.svg'}
-              title={store.title}
-              description={store.aboutThisProject || 'No description available.'}
-              slug={`/stores/${store.slug}`}
-              purchase={true}
-              price={store.priceWithCurrency}
-            />
-          ))}
-      </div>
-    </div>
-  )
+  return <ClientStoreList stores={docs} limit={limit} />
 }
 
 export default StoreList

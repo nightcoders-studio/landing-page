@@ -5,11 +5,10 @@ import { Card, CardPostData } from '@/components/Card'
 
 export type Props = {
   posts: CardPostData[]
+  relationTo: 'posts' | 'portfolios' | 'stores'
 }
 
-export const CollectionArchive: React.FC<Props> = (props) => {
-  const { posts } = props
-
+export const CollectionArchive = ({ posts, relationTo }: Props) => {
   return (
     <div className={cn('container')}>
       <div>
@@ -18,7 +17,7 @@ export const CollectionArchive: React.FC<Props> = (props) => {
             if (typeof result === 'object' && result !== null) {
               return (
                 <div className="col-span-4" key={index}>
-                  <Card className="h-full" doc={result} relationTo="posts" showCategories />
+                  <Card className="h-full" doc={result} relationTo={relationTo} showCategories />
                 </div>
               )
             }

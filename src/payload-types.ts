@@ -913,10 +913,19 @@ export interface Search {
   id: string;
   title?: string | null;
   priority?: number | null;
-  doc: {
-    relationTo: 'posts';
-    value: string | Post;
-  };
+  doc:
+    | {
+        relationTo: 'posts';
+        value: string | Post;
+      }
+    | {
+        relationTo: 'portfolios';
+        value: string | Portfolio;
+      }
+    | {
+        relationTo: 'stores';
+        value: string | Store;
+      };
   slug?: string | null;
   meta?: {
     title?: string | null;

@@ -14,7 +14,7 @@ export const Card: React.FC<{
   alignItems?: 'center'
   className?: string
   doc?: CardPostData
-  relationTo?: 'posts'
+  relationTo?: 'posts' | 'portfolios' | 'stores'
   showCategories?: boolean
   title?: string
 }> = (props) => {
@@ -32,7 +32,7 @@ export const Card: React.FC<{
   return (
     <article
       className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
+        'border border-border overflow-hidden hover:cursor-pointer bg-neutral-400/10 p-3 items-center rounded-2xl hover:shadow-lg transition-shadow duration-200',
         className,
       )}
       ref={card.ref}

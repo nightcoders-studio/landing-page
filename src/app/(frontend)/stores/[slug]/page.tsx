@@ -51,89 +51,90 @@ export default async function PortfolioDetail({ params: paramsPromise }: Args) {
   if (!store) return <PayloadRedirects url={url} />
 
   return (
-    <article className="min-h-screen text-primary md:p-4 xl:p-10 px-4 max-w-[1200px] mx-auto">
-      <PageClient />
+    <>
+      <article className="min-h-screen text-primary md:p-4 xl:p-10 px-4 max-w-[1200px] mx-auto">
+        <PageClient />
 
-      {/* Allows redirects for valid pages too */}
-      <PayloadRedirects disableNotFound url={url} />
+        {/* Allows redirects for valid pages too */}
+        <PayloadRedirects disableNotFound url={url} />
 
-      {draft && <LivePreviewListener />}
+        {draft && <LivePreviewListener />}
 
-      <StoreHero store={store} />
+        <StoreHero store={store} />
 
-      <div className="flex  flex-col flex-1 w-full justify-between p-10 bg-neutral-400/10 rounded-2xl md:w-full">
-        <h2 className="text-2xl font-bold text-primary">About This Project</h2>
-        <p className="text-tertiary text-md mt-4">{store.aboutThisProject}</p>
-      </div>
-
-      <div className="flex w-full bg-neutral-400/10 justify-between md:flex-row flex-col mt-10 rounded-2xl">
-        <div className="flex flex-col md:w-1/2 p-10">
-          <h2 className="text-2xl font-bold text-primary">The Features</h2>
-          <p className="text-tertiary text-md mt-4">
-            {store.features.split('\n').map((str, index: number) => (
-              <span key={index} className="block">
-                {str}
-              </span>
-            ))}
-          </p>
+        <div className="flex  flex-col flex-1 w-full justify-between p-10 bg-neutral-400/10 rounded-2xl md:w-full">
+          <h2 className="text-2xl font-bold text-primary">About This Project</h2>
+          <p className="text-tertiary text-md mt-4">{store.aboutThisProject}</p>
         </div>
 
-        <div className="flex flex-col md:w-1/2 p-10">
-          <h2 className="text-2xl font-bold text-primary">Use Case</h2>
-          <p className="text-tertiary text-md mt-4">
-            {store.features.split('\n').map((str, index: number) => (
-              <span key={index} className="block">
-                {str}
-              </span>
-            ))}
-          </p>
+        <div className="flex w-full bg-neutral-400/10 justify-between md:flex-row flex-col mt-10 rounded-2xl">
+          <div className="flex flex-col md:w-1/2 p-10">
+            <h2 className="text-2xl font-bold text-primary">The Features</h2>
+            <p className="text-tertiary text-md mt-4">
+              {store.features.split('\n').map((str, index: number) => (
+                <span key={index} className="block">
+                  {str}
+                </span>
+              ))}
+            </p>
+          </div>
+
+          <div className="flex flex-col md:w-1/2 p-10">
+            <h2 className="text-2xl font-bold text-primary">Use Case</h2>
+            <p className="text-tertiary text-md mt-4">
+              {store.features.split('\n').map((str, index: number) => (
+                <span key={index} className="block">
+                  {str}
+                </span>
+              ))}
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="flex w-full bg-neutral-400/10 justify-between md:flex-row flex-col mt-10 rounded-2xl">
-        <div className="flex w-full flex-col p-10 gap-2">
-          <h2 className="text-2xl font-bold text-primary">Technical Stack</h2>
+        <div className="flex w-full bg-neutral-400/10 justify-between md:flex-row flex-col mt-10 rounded-2xl">
+          <div className="flex w-full flex-col p-10 gap-2">
+            <h2 className="text-2xl font-bold text-primary">Technical Stack</h2>
 
-          <div className="flex flex-col md:grid md:grid-cols-3 gap-4 justify-between">
-            <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
-              <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
-              <div className="flex flex-col">
-                <h3 className="font-semibold text-primary">Front End</h3>
-                <p className="text-tertiary">{store.techStacks.frontEnd}</p>
+            <div className="flex flex-col md:grid md:grid-cols-3 gap-4 justify-between">
+              <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
+                <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
+                <div className="flex flex-col">
+                  <h3 className="font-semibold text-primary">Front End</h3>
+                  <p className="text-tertiary">{store.techStacks.frontEnd}</p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
-              <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
-              <div className="flex flex-col">
-                <h3 className="font-semibold text-primary">Back End</h3>
-                <p className="text-tertiary">{store.techStacks.backEnd}</p>
+              <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
+                <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
+                <div className="flex flex-col">
+                  <h3 className="font-semibold text-primary">Back End</h3>
+                  <p className="text-tertiary">{store.techStacks.backEnd}</p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
-              <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
-              <div className="flex flex-col">
-                <h3 className="font-semibold text-primary">Design</h3>
-                <p className="text-tertiary">{store.techStacks.design}</p>
+              <div className="flex gap-4 p-6 ring-brand ring-1 rounded-2xl items-start">
+                <Image src="/react.svg" alt="react front end tech stack" width={20} height={20} />
+                <div className="flex flex-col">
+                  <h3 className="font-semibold text-primary">Design</h3>
+                  <p className="text-tertiary">{store.techStacks.design}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col items-center gap-4 pt-8">
-        <div className="container">
-          <RichText
-            className="max-w-[48rem] mx-auto"
-            data={store.content as DefaultTypedEditorState}
-            enableGutter={false}
-          />
+        <div className="flex flex-col items-center gap-4 pt-8">
+          <div className="container">
+            <RichText
+              className="max-w-[48rem] mx-auto"
+              data={store.content as DefaultTypedEditorState}
+              enableGutter={false}
+            />
+          </div>
         </div>
-      </div>
-
+      </article>
       <Contact />
-    </article>
+    </>
   )
 }
 

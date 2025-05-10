@@ -9,53 +9,58 @@ import Link from 'next/link'
 
 const Home = () => {
   return (
-    <div className="min-h-screen text-primary md:p-4 xl:p-10 px-4 max-w-[1200px] mx-auto">
-      <Header />
+    <>
+      <div className="w-full min-h-screen text-primary md:p-4 xl:p-10 px-4 max-w-[1200px] mx-auto">
+        <Header />
 
-      <h2 id="services" className="text-3xl text-primary text-center font-bold p-4 mt-10">
-        Our Best <span className="text-brand">Service</span>
-      </h2>
-      <ServiceList />
+        <h2 id="services" className="text-3xl text-primary text-center font-bold p-4 mt-10">
+          Our Best <span className="text-brand">Service</span>
+        </h2>
+        <ServiceList />
 
-      <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
-        Our <span className="text-brand">Work</span> Speaks for Itself
-      </h2>
-      <PortfolioList slug="/" />
-      <div className="flex justify-center">
-        <Link
-          href="/portfolios"
-          className="px-6 py-3 text-brand border border-brand rounded-3xl hover:bg-brand hover:text-white my-4 transition"
-        >
-          See more
-        </Link>
+        <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
+          Our <span className="text-brand">Work</span> Speaks for Itself
+        </h2>
+        <PortfolioList slug="/" />
+        <div className="flex justify-center">
+          <Link
+            href="/portfolios"
+            className="px-6 py-3 text-brand border border-brand rounded-3xl hover:bg-brand hover:text-white my-4 transition"
+          >
+            See more
+          </Link>
+        </div>
+
+        <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
+          Our <span className="text-brand">Store</span>
+        </h2>
+        <StoreList slug="/" />
+        <div className="flex justify-center">
+          <Link
+            href="/stores"
+            className="px-6 py-3 text-brand border border-brand rounded-3xl hover:bg-brand hover:text-white my-4 transition"
+          >
+            See more
+          </Link>
+        </div>
+
+        <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
+          Who are our <span className="text-brand">Client?</span>
+        </h2>
       </div>
 
-      <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
-        Our <span className="text-brand">Store</span>
-      </h2>
-      <StoreList slug="/" />
-      <div className="flex justify-center">
-        <Link
-          href="/stores"
-          className="px-6 py-3 text-brand border border-brand rounded-3xl hover:bg-brand hover:text-white my-4 transition"
-        >
-          See more
-        </Link>
-      </div>
-
-      <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
-        Who are our <span className="text-brand">Client?</span>
-      </h2>
-      <div className="flex gap-6 flex-nowrap w-full justify-between">
-        <MitraCard image={'/mugee.png'} />
-        <MitraCard image={'/ministry_of_finance.png'} />
-        <MitraCard image={'/polda.png'} />
-        <MitraCard image={'/tou.png'} />
-        <MitraCard image={'/kasyapi.png'} />
+      <div className="overflow-x-auto w-full mb-10">
+        <div className="flex w-full justify-center gap-6 flex-nowrap px-4 sm:px-0">
+          <MitraCard image={'/mugee.png'} />
+          <MitraCard image={'/ministry_of_finance.png'} />
+          <MitraCard image={'/polda.png'} />
+          <MitraCard image={'/tou.png'} />
+          <MitraCard image={'/kasyapi.png'} />
+        </div>
       </div>
 
       <Contact />
-    </div>
+    </>
   )
 }
 

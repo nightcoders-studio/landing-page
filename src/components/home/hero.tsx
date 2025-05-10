@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import { Code, Phone } from 'lucide-react'
 import Link from 'next/link'
+import HeroImage from './hero-image'
 
 const Hero = () => {
   return (
@@ -29,16 +29,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full hidden md:block">
-        <Image
-          src={'/hero.svg'}
-          alt="Hero Image"
-          width={400}
-          height={400}
-          className="max-w-md max-h-md object-cover"
-          priority
-        ></Image>
-      </div>
+      <HeroImage />
     </div>
   )
 }

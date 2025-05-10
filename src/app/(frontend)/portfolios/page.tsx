@@ -1,16 +1,9 @@
+import Contact from '@/components/home/contact'
 import PortfolioList from '@/components/home/portofolios/portfolio-list'
-import FilterButton from '@/components/ui/filter-button'
-import configPromise from '@payload-config'
 import { Metadata } from 'next/types'
-import { getPayload } from 'payload'
 import React from 'react'
 
 const PortfolioPage = async () => {
-  const payload = await getPayload({ config: configPromise })
-  const categories = await payload.find({
-    collection: 'categories',
-  })
-
   return (
     <div className="min-w-screen min-h-screen">
       <h2 className="text-3xl text-primary text-center font-bold p-4 mt-10">
@@ -18,6 +11,8 @@ const PortfolioPage = async () => {
       </h2>
 
       <PortfolioList />
+      <br />
+      <Contact />
     </div>
   )
 }
