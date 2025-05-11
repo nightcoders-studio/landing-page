@@ -728,6 +728,8 @@ export interface Form {
         id?: string | null;
       }[]
     | null;
+  hasAttachment?: boolean | null;
+  hasAttachmentLabel?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -900,6 +902,7 @@ export interface FormSubmission {
         id?: string | null;
       }[]
     | null;
+  file?: (string | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -1669,6 +1672,8 @@ export interface FormsSelect<T extends boolean = true> {
         message?: T;
         id?: T;
       };
+  hasAttachment?: T;
+  hasAttachmentLabel?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1685,6 +1690,7 @@ export interface FormSubmissionsSelect<T extends boolean = true> {
         value?: T;
         id?: T;
       };
+  file?: T;
   updatedAt?: T;
   createdAt?: T;
 }

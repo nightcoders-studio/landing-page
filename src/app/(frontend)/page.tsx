@@ -1,10 +1,10 @@
 import { generateMetadata } from './[slug]/page'
-import Header from '../../components/home/hero'
-import MitraCard from '../../components/home/ui/mitra-card'
-import PortfolioList from '../../components/home/portofolios/portfolio-list'
-import ServiceList from '../../components/home/services/service-list'
-import StoreList from '../../components/home/store/store-list'
-import Contact from '@/components/home/contact'
+import Header from '../../components/Home/hero'
+import MitraCard from '../../components/Home/ui/mitra-card'
+import PortfolioList from '../../components/Home/portofolios/portfolio-list'
+import ServiceList from '../../components/Home/services/service-list'
+import StoreList from '../../components/Home/store/store-list'
+import Contact from '@/components/Home/contact'
 import Link from 'next/link'
 
 const Home = () => {

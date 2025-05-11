@@ -62,7 +62,7 @@ export const plugins: Plugin[] = [
     },
     formOverrides: {
       fields: ({ defaultFields }) => {
-        return defaultFields.map((field) => {
+        const modifiedFields = defaultFields.map((field) => {
           if ('name' in field && field.name === 'confirmationMessage') {
             return {
               ...field,
@@ -79,6 +79,29 @@ export const plugins: Plugin[] = [
           }
           return field
         })
+
+        // Then add any new fields
+        return [
+          ...modifiedFields,
+          { name: 'hasAttachment', type: 'checkbox' },
+          { name: 'hasAttachmentLabel', type: 'text' },
+        ]
+      },
+    },
+    formSubmissionOverrides: {
+      fields: ({ defaultFields }) => {
+        return [
+          ...defaultFields,
+          {
+            name: 'file',
+            type: 'upload',
+            relationTo: 'media',
+            admin: {
+              allowCreate: true,
+              allowEdit: true,
+            },
+          },
+        ]
       },
     },
   }),
