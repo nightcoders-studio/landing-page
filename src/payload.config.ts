@@ -18,6 +18,7 @@ import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 import { Portfolios } from './collections/Portfolios'
 import { Stores } from './collections/Stores'
+import { resendAdapter } from '@payloadcms/email-resend'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -69,6 +70,11 @@ export default buildConfig({
   globals: [Header, Footer],
   plugins: [...plugins],
   secret: process.env.PAYLOAD_SECRET,
+  email: resendAdapter({
+    defaultFromAddress: 'fathin@nightcoders.id',
+    defaultFromName: 'Fathin From Nightcoders',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   sharp,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -76,12 +82,7 @@ export default buildConfig({
   jobs: {
     access: {
       run: ({ req }: { req: PayloadRequest }): boolean => {
-        // Allow logged in users to execute this endpoint (default)
         if (req.user) return true
-
-        // If there is no logged in user, then check
-        // for the Vercel Cron secret to be present as an
-        // Authorization header:
         const authHeader = req.headers.get('authorization')
         return authHeader === `Bearer ${process.env.CRON_SECRET}`
       },

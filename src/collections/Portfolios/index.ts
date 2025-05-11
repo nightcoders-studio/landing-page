@@ -15,8 +15,7 @@ import { Banner } from '../../blocks/Banner/config'
 import { Code } from '../../blocks/Code/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 import { generatePreviewPath } from '../../utilities/generatePreviewPath'
-// import { populateAuthors } from './hooks/populateAuthors'
-// import { revalidateDelete, revalidatePost } from './hooks/revalidatePost'
+import { revalidateDelete, revalidatePortfolio } from './hooks/revalidatePortfolio'
 
 import {
   MetaDescriptionField,
@@ -263,11 +262,11 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
     },
     ...slugField(),
   ],
-  //   hooks: {
-  //     afterChange: [revalidatePost],
-  //     afterRead: [populateAuthors],
-  //     afterDelete: [revalidateDelete],
-  //   },
+  hooks: {
+    afterChange: [revalidatePortfolio],
+    //     afterRead: [populateAuthors],
+    afterDelete: [revalidateDelete],
+  },
   versions: {
     drafts: {
       autosave: {

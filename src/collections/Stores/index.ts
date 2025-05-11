@@ -15,8 +15,7 @@ import { Banner } from '../../blocks/Banner/config'
 import { Code } from '../../blocks/Code/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 import { generatePreviewPath } from '../../utilities/generatePreviewPath'
-// import { populateAuthors } from './hooks/populateAuthors'
-// import { revalidateDelete, revalidatePost } from './hooks/revalidatePost'
+import { revalidateDelete, revalidateStore } from './hooks/revalidateStore'
 
 import {
   MetaDescriptionField,
@@ -275,11 +274,11 @@ export const Stores: CollectionConfig<'stores'> = {
     },
     ...slugField(),
   ],
-  //   hooks: {
-  //     afterChange: [revalidatePost],
-  //     afterRead: [populateAuthors],
-  //     afterDelete: [revalidateDelete],
-  //   },
+  hooks: {
+    afterChange: [revalidateStore],
+    // afterRead: [populateAuthors],
+    afterDelete: [revalidateDelete],
+  },
   versions: {
     drafts: {
       autosave: {

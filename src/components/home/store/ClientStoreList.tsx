@@ -46,7 +46,7 @@ const ClientStoreList = ({ stores, limit }: Props) => {
           {filtered.map((store) => (
             <ContentCard
               key={store.slug}
-              image={store.heroImage?.url || '/placeholder.svg'}
+              image={store.heroImage?.sizes.small.url || '/placeholder.svg'}
               title={store.title}
               description={store.aboutThisProject || 'No description available.'}
               slug={`/stores/${store.slug}`}
