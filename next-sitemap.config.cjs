@@ -1,20 +1,40 @@
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SERVER_URL ||
-  process.env.VERCEL_PROJECT_PRODUCTION_URL ||
-  'https://example.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://localhost:3000'
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: SITE_URL,
   generateRobotsTxt: true,
-  exclude: ['/posts-sitemap.xml', '/pages-sitemap.xml', '/*', '/posts/*'],
+  defaultChangeFreq: 'weekly',
+  sitemapSize: 5000,
+  exclude: ['/admin/*', '/api/*', '/posts', '/posts/*', '/404', '/500'],
+  transform: async (config, path) => {
+    const priority =
+      path === '/'
+        ? 1.0
+        : path.startsWith('/portfolios/') && path.split('/').length === 3
+          ? 0.9
+          : path.startsWith('/stores/') && path.split('/').length === 3
+            ? 0.9
+            : path === '/portfolios'
+              ? 0.8
+              : path === '/stores'
+                ? 0.8
+                : 0.7
+
+    return {
+      loc: path,
+      changefreq: config.changefreq,
+      priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+      alternateRefs: config.alternateRefs || [],
+    }
+  },
   robotsTxtOptions: {
     policies: [
       {
         userAgent: '*',
-        disallow: '/admin/*',
+        disallow: ['/admin/*', '/api/*', '/posts', '/posts/*', '/404', '/500'],
       },
     ],
-    additionalSitemaps: [`${SITE_URL}/pages-sitemap.xml`, `${SITE_URL}/posts-sitemap.xml`],
   },
 }
