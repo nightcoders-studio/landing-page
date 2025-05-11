@@ -1,9 +1,9 @@
 'use client'
 import { FormEvent, useEffect, useRef, useState } from 'react'
-import FileUploader from './ui/upload-file'
 import { FormContact, FormField } from '@/types/ContactForm'
 import { useToast } from '../hooks/use-toast'
 import { ToastAction } from '../ui/toast'
+import FileUploader from './ui/upload-file'
 
 const getForm = async (formId: string) => {
   try {
