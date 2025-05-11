@@ -3,6 +3,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react'
 import FileUploader from './ui/upload-file'
 import { FormContact, FormField } from '@/types/ContactForm'
 import { useToast } from '../hooks/use-toast'
+import { ToastAction } from '../ui/toast'
 
 const getForm = async (formId: string) => {
   try {
@@ -18,10 +19,8 @@ const getForm = async (formId: string) => {
 
 const Contact = () => {
   const formId = '6820232f1753e62592e1fd73'
-  const [cmsForm, setCmsForm] = useState<any>(null)
+  const [cmsForm, setCmsForm] = useState<FormContact | null>(null)
   const [file, setFile] = useState<File | null>(null)
-  const [success, setSuccess] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
 
   const { toast } = useToast()
 
@@ -131,7 +130,6 @@ const Contact = () => {
       })
 
       if (response.ok) {
-        setSuccess(true)
         toast({
           title: 'Thank you for reaching out to us!',
           description: "We've received your inquiry",
@@ -139,14 +137,24 @@ const Contact = () => {
 
         // Reset the form and file state on success
         formRef.current?.reset()
-        setFile(null) // Clear the file state
+        setFile(null)
       } else {
         throw new Error('Form submission failed')
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      setError('An error occurred, please refresh and try again.')
-      setSuccess(false)
+      if (error instanceof Error) {
+        toast({
+          title: 'Error',
+          description: `${error.message}, you can try again`,
+          variant: 'destructive',
+          action: (
+            <ToastAction onClick={() => formRef.current?.requestSubmit()} altText="Try again">
+              Try again
+            </ToastAction>
+          ),
+        })
+      }
     }
   }
 

@@ -8,7 +8,7 @@ import React, { cache } from 'react'
 import RichText from '@/components/RichText'
 
 import Image from 'next/image'
-import Contact from '@/components/home/contact'
+import Contact from '@/components/Home/contact'
 import { Store } from '@/types/Store'
 import StoreHero from '@/heros/StoreHero'
 

@@ -11,7 +11,7 @@ import { type Portfolio } from '@/types/Portfolio'
 import { DefaultTypedEditorState } from '@payloadcms/richtext-lexical'
 import PortfolioHero from '@/heros/PortfolioHero'
 import Image from 'next/image'
-import Contact from '@/components/home/contact'
+import Contact from '@/components/Home/contact'
 
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'

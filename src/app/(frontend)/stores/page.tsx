@@ -1,5 +1,5 @@
-import Contact from '@/components/home/contact'
-import StoreList from '@/components/home/store/store-list'
+import Contact from '@/components/Home/contact'
+import StoreList from '@/components/Home/store/store-list'
 import { Metadata } from 'next/types'
 import React from 'react'
 

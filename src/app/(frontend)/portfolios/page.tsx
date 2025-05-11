@@ -1,5 +1,5 @@
-import Contact from '@/components/home/contact'
-import PortfolioList from '@/components/home/portofolios/portfolio-list'
+import Contact from '@/components/Home/contact'
+import PortfolioList from '@/components/Home/portofolios/portfolio-list'
 import { Metadata } from 'next/types'
 import React from 'react'
 

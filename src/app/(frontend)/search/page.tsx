@@ -48,7 +48,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
     : {}
 
   // Search portfolios
-  //@ts-expect-error
+  //@ts-expect-error - this is just because searchParams have to declare the types
   const portfolios = await payload.find({
     collection: 'portfolios',
     depth: 1,
@@ -64,7 +64,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
   }) // error is just because searchParams have to declare the types
 
   // Search stores
-  //@ts-expect-error
+  //@ts-expect-error - this is just because searchParams have to declare the types
   const stores = await payload.find({
     collection: 'stores',
     depth: 1,

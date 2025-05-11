@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { SearchIcon, MenuIcon, XIcon } from 'lucide-react'
 import type { Header as HeaderType } from '@/payload-types'
 import { CMSLink } from '@/components/Link'
-import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/Logo/Logo'
 
 export const HeaderNav: React.FC<{ data: HeaderType }> = ({ data }) => {
