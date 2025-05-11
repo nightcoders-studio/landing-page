@@ -42,7 +42,7 @@ const Contact = () => {
           <textarea
             name={field.name}
             id={field.name || field.id}
-            placeholder={field.placeholder || `Enter your ${field.label}`}
+            placeholder={field.placeholder || `${field.label}`}
             className="mt-1 block w-full rounded-xl border border-brand-secondary px-4 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-brand/50"
             rows={3}
             required={field.required}
@@ -177,7 +177,9 @@ const Contact = () => {
                     htmlFor={field.name}
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    {field.label}
+                    {field.label == 'Describe Your Problem or What You Want to Build'
+                      ? 'Message'
+                      : field.label}
                     {field.required && <span className="text-red-500 ml-1">*</span>}
                   </label>
                   {renderField(field)}
