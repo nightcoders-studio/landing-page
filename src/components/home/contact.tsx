@@ -199,7 +199,7 @@ const Contact = () => {
                   <label htmlFor="file" className="block text-sm font-medium text-gray-700 mb-2">
                     Attachment
                   </label>
-                  <FileUploader initialFile={cmsForm.attachmentFile} onFileChange={setFile} />
+                  <FileUploader initialFile={file} onFileChange={setFile} />
                 </div>
               )}
 
