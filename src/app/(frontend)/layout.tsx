@@ -28,6 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script
           src="https://analytics.nightcoders.id/api/script.js"
           data-site-id="1"
+          data-skip-patterns='["/admin/**"]'
           defer
         ></script>
       </head>
