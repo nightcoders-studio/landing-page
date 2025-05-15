@@ -25,6 +25,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
+        <script
+          src="https://analytics.nightcoders.id/api/script.js"
+          data-site-id="1"
+          defer
+        ></script>
       </head>
       <body>
         <Providers>
