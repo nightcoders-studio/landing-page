@@ -63,7 +63,7 @@ export default async function PortfolioDetail({ params: paramsPromise }: Args) {
 
         <StoreHero store={store} />
 
-        <div className="flex  flex-col flex-1 w-full justify-between p-10 bg-neutral-400/10 rounded-2xl md:w-full">
+        <div className="flex flex-col flex-1 w-full justify-between p-10 bg-neutral-400/10 rounded-2xl md:w-full">
           <h2 className="text-2xl font-bold text-primary">About This Project</h2>
           <p className="text-tertiary text-md mt-4">{store.aboutThisProject}</p>
         </div>
