@@ -83,7 +83,7 @@ export default async function PortfolioDetail({ params: paramsPromise }: Args) {
           <div className="flex flex-col md:w-1/2 p-10">
             <h2 className="text-2xl font-bold text-primary">Use Case</h2>
             <p className="text-tertiary text-md mt-4">
-              {store.features.split('\n').map((str, index: number) => (
+              {store.useCases.split('\n').map((str, index: number) => (
                 <span key={index} className="block">
                   {str}
                 </span>
