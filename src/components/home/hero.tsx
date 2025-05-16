@@ -22,10 +22,12 @@ const Hero = () => {
               <span>See our Work</span>
             </button>
           </Link>
-          <button className="flex items-center gap-2 px-4 py-2 text-brand border border-brand rounded-3xl">
-            <Phone size={16} />
-            <span>Contact Us</span>
-          </button>
+          <Link href="/#contact">
+            <button className="flex items-center gap-2 px-4 py-2 text-brand border border-brand rounded-3xl">
+              <Phone size={16} />
+              <span>Contact Us</span>
+            </button>
+          </Link>
         </div>
       </div>
 
