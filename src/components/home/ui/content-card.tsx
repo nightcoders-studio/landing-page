@@ -28,7 +28,7 @@ const ContentCard = ({
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-[316px] h-[210px] object-cover rounded-lg"
           />
         </div>
         <div className="flex flex-col gap-2 w-full">

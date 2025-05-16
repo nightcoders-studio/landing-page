@@ -87,6 +87,7 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
               name: 'heroImage',
               type: 'upload',
               relationTo: 'media',
+              required: true,
             },
             {
               name: 'aboutThisProject',
@@ -101,6 +102,7 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
                   name: 'reviewImage',
                   type: 'upload',
                   relationTo: 'media',
+                  required: true,
                 },
                 {
                   name: 'reviewText',

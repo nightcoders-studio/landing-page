@@ -46,7 +46,11 @@ const ClientPortofolioList = ({ portfolios, limit }: Props) => {
           {filtered.map((portfolio) => (
             <ContentCard
               key={portfolio.slug}
-              image={portfolio.heroImage?.sizes.small.url || '/placeholder.svg'}
+              image={
+                portfolio.heroImage?.sizes.small.url ||
+                portfolio.heroImage?.url ||
+                '/placeholder.svg'
+              }
               title={portfolio.title}
               description={portfolio.aboutThisProject || 'No description available.'}
               slug={`/portfolios/${portfolio.slug}`}

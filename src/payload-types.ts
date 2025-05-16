@@ -741,10 +741,10 @@ export interface Portfolio {
   id: string;
   title: string;
   year: number;
-  heroImage?: (string | null) | Media;
+  heroImage: string | Media;
   aboutThisProject: string;
   review: {
-    reviewImage?: (string | null) | Media;
+    reviewImage: string | Media;
     reviewText: string;
     reviewAuthor: string;
   };

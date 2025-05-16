@@ -1,38 +1,42 @@
 'use client'
+
 import { FormEvent, useEffect, useRef, useState } from 'react'
 import { FormContact, FormField } from '@/types/ContactForm'
 import { useToast } from '../hooks/use-toast'
 import { ToastAction } from '../ui/toast'
 import FileUploader from './ui/upload-file'
-
-const getForm = async (formId: string) => {
-  try {
-    const URL = `${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/${formId}?depth=1&draft=false&locale=undefined`
-    const res = await fetch(URL)
-    if (!res.ok) throw new Error('Failed to fetch form')
-    return (await res.json()) as FormContact
-  } catch (error) {
-    console.error('Failed in getForm: ', error)
-    return null
-  }
-}
+import { useContactContext } from '@/providers/ContactProvider'
 
 const Contact = () => {
   const formId = '6820232f1753e62592e1fd73'
   const [cmsForm, setCmsForm] = useState<FormContact | null>(null)
   const [file, setFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
 
+  const { contactPromise } = useContactContext()
   const { toast } = useToast()
-
   const formRef = useRef<HTMLFormElement>(null)
 
+  // Fetch contact form data
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getForm(formId)
-      setCmsForm(data)
+    const fetchContactForm = async () => {
+      try {
+        const data = await contactPromise
+        setCmsForm(data)
+      } catch (error) {
+        console.error('Failed to load contact form:', error)
+        toast({
+          title: 'Error',
+          description: 'Failed to load the contact form. Please refresh the page.',
+          variant: 'destructive',
+        })
+      } finally {
+        setIsLoading(false)
+      }
     }
-    fetchData()
-  }, [formId])
+
+    fetchContactForm()
+  }, [contactPromise, toast])
 
   const renderField = (field: FormField) => {
     switch (field.blockType) {
@@ -174,18 +178,24 @@ const Contact = () => {
             We have assisted over 40+ clients in developing their digital products
           </p>
 
-          {cmsForm ? (
+          {isLoading ? (
+            <div className="py-12 text-center">
+              <p className="text-gray-500">Loading form...</p>
+            </div>
+          ) : cmsForm ? (
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               {cmsForm.fields.map((field: FormField) => (
                 <div
                   key={field.id || field.name}
-                  className={`transition-all duration-200 ease-in-out ${field.width === 100 ? 'w-full' : 'w-full md:w-1/2'}`}
+                  className={`transition-all duration-200 ease-in-out ${
+                    field.width === 100 ? 'w-full' : 'w-full md:w-1/2'
+                  }`}
                 >
                   <label
                     htmlFor={field.name}
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    {field.label == 'Describe Your Problem or What You Want to Build'
+                    {field.label === 'Describe Your Problem or What You Want to Build'
                       ? 'Message'
                       : field.label}
                     {field.required && <span className="text-red-500 ml-1">*</span>}
@@ -214,7 +224,7 @@ const Contact = () => {
             </form>
           ) : (
             <div className="py-12 text-center">
-              <p className="text-gray-500">Loading form...</p>
+              <p className="text-gray-500">Failed to load form. Please refresh the page.</p>
             </div>
           )}
         </div>

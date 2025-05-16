@@ -16,9 +16,15 @@ import { draftMode } from 'next/headers'
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
 import { Toaster } from '@/components/ui/toaster'
+import { getForm } from '@/utilities/getForm'
+import { ContactContextProvider } from '@/providers/ContactProvider'
+import { FormContact } from '@/types/ContactForm'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
+  const form = await getForm('6820232f1753e62592e1fd73')
+  if (!form) throw new Error('Contact form not found')
+  const contactPromise = Promise.resolve(form)
 
   return (
     <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>
@@ -40,10 +46,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }}
           />
 
-          <Header />
-          {children}
-          <Toaster />
-          <Footer />
+          <ContactContextProvider contactPromise={contactPromise}>
+            <Header />
+            {children}
+            <Toaster />
+            <Footer />
+          </ContactContextProvider>
         </Providers>
       </body>
     </html>

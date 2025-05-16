@@ -6,6 +6,7 @@ import ServiceList from '../../components/home/services/service-list'
 import StoreList from '../../components/home/store/store-list'
 import Contact from '@/components/home/contact'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 const Home = () => {
   return (
@@ -59,7 +60,9 @@ const Home = () => {
         </div>
       </div>
 
-      <Contact />
+      <Suspense>
+        <Contact />
+      </Suspense>
     </>
   )
 }
