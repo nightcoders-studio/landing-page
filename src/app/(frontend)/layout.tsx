@@ -18,7 +18,6 @@ import { getServerSideURL } from '@/utilities/getURL'
 import { Toaster } from '@/components/ui/toaster'
 import { getForm } from '@/utilities/getForm'
 import { ContactContextProvider } from '@/providers/ContactProvider'
-import { FormContact } from '@/types/ContactForm'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const { isEnabled } = await draftMode()
