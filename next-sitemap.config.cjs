@@ -6,7 +6,7 @@ module.exports = {
   generateRobotsTxt: true,
   defaultChangeFreq: 'weekly',
   sitemapSize: 5000,
-  exclude: ['/admin/*', '/api/*', '/posts', '/posts/*', '/404', '/500'],
+  exclude: ['/admin/*', '/api/*', '/404', '/500'],
   transform: async (config, path) => {
     const priority =
       path === '/'
@@ -33,7 +33,7 @@ module.exports = {
     policies: [
       {
         userAgent: '*',
-        disallow: ['/admin/*', '/api/*', '/posts', '/posts/*', '/404', '/500'],
+        disallow: ['/admin/*', '/api/*', '/404', '/500'],
       },
     ],
   },

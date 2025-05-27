@@ -176,6 +176,7 @@ export const Portfolios: CollectionConfig<'portfolios'> = {
               },
               hasMany: true,
               relationTo: 'categories',
+              required: true,
             },
           ],
           label: 'Meta',

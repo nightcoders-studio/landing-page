@@ -770,7 +770,7 @@ export interface Portfolio {
     };
     [k: string]: unknown;
   } | null;
-  categories?: (string | Category)[] | null;
+  categories: (string | Category)[];
   meta?: {
     title?: string | null;
     /**
