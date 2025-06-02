@@ -26,6 +26,7 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { slugField } from '@/fields/slug'
+import { createMdxField } from '@/fields/mdxField'
 
 export const Posts: CollectionConfig<'posts'> = {
   slug: 'posts',
@@ -100,8 +101,16 @@ export const Posts: CollectionConfig<'posts'> = {
                 },
               }),
               label: false,
-              required: true,
+              // required: true,
             },
+            createMdxField({
+              name: 'contentMdx',
+              richTextField: 'content',
+              admin: {
+                position: 'sidebar',
+                condition: (data) => Boolean(data?.content),
+              },
+            }),
           ],
           label: 'Content',
         },
