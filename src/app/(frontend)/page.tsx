@@ -8,6 +8,9 @@ import Contact from '@/components/home/contact'
 import Link from 'next/link'
 import { Suspense } from 'react'
 
+export const dynamic = 'force-static'
+export const revalidate = 600
+
 const Home = () => {
   return (
     <>
